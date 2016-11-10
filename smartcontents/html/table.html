@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>테이플</title>
+</head>
+<body>
+<!-- 가로형 테이플 -->
+   <table border="1" width="400" >
+     <caption>시간표</caption>
+     <colgroup>
+       <col width="100" / >
+       <col width="150" / >
+       <col width="100" / >
+       <col width="110" / >
+     </colgroup>
+
+
+     <thead>
+
+
+      <tr>
+        <th>월</th>
+        <th>화</th>
+        <th>수</th>
+        <th>목</th>
+      </tr>
+     </thead>
+<!--tfoot은 굳이 들어가지 않아도 된다. thead와 tbody 안에 들어간다. 정산의 합계치에 쓰인다. -->
+     <tfoot>
+       <td></td>
+       <td></td>
+       <td>합계</td>
+       <td>100만원</td>
+     </tfoot>
+
+    <tbody>
+     <tr>
+       <td colspan="3">사과</td>
+
+
+       <td rowspan="2">포도</td>
+     </tr>
+     <tr>
+       <td>사과</td>
+       <td>배</td>
+       <td>오렌지</td>
+
+     </tr>
+   </tbody>
+
+
+<!--세로형 테이플 thead와 tfoot이 필요 없어진다. -->
+
+   <table border="1" width="300" >
+
+    <tbody>
+     <tr>
+       <th>과일</th>
+       <td>배</td>
+       <td>오렌지</td>
+       <td>포도</td>
+     </tr>
+     <tr>
+       <th>과일</th>
+       <td>배</td>
+       <td>오렌지</td>
+       <td>포도</td>
+     </tr>
+   </tbody>
+
+ </table>
+
+
+
+
+
+
+
+
+
+<!--리딩 방향  -->
+
+
+
+   <table border="1" width="300" >
+
+    <thead>
+
+<!--scope에 col을 붙이면 제목읽고 내용 읽는 형태의 방향을 만들어준다  -->
+      <tr>
+        <th scope="col">dd</th>
+        <th scope="col">dd</th>
+        <th scope="col">dd</th>
+        <th scope="col">dd</th>
+      </tr>
+    </thead>
+
+    <tbody>
+     <tr>
+       <th scope="row">과일</th>
+       <td>배</td>
+       <td>오렌지</td>
+       <td>포도</td>
+     </tr>
+     <tr>
+       <th scope="row">과일</th>
+       <td>배</td>
+       <td>오렌지</td>
+       <td>포도</td>
+     </tr>
+   </tbody>
+
+
+
+
+
+
+
+
+
+
+
+   </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
