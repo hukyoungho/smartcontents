@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Document</title>
+  <style>
+    #box {
+      width: 300px;
+      height: 100px;
+      border: 1px #f00 solid;
+      margin :0 auto;
+              /*위  오른쪽 아래 왼쪽*/
+              /*margin 100px 0 100px 일경우 왼쪽은 0px이 됨.
+              margin o auto 는 가운데 정렬
+              padding 도 마찬가지로 적용됨.*/
+
+    }
+    p{margin:20px 0; width: auto; border: 1px #f00 solid;}
+    /*margin은 겹침 현상이 있고 큰 마진을 따라간다.*/
+    #김정일{margin: 0; border: 1px #f00 solid;
+
+       }
+
+       #김정은{
+          margin-top:100px;
+          border:1px #00F solid;
+        }
+  </style>
+</head>
+<body>
+  <div id="김정일">김정일
+
+   <div id="김정은">김정은</div>
+
+ </div>
+  <p>안녕 트럼프</p>
+  <p style="margin-top:40px">안녕 힐러리</p>
+  <p>안녕 김정은</p>
+
+
+  <div id="box">
+
+
+
+  </div>
+</body>
+</html>
