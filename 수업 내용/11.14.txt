@@ -1,0 +1,52 @@
+* git remote (서버 등록 확인)
+
+저장소가 없다고 나올것이다. 있으면 있다고 할것이고..
+
+clear
+
+*git clone 주소
+
+깃으로 부터 자료 다운로드 됨..
+
+*서버 등록
+
+git add remote add origin 복사한 주소
+
+
+*깃 저장소 들어가기
+
+cd 위치
+(위치 다 안써도 탭 누르면 자동으로 찾아줌. 그리고 엔터)
+
+*사용자 등록
+
+git push -u origin master
+
+계정확인 아이디/비밀번호 (등록 되어 있으면 안물)
+
+*git branch
+
+
+css 속성
+
+*float 
+
+1.공중에 붕~뜨다
+
+2.float이 선언된 엘리먼트(요소) 다른컨텐츠들이 피해간다.
+
+3.float이 선언된 엘리먼트 보다 먼저 작선된 엘리먼트 위로는 뜰수 없다.
+
+4.width heigh 선언이 안되면 float은 contents 만큼 박스가 줄어든다.
+
+*overflow:hidden :나한테 주어진 만큼 보여줘.
+
+* outline 은 넓이가 포함되지 않는다. <=>border
+
+* class 값은 두개 가질수 있다.
+
+background
+
+* 영역이 존재 해야 구현 됨.
+
+* height 값에 상대값을주면 부모 영역에 값이 정해져야함.

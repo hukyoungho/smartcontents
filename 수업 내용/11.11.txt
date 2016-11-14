@@ -1,0 +1,36 @@
+css
+
+* box모델
+
+* 선택자
+
+* float
+
+* position
+
+* line-height
+
+* display
+
+* overflow
+
+* 절대값: px
+
+* 상대값: %
+
+* auto
+  
+     width 부모기준
+     height 컨텐츠 기준
+
+* 부모자식 관계
+
+<div>
+    <span>
+          <span></span>
+    </span>
+</div>
+
+*플로트는 컨텐츠는 겹치지 않는다
+
+*먼저 적용된 플로트가 우선이다.

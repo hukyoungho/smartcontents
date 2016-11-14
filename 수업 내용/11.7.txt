@@ -1,0 +1,48 @@
+*atom(editor)
+
+장점
+1. 드래그, ctrl + d 한꺼번에 수정 가능
+2. 사용자들간의 확장프로그램 공유 가능
+
+내용
+
+ 환경설정 맞추기
+
+ 1.emmet 2.4.3 파일 설치
+ 2.file-icons
+ 3.open in browsers 0.0.19
+ 4.minimap
+
+
+ 단축키
+
+ 1. ctrl + alt + o 는 브라우저 열기
+
+*git(editor)
+
+장점
+1. 여러 사람들과 작업 가능 (손실 x)
+
+내용
+ 
+ status :현재 상황
+ commit :올리기
+ git init :저장소 생성
+ git status :상태확인 ->html:commit 한번도 안된 경우 빨강 
+                          html:commit 되었지만 수정해야하는 경우 갈색
+ git add :파일등록 (add *):전체
+ git commit:파일 올리기
+ git commmit -m"내용"
+ 10:cd ..:경로에서 나와라
+ 11.ls :수정된것만 commit
+ 12.git push: github 올리기
+
+ 순서 git status -> git add {컴퓨터 안}
+      git push {서버 올리기}
+
+ 
+
+
+
+
+
