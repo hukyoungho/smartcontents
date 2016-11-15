@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>selectors</title>
+
+  <style>
+
+  /*div{border:1px #F00 solid;} 태그 선택*/
+  /*div,ul,li{border:1px #F00 solid;} 태그 중복 선택*/
+  /*.menu {border:1px #F00 solid}메뉴 클래스 선택*/
+  /*#unit1{border:1px #F00 solid}아이디 선택*/
+  /*.menu li {border:1px #F00 solid;}클래스 안의 모든 태그 선택*/
+  /*.menu>ul>li{border:1px #F00 solid;} 메뉴안의 태그 속 태그만 선택*/
+  /*.menu .testul>li{border:1px #F00 solid;} 클래스 안에 클래스 안의 태그만 서택 */
+  /*.menu ul.subul {border:1px #F00 solid;} 클래스안 클래스 속성을 갖은 태그 */
+  /*ul.subul.list-item{border:1px #F00 solid;} 중복 클래스를 갖은 태그*/
+  /*.menu li li:first-child{border:1px #F00 solid} 클래스 안에 태그안 태그의 첫번째 */
+  /*.menu li li:last-child{border:1px #F00 solid} 클래스 안에 태그안 태그의 마지막*/
+  /*li input[type="button"]{border:1px #F00 solid} 태그안 input태그 선택*/
+  /*a[href="라이코스"]{border:1px #F00 solid} a태그 선택 */
+
+    /*
+
+    ^ = 시작하면
+    * = 포함되어있으면
+    $ = 끝나면
+
+     */
+  /*
+  a[href*="이코"]{border:1px #F00 solid} 포함
+  a[href^="라이"]{border:1px #F00 solid} 시작
+  a[href$="코스"]{border:1px #F00 solid} 끝
+  */
+
+  /*.unitlili{border:1px #F00 solid}*/
+  /*.unit~p{border:1px #F00 solid}* 태그 다음 끝까지 선택/
+
+
+
+
+  </style>
+
+
+
+
+ </head>
+ <body>
+
+
+
+  <p>text</p>
+  <p>text</p>
+  <p>text</p>
+  <p class="unit"></p>
+  <p>text</p>
+  <p>text</p>
+  <p>text</p>
+  <div>text</div>
+  <p>text</p>
+  <p>text</p>
+
+
+
+<div class="menu">
+   <ul class="first-ul">
+     <li>text1
+       <ul class="subul">
+         <li>text1-1</li>
+         <li>text2-2</li>
+        <li class="unit">unit</li>
+         <li>text1-1</li>
+         <li>text2-2</li>
+         <li>text3-3</li>
+@@ -25,10 80,10 @@
+       <ul class="subul list-item">
+         <li><input type="text"></li>
+         <li><input type="button"></li>
+        <li><a href="네이버">text3-3</a></li>
+       </ul>
+     </li>
+    <li><a href="라이코스">text3</a>
+       <ul class="testul">
+         <li><input type="text"></li>
+         <li id="unit">text2-2</li>
+@@ -38,7 93,7 @@
+             <li id="unit1">text2-2</li>
+             <li>text3-3</li>
+             <li><input type="text1"></li>
+            <li id="unit2">text2-2</li>
+             <li>text3-3</li>
+           </ul>
+         </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
