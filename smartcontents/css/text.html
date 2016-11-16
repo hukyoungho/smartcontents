@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>text</title>
+</head>
+<style>
+.box {width: 400px;
+  height: auto;
+  border: 1px #f00 solid;
+  color: red;
+  /*폰트 칼라*/
+  font-weight: bold;
+  /*폰트 굵기*/
+  font-size: 45px;
+  /*폰트 크기*/
+  font-style: italic;
+  /*폰트 스타일:잘안씀*/
+  font-family:helvetica, "궁서";
+  /*폰트 서체 변경*/
+  /*폰트서체가 띄어쓰기가 있거나 영어와 다른게 설정되면 ""를 써준다.*/
+  /*영문폰트를 먼저 기입하고 한글 폰트를 뒤에 설정해야 영문폰트 따로 한글폰트 따로 설정된다.*/
+  letter-spacing: 5px;
+  /*글자 간격*/
+  word-spacing: 10px;
+  /*띄어쓰기 넖이는*/
+  word-break: keep-all;
+  /*글자간*/
+  line-height: 100px;
+
+}
+/*부모가 빨갱이면 자식도 빨갱잌 :상속
+font-color 속성은 없다. color가 맞다.*/
+.box div{color: #00f;}
+.box div a{color: inherit;}
+/*상속한다*/
+.box div p{color: initial;}
+/*상속안한다.*/
+
+
+
+</style>
+<body>
+
+  <div class="box">
+    <span>
+      ppap ppap pen pineapple apple pen
+      안녕하세요. 안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.
+    </span>
+    <p>
+      굴림
+    </p>
+    <div>
+      <a href="">돋움</a>
+      <p>돋움</p>
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

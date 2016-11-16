@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>전자신문</title>
+  <style>
+  *{margin: 0; padding: 0;}
+
+  .wrapper {
+    width: 900px;
+    height: 540px;
+    border: 3px #f4f4f4 solid ;
+    border-style: dotted;
+    margin: 50px auto 0;
+    background-color: #fdfdfd;
+
+  }
+  .heading {
+    width: 840px;
+    height: 111px;
+    margin: 0 auto;
+
+
+  }
+  .contents {
+    width: 840px;
+    height: 380px;
+    margin: 15px auto;
+
+
+
+
+  }
+  .heading1 {
+    height: 86px;
+
+  }
+  .heading2 {
+    height: 25px;
+  }
+  .heading2 span{
+    font-family: "돋움";
+    font-size: 13px;
+  }
+  .contents .left {
+    width: 513px;
+    height: 100%;
+    float: left;
+
+  }
+  .contents .left .up {
+    width: 513px;
+    height: 130px;
+
+  }
+  .contents .left .down {
+    width: 513px;
+    height: 250px;
+  }
+  .contents .right {
+    width: 307px;
+    height: 100%;
+    margin-left: 533px;
+
+  }
+  .contents .right .up{
+    height: 112px;
+    border: 1px #e3e3e3 solid;
+
+  }
+  .contents .right .down{
+    height: 268px;
+
+  }
+  .contents .left .down .left{
+    width: 162px;
+    height: 100%;
+    float: left;
+
+  }
+  .contents .left .down .right{
+    width: 351px;
+    height: 100%;
+    margin-left: 162px
+
+
+
+  }
+  .heading1 img{
+    width: 100%;
+
+    }
+  .heading1 .logo{
+    width: 260px;
+    height: 55px;
+    overflow: hidden;
+    display:inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+
+
+  }
+  .heading1 .banner{
+    width: 468px;
+    height: 60px;
+    overflow: hidden;
+    display:inline-block;
+    margin-top: 42px;
+    margin-left: 102px;
+
+  }
+  .heading1 .banner img{
+    width: 100%;
+  }
+  .heading2 {
+    border-bottom: 3px #000 solid;
+  }
+
+  .contents .left .up ul li{font-family: "돋움"; font-size: 13px; list-style: none; color: #7a7a7a;}
+  .contents .left .up ul li .header{font-size: 20px; color: #d91b5c;}
+
+
+  .contents .left .up ul li span{
+    width:160px;
+    height:94px;
+    display: block;
+    overflow: hidden;
+    float: left;
+    margin-right: 5px;
+    margin-top: 5px;
+
+
+  }
+  .contents .left .up ul li span img{
+    width: 100%;
+  }
+  .contents .left .up ul li p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .contents .left .down .left {
+    border-top: 3px #d91b5c solid
+
+  }
+
+  .contents .left .down .left ul li{list-style: none;}
+  .contents .left .down .left ul li .picture1{
+    overflow: hidden;
+    width: 162px;
+    height: 78px;
+  }
+  .contents .left .down .left ul li .picture1 img{
+    width: 100%;
+    margin-top: 10px;
+  }
+  .contents .left .down .left ul li .picture2{
+    overflow: hidden;
+    width: 162px;
+    height: 78px;
+    margin-top: 10px;
+  }
+  .contents .left .down .left ul li .picture2 img{
+    width: 100%;
+  }
+  .contents .left .down .left ul li p{
+    font-family: "돋움";
+    font-size: 13px;
+    margin-top: 5px;
+
+  }
+  .contents .left .down .right{
+    border-top: 3px #dcdcdc solid;
+  }
+  .contents .left .down .right ul li{
+    list-style: none;
+    font-family: "돋움";
+    font-size: 14px;
+    line-height: 27px;
+    margin-left: 10px;
+  }
+  .contents .right .up {
+    background-color:#fafafa
+  }
+  .contents .right .up strong{
+    margin-left: 10px;
+  }
+  .contents .right .up p{
+    font-family: "돋움";
+    font-size: 15px;
+    color: #fff;
+    line-height: 27px;
+    border: 1px #e3e3e3 solid;
+    background-color: #747573
+  }
+  .contents .right .up ul li{
+
+    font-family: "돋움";
+    font-size: 12px;
+
+  }
+  .contents .right .up ul{
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+  .contents .right .down div .picture{
+    width: 145px;
+    height: 95px;
+    overflow: hidden;
+
+  }
+  .contents .right .down div .picture img{
+    width: 100%;
+  }
+  .contents .right .down div .picture .pic1{
+    float: left;
+  }
+  .contents .right .down .div1{
+    float: left;
+  }
+  .contents .right .down .div3{
+    float: left;
+  }
+  .contents .right .down p{
+    font-family: "돋움";
+    font-size: 12px;
+  }
+  .contents .right .down .div2,.div4{
+    margin-left: 162px;
+  }
+  .bottom{
+    width: 840px;
+    height: 20px;
+    margin: 0 auto;
+  }
+  .bottom_text{
+    text-align: right;
+     line-height: 8px;
+     font-family: "돋움";
+     font-size: 12px;
+   }
+
+
+
+
+
+
+
+
+
+  </style>
+
+</head>
+<body>
+  <div class="wrapper">
+    <div class="heading guide_line">
+      <div class="heading1 guide_line">
+        <span class="logo"><img src="http://static.naver.net/newsstand/up/2013/0813/nsd114836462.gif" alt="logo" /></span>
+        <span class="banner"><img src="http://adcreative.naver.com/ad3/1004/1004874/468_60_01473227375503.jpg" alt="banner"></span>
+      </div>
+      <div class="heading2 guide_line">
+        <input type="button" name="" value="x구독해지">
+        <input type="button" name="" value="이용자 한마디">
+        <span>11-16 11:10편집</span>
+
+
+      </div>
+
+
+
+    </div>
+    <div class="contents guide_line">
+      <div class="left guide_line">
+        <div class="up guide_line">
+          <ul>
+            <li>
+              <strong class="header">SKT·BMW, 세계 최초 5G 커넥티드카 시연</strong>
+              <span><img src="http://static.naver.net/newsstand/2016/1116/etnews/111725/001.jpg" alt="article_logo" /></span>
+              <p>5세대(5G) 이동통신망으로 각종 사고와 교통 정체 등 도로 상황을 0.1초 만에 인식하고 UHD급 영상으로 실시간 전송하는 커넥티드카가 세계 최초로 시동을 걸었다. SK텔레...</p>
+
+
+            </li>
+            <li><strong>[이슈분석]커넥티드카 `가속 중`</strong></li>
+            <li><strong>[이슈분석]미래 자동차엔 왜 5G가 필요한가</strong></li>
+          </ul>
+
+
+        </div>
+        <div class="down guide_line">
+
+          <div class="left guide_line">
+            <ul>
+              <li>
+                <div class="picture1">
+                  <img src="http://static.naver.net/newsstand/2016/1116/etnews/111725/002.jpg" alt="" />
+                </div>
+                 <p>애플, 최신 제품은 25만원짜리 포토북</p>
+
+              </li>
+              <li>
+                <div class="picture2">
+                  <img src="http://static.naver.net/newsstand/2016/1116/etnews/111725/003.jpg" alt="">
+                </div>
+                 <p>정부, 오늘부터 '대포폰' 직권해지</p>
+              </li>
+            </ul>
+          </div>
+          <div class="right  guide_line">
+            <ul>
+              <li>간섭 카드도 물건너가나···KT, 800㎒ 고민 깊어진다</li>
+              <li>"포켓몬고, 곧 한국 서비스 한다"</li>
+              <li>[카드뉴스]미션:아스가르디아 '우주 국가'를 세워라</li>
+              <li>11번가, '110분 이내 무료배송' 프로모션 선보여</li>
+              <li>창조경제 45조 기술금융 대출, 부실심사 의혹</li>
+              <li>수도권서 경유차는 저공해차로 인정 안된다</li>
+              <li>한국형전투기에 국산 SW통합관리솔루션 첫 적용</li>
+              <li>삼성 인수한 하만 주가 25% 이상 급등</li>
+              <li>“가벼운 맥주 한잔이 뇌졸중 예방에 탁월”</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="right guide_line">
+        <div class="up">
+          <p><strong>이슈분석</strong></p>
+          <ul>
+            <li>최순실 직격탄 창조경제혁신센터, 탈출구는 어디</li>
+            <li>SK텔레콤-BMW코리아 `세계최초 5G 커넥티드카</li>
+            <li>2017년 신차 경쟁...전 차급 경쟁 심화·PHEV 진격</li>
+          </ul>
+
+        </div>
+        <div class="down guide_line">
+          <div class="div1">
+            <div class="picture">
+              <img class="a"src="http://static.naver.net/newsstand/2016/1116/etnews/150157/004.jpg" alt="">
+
+            </div>
+            <p>中 "세계 최초 더블M형 스마<br />트 무인함정 개발"</p>
+          </div>
+          <div class="div2">
+            <div class="picture">
+              <img class="b"src="http://static.naver.net/newsstand/2016/1116/etnews/150157/006.jpg" alt="">
+
+            </div>
+            <p>3800년 전 이집트 벽화에 숨<br />은 비밀</p>
+          </div>
+          <div class="div3">
+            <div class="picture">
+              <img class="c"src="http://static.naver.net/newsstand/2016/1116/etnews/150157/005.jpg" alt="">
+
+            </div>
+            <p>830만년전엔…냥이 몸무게가<br /> 404㎏</p>
+          </div>
+          <div class="div4">
+            <div class="picture">
+              <img class="d"src="http://static.naver.net/newsstand/2016/1116/etnews/150157/007.jpg" alt="">
+
+            </div>
+            <p>탱크로봇 전쟁터로···이라크,모술에 배치</p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+    <div class="bottom">
+      <p class="bottom_text"><strong>전자신문</strong> 사이트 바로가기</p>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+</body>
+</html>
