@@ -20,7 +20,7 @@ jquery로 변경가능
 
 * form method get 방식은 주소창에 보이고 post는 안보인다
 
-* https://jsfiddle.net/ 
+* https://jsfiddle.net/
 
 다른 사람들과 공유 가능한 사이트
 
@@ -55,4 +55,3 @@ ex)
 절대 경로:http://~
 
 상대 경로:../a/b/c
-

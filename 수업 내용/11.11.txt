@@ -19,7 +19,7 @@ css
 * 상대값: %
 
 * auto
-  
+
      width 부모기준
      height 컨텐츠 기준
 

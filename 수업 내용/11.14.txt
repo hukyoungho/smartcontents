@@ -29,7 +29,7 @@ git push -u origin master
 
 css ¼Ó¼º
 
-*float 
+*float
 
 1.°øÁß¿¡ ºØ~¶ß´Ù
 

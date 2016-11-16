@@ -24,11 +24,11 @@
 1. 여러 사람들과 작업 가능 (손실 x)
 
 내용
- 
+
  status :현재 상황
  commit :올리기
  git init :저장소 생성
- git status :상태확인 ->html:commit 한번도 안된 경우 빨강 
+ git status :상태확인 ->html:commit 한번도 안된 경우 빨강
                           html:commit 되었지만 수정해야하는 경우 갈색
  git add :파일등록 (add *):전체
  git commit:파일 올리기
@@ -39,10 +39,3 @@
 
  순서 git status -> git add {컴퓨터 안}
       git push {서버 올리기}
-
- 
-
-
-
-
-
