@@ -8,7 +8,11 @@
 
  장문의 경우 %
 
- 단문의 경우 px 쓴다. 
+ 단문의 경우 px 쓴다.
+
+ 상속이 안된다.
+
+ ex. 자식의 위치
 
  ex. 12px 폰트 에 line-height 값을 12px을 준다면 다음 글자는 딱 붙어서 나온다
 
@@ -17,20 +21,26 @@
  ex. 12px 폰트에 line-height 값을 30px을 준다면 폰트 위아래로 9px이 만들어져진다.
 
 
+
+
 * html&css 교재 추천
 
 * css 교재: 쉽게 빠르게 익히는 css3
 
 * vertical
 
-inline 
+inline
 
 inline-block : 가장 큰 박스 기준으로 위 중간 아래
 
-table :정해져 있는 height 값 기준으로 정해진다.         
+table :정해져 있는 height 값 기준으로 정해진다.
+
+*상속이 안된다.
+
+ex. 자식의 정렬을 하려면 어미의 line-height값이 정해져야 한다.
 
 
-*단축키 
+*단축키
 
 shift tab
 
@@ -38,5 +48,3 @@ tab
 
 setting show indent guide
 tab length 4
-
-      
