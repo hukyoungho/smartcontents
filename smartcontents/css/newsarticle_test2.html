@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+<style>
+*{margin: 0; padding: 0; font-family: "돋움"}
+/*.guide_line{outline: 1px #f00 solid;}*/
+.wrapper{
+    width: 900px;
+    height: 540px;
+    margin: 30px auto;
+
+}
+.footer{
+    width: 840px;
+    height: 15px;
+    text-align: right;
+    font-size: 14px;
+    margin: 7px auto 0;
+}
+.heading{
+    width: 840px;
+    height: 111px;
+    margin: 0 auto;
+    border-top: 1px black solid;
+
+}
+.heading .logo {
+    width: 260px;
+    height:55;
+    float: left;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.heading .logo img{
+    width: 100%;
+}
+.heading .banner{
+    width: 468px;
+    height: 60px;
+    margin-left: 374px;
+    margin-top: 30px;
+
+}
+.heading .heading_bottom{
+    width: 840px;
+    height: 24px;
+    border-bottom: 3px black solid;
+
+}
+.read{
+    width: 66px;
+    height: 21px;
+    background-image: url(../images/dd.png);
+    background-position: -256px -199px;
+    float: left;
+
+}
+.user{
+    width: 106px;
+    height: 21px;
+    background-image: url(../images/dd.png);
+    background-position: -293px -174px;
+
+    float: left;
+    margin-left: 3px
+
+}
+.give{
+    width: 28px;
+    height: 21px;
+    background-position: -500px -270px;
+    background-image: url(../images/dd.png);
+    float: left;
+    margin-left: 3px;
+}
+
+.heading_bottom span{
+    font-size: 12px;
+    margin-left: 3px;
+}
+
+
+.contents{
+    width: 840px;
+    height: 380px;
+    margin: 20px auto 0;
+
+}
+.contents .left{
+    width: 90px;
+    height: 380px;
+    float: left;
+
+}
+.contents .middle{
+    width: 530px;
+    height: 380px;
+    margin-left: 100px;
+
+
+}
+.contents .right{
+    width: 200px;
+    height: 380px;
+    float: right;
+}
+.contents .left h2{
+    width: 90px;
+    height: 29px;
+    overflow: hidden;
+    margin-bottom: 5px;
+
+}
+.contents .left h2 img{
+    width: 100%;
+}
+.contents .left .weather{
+    width: 90px;
+    height: 26px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 25px;
+    background-color: blue;
+    color: white;
+
+
+}
+.contents .left .box h3{
+    width: 78px;
+    height: 11px;
+    color: blue;
+    font-size: 15px;
+    margin-top: 5px;
+
+
+}
+.contents .left .box .left_picture1{
+    width: 78px;
+    height: 87px;
+    overflow: hidden;
+
+
+    margin-top: 20px;
+    margin: 10px auto 5px;
+    display: block;
+
+}
+.contents .left .box .left_picture1 img{
+    width: 78px;
+    height: 87px;
+
+
+
+}
+.contents .left .box p{
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.contents .left .box .left_picture2{
+    width: 78px;
+    height: 87px;
+    overflow: hidden;
+
+
+    margin-top: 20px;
+    margin: 10px auto 5px;
+    display: block;
+
+}
+.contents .left .box .left_picture2 img{
+    width: 78px;
+    height: 87px;
+
+
+
+}
+.contents .middle .upper{
+    width: 530px;
+    height: 200px;
+    list-style: none;
+    display: inline-block;
+
+
+}
+.contents .middle .upper .first{
+    width:353px;
+    height: 200px;
+    background-image: url(../images/Untitled-2.jpg);
+    background-size: 100%;
+    border: 1px black solid;
+    float: left;
+
+
+
+
+}
+.contents .middle .upper .first strong{
+    font-size: 20px;
+
+}
+.contents .middle .upper .first p{
+    font-size: 12px;
+    margin-top: 130px;
+    color: white;
+}
+.contents .middle .upper .second{
+    width: 172px;
+    height: 97px;
+    background-image: url(http://img.sbs.co.kr/newimg/news/20161117/200997067_700.jpg);
+    background-size: 100%;
+    border: 1px black solid;
+    margin-left: 356px
+
+}
+.contents .middle .upper .second p{
+    font-size: 12px;
+    margin-top: 65px;
+    text-align: center;
+    color: white;
+}
+.contents .middle .upper .third{
+    width: 172px;
+    height: 97px;
+    background-image: url(http://img.sbs.co.kr/newimg/news/20161112/200995845_700.jpg);
+    background-size: 100%;
+    border: 1px black solid;
+    margin-left: 356px;
+    margin-top: 4px;
+
+}
+.contents .middle .upper .third p{
+    font-size: 12px;
+    margin-top: 65px;
+    text-align: center;
+    color: white;
+}
+.contents .middle .bottom{
+    width: 530px;
+    height: 180px;
+    border: 1px black solid;
+}
+.contents .middle .bottom .top{
+    width: 530px;
+    height: 24px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 24px;
+    color: white;
+    background-color: blue;
+    margin-top: 10px;
+    border: 1px black solid;
+}
+.contents .middle .bottom .box1{
+    width: 245px;
+    height: 145px;
+    float: left;
+
+
+
+
+}
+.contents .middle .bottom .box1 ul{
+    list-style: none;
+
+}
+.contents .middle .bottom .box1 ul .area1{
+    border: 1px black solid;
+    overflow: hidden;
+
+}
+
+
+
+
+.contents .middle .bottom .box1 .picture1{
+    width: 100px;
+    height: 56px;
+    float: left;
+    overflow: hidden;
+    display: inline-block;
+    margin-top: 7px;
+    margin-left: 7px;
+    margin-bottom: 8px;
+
+
+}
+.contents .middle .bottom .box1 .picture1 img{
+    width: 100px;
+    height: 56px;
+
+}
+.contents .middle .bottom .box1 p{
+    font-size: 11px;
+    margin: 15px 10px 15px 110px;
+}
+.contents .middle .bottom .box1 .area2{
+    border: 1px black solid;
+    overflow: hidden;
+}
+.contents .middle .bottom .box1 .picture2{
+    width: 100px;
+    height: 56px;
+    float: left;
+    overflow: hidden;
+    display: inline-block;
+    margin-top: 7px;
+    margin-left: 7px;
+
+
+}
+.contents .middle .bottom .box1 .picture2 img{
+    width: 100px;
+    height: 56px;
+
+}
+
+
+
+
+
+
+
+
+.contents .middle .bottom .box2{
+    height: 145px;
+    margin-left: 245px;
+
+}
+.contents .middle .bottom .box2 ul{
+    padding-left: 20px;
+    padding-top: 12px;
+
+}
+
+
+.contents .middle .bottom .box2 ul li{
+    font-size: 12px;
+    line-height: 20px;
+}
+.contents .right .upper{
+    width: 200px;
+    height: 200px;
+}
+.contents .right .upper ul{
+    padding: 10px;
+    list-style: none;
+    font-size: 10px;
+
+}
+.contents .right .upper ul li{
+    line-height: 17px;
+    border-bottom: 1px gray solid;
+
+}
+.contents .right .down{
+    width: 200px;
+    height: 160px;
+    margin-top: 20px;
+}
+.contents .right .down .left_up{
+    width:80px;
+    height:20px;
+    background-color: orange;
+    font-size: 10px;
+    color: white;
+    line-height: 17px;
+    text-align: center;
+    float: left;
+
+}
+.contents .right .down .pic1{
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    display: inline-block;
+
+
+
+
+
+}
+.contents .right .down .pic1 img{
+    width: 100%;
+
+}
+.contents .right .down p{
+    font-size: 10px;
+    text-align: center;
+
+}
+
+
+</style>
+<body>
+    <div class="wrapper guide_line">
+        <div class="heading ">
+            <h1 class="logo">
+                <img src="http://static.naver.net/newsstand/up/2013/0813/nsd11419129.gif" alt="">
+            </h1>
+            <div class="banner">
+                <img src="http://adcreative.naver.com/ad3/1004/1004874/468_60_01475642087174.jpg" alt="">
+            </div>
+            <div class="heading_bottom">
+                <div class="read"></div>
+                <div class="user"></div>
+                <div class="give"></div>
+                <span>11-17 23:36 편집</span>
+
+
+
+            </div>
+        </div>
+        <div class="contents guide_line">
+            <div class="left guide_line">
+                <h2>
+                    <img src="http://static.naver.net/newsstand/2016/1117/sbs/193203/001.gif" alt="sbs logo">
+                </h2>
+                <div class="weather guide_line">
+                    11.8
+                </div>
+                <div class="box">
+                    <h3>생생영상</h3>
+                    <span class="left_picture1">
+                        <img src="http://img.sbs.co.kr/newimg/news/20161117/200997137_700.jpg" alt="">
+                    </span>
+                    <p>후배들의 박력<br />있는 수능 응원</p>
+                    <h3>취재파일</h3>
+                    <span class="left_picture2">
+                        <img src="http://img.sbs.co.kr/newimg/news/20161117/200997108_700.jpg" alt="">
+                    </span>
+                    <p>트럼프가 당선<br />됐는데 왜 중국</p>
+                </div>
+            </div>
+
+            <div class="right guide_line">
+                <div class="upper guide_line">
+                    <ul>
+                        <li>[경제]주택대출 금리 최고 5% 육박…가계 부담 우려</li>
+                        <li>[국제]"트럼프 잡자" 뉴욕 떠나는 아베 총리…한국은?</li>
+                        <li>[정치]대통령 조사 시기 놓쳤다…"혐의 입증 차질"</li>
+                        <li>[연예]빅뱅, 포브스 '30세 이하 수입 톱30'…연간수입 520억 원</li>
+                        <li>[연예]편의점 노예로 살아온 부부…충격 학대</li>
+                    </ul>
+                </div>
+                <div class="down guide_line">
+                    <h3 class="left_up">연예인 스포츠</h3>
+                    <span class="pic1">
+                        <img src="http://image.chosun.com/sitedata/image/201605/30/2016053002323_0.jpg" alt="">
+                    </span>
+                    <p><strong>[영상] 말문 트인 전지현, 이민<br />호에 던진 첫마디는?</strong>
+
+                    </p>
+                    <p>'푸른 바다의 전설'(전지현...)</p>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="middle guide_line">
+                <ul class="upper guide_line">
+                    <li>
+                        <div class="first ">
+                            <p><strong>[영상]"정치 1,2 한 분도 아니고..한번<br />붙어봅시다"조윤선 장관질책</strong>
+                                <br />어제(16일), 조윤선 문화체육관광부 장관이 국회 교육문화...</p>
+
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="second">
+                                <p><strong>대통령 이번 주 조사도 '무<br />산'.."다음 주 조사받겠다."</strong></p>
+
+                            </div >
+
+                        </li>
+                        <li>
+                            <div class="third">
+                                <p><strong>특검법에 빠진'대통령'과'7<br />시간'...너무 많은 허점</strong></p>
+
+                            </div >
+                        </li>
+                    </ul>
+                    <div class="bottom">
+                        <p class="top guide_line">
+                            조성진의 1년, 어떤 변화가 있었을까 '트럼플레이션' 공포에 휩싸인 세계 경제
+
+                        </p>
+
+                        <div class="box1 ">
+                            <ul>
+                                <li class="area1" >
+                                    <span class="picture1">
+                                        <img src="http://pds23.egloos.com/pds/201210/27/31/e0019531_508bc780b8862.jpg" alt="">
+                                    </span>
+                                    <p>'탄핵? 할 테면 해봐'…야당은 왜 머뭇거리나</p>
+
+                                </li>
+                                <li class="area2">
+                                    <span class="picture2">
+                                        <img src="http://d2kl0xuacqn1kv.cloudfront.net/2016/09/29174459/2016092901_01.jpg" alt="">
+                                    </span>
+                                    <p>'"한 달에 400만 원"…이영복 '황제 친목계' 압수수색영상</p>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="box2 guide_line">
+                            <ul>
+                                <li>대통령 조사 다음 주로…기소 전 '무산'</li>
+                                <li>"참담하다" 조원동 소환…김종 구속영장 청구</li>
+                                <li>'최순실 특검법' 진통 끝 통과…야당이 추천</li>
+                                <li>"올해 수능 국·영·수 모두 지난해보다 어려웠다"</li>
+                                <li>"촛불은 바람 불면 꺼진다"?…시민 분노</li>
+                                <li>'병사' 기록 논란 서울대병원 주치의 보직 해임</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="footer"><strong>sbs</strong> 사이트 바로가기
+            </div>
+        </div>
+
+    </div>
+    </body>
+    </html>
