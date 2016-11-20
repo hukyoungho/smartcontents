@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+<style>
+*{margin: 0; padding: 0;font-family:'dotum';font-size: 12px; line-height: 16px;}
+.guide_line{outline: 1px #f00 solid;}
+.wrapper{
+    width: 900px;
+    height: 540px;
+    margin: 50px auto;
+}
+.footer{
+    width: 840px;
+    display:block;
+    text-align: right;
+
+    margin: 0 auto;
+}
+.heading{
+    width: 840px;
+    height: 55px;
+    padding: 20px 0 30px;
+    margin: 0 auto;
+    text-align: left;
+    border-bottom: 3px solid #545454;
+    overflow: hidden;
+
+}
+.heading .logo{
+    display: block;
+    float: left;
+
+}
+.heading .banner{
+    display: block;
+    float: right;
+    margin-top: 10px;
+}
+.heading_banner{
+    width: 840px;
+    height: 25px;
+    margin: -31px auto 20px;
+}
+.read{
+    width: 66px;
+    height: 21px;
+    background-image: url(../images/dd.png);
+    background-position: -256px -199px;
+    float: left;
+
+}
+.user{
+    width: 106px;
+    height: 21px;
+    background-image: url(../images/dd.png);
+    background-position: -293px -174px;
+
+    float: left;
+    margin-left: 3px
+
+}
+.give{
+    width: 28px;
+    height: 21px;
+    background-position: -500px -270px;
+    background-image: url(../images/dd.png);
+    float: left;
+    margin-left: 3px;
+}
+
+.heading_bottom span{
+    font-size: 11px;
+    display: inline-block;
+    line-height: 30px;
+    margin-left: 3px;
+}
+.contents {
+    width: 840px;
+    height: 380px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.contents .left_article {
+
+    width: 358px;
+    float: left;
+    border-right: 1px solid #e1e1e1;
+    padding-right: 15px;
+}
+.contents .left_article .main{
+
+    width: 358px;
+    height: 155px;
+    margin-bottom: 6px;
+    height: 190px;
+}
+.contents .left_article .main .tit{
+    color: #222;
+    display: block;
+}
+.contents .left_article .main .tit h1{
+    font-size: 16px;
+    line-height: 25px;
+
+    font-weight: bold;
+    padding-bottom: 13px;
+    color: #000;
+
+}
+.contents .left_article .tit2{
+    overflow: hidden;
+    border-top: 1px solid #e1e1e1;
+    width: 358px;
+    padding-top: 10px;
+}
+.contents .left_article .tit2 ul{
+    overflow: hidden;
+    width: 358px;
+    list-style: none;
+}
+.contents .left_article .tit2 ul li a{
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: bold;
+    color: #222;
+}
+.contents .right {
+    width: 451px;
+    float: left;
+    margin-left: 15px;
+}
+.contents .right .left{
+    width: 292px;
+    float: left;
+}
+.contents .right .left h2{
+    overflow: hidden;
+    height: 23px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #e1e1e1;
+}
+.contents .right .left h2 span{
+    font-size: 12px;
+    line-height: 18px;
+    color: black;
+    font-weight: bold;
+    padding-top: 4px;
+}
+.contents .right .left ul{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    list-style: none;
+}
+.contents .right .left ul li {
+    line-height: 21px;
+    font-size: 12px;
+
+    font-weight: normal;
+    padding-left: 8px;
+    background: url(http://static.naver.net/newsstand/2016/1120/mkinternet/211052/009.gif) no-repeat 0 44%;
+    overflow: hidden;
+}
+.contents .right .left ul li a{
+    color: #222;
+}
+.contents .right .right{
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+    width: 128px;
+    height: 129px;
+    float: right;
+    line-height: 100%
+}
+.contents .right .right img{
+    width: 129px;
+    height: 129px;
+}
+.contents .right .right h3{
+    width: 100%;
+    height: 40px;
+
+
+    vertical-align: bottom;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    color: white;
+    background:linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%)
+}
+.contents .right .down .left{
+    width: 292px;
+    float: left;
+    border-top: 1px solid #e1e1e1;
+    padding-top: 12px;
+}
+.contents .right .down .left .top{
+    width: 292px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+.contents .right .down .left .top .thumb{
+    float: left;
+    width: 65px;
+    height: 45px;
+    margin-right: 10px;
+}
+.contents .right .down .left .top dt{
+    margin-top: 5px;
+}
+.contents .right .down .left .top dt a{
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+    color: #222;
+    overflow: hidden;
+}
+.contents .right .down .left .bottom{
+    overflow: hidden;
+    border-top: 1px solid #e1e1e1;
+    margin-top: 12px;
+
+    padding-top: 12px;
+    width: 292px;
+}
+.contents .right .down .left .bottom .pictures{
+    overflow: hidden;
+    width: 292px;
+
+}
+.contents .right .down .left .bottom .pictures .pic1{
+    float: left;
+    text-align: center;
+    width: 140px;
+}
+
+.contents .right .down .left .bottom .pictures .pic1 a{
+    display: block;
+    padding-top: 2px;
+    color: #222;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+}
+.contents .right .down .right{
+    float: right;
+    width: 100px;
+
+}
+.contents .right .right_article{
+    width: 129px;
+    height: 237px;
+    float: right;
+    margin-top: 10px;
+}
+.contents .right .right_articl {}
+</style>
+
+<body>
+    <div class="wrapper guide_line">
+        <div class="heading guide_line">
+            <a  class="logo "href="">
+                <img src="http://static.naver.net/newsstand/up/2016/0325/nsd185254610.png" width="260" height="55" alt="매일경제">
+            </a>
+            <a class="banner"href="">
+                <img src="http://adcreative.naver.com/ad3/1004/1004874/468_60_01473227375503.jpg" width="468" height="60" title="" alt="광고 영역 입니다.">
+            </a>
+        </div>
+        <div class="heading_banner guide_line">
+            <a class="read"href=""></a>
+            <a class="user"href=""></a>
+            <a class="give"href=""></a>
+            <span class="date">11-20 05:10</span>
+        </div>
+        <div class="contents">
+            <div class="left_article">
+                <div class="main">
+                    <a class="photo" href="" alt="檢 ">
+                        <img src="http://static.naver.net/newsstand/2016/1120/mkinternet/211052/001.jpg" alt="檢 포토" width="358" height="155">
+
+                    </a>
+                    <a class="tit" href="" alt="檢">
+                        <h1>檢 "朴, 최순실과 공모"…靑 "차라리 탄핵하라"</h1>
+                    </a>
+                </div>
+                <div class="tit2">
+                    <ul>
+                        <li><a style="color:#1d3cd7"href="" >미분양 대비 재건축 새 트렌드 '리스크 셰어링'</a></li>
+                        <li><a href="" >野 "퇴진·탄핵 병행"…文 "朴결단땐 퇴로 열어줄 것"</a></li>
+                        <li><a style="color:#1d3cd7"href="" >朴대통령 '세월호 7시간' 관저에서 업무봤다는데…</a></li>
+                        <li><a href="" ><strong style="color:red; font-size:15px;">[단독]</strong>패션 전문가 끌어모으는 삼성전자, 이유가..</a></li>
+                        <li><a href="">'초등학생도 맞춘다' 역대급 저난이도 수능 문제는?</a></li>
+                        <li><a href="">착용만 하면 '거북목' 고친다…자세 안좋으면 '윙~'</a></li>
+                        <li><a style="color:#1d3cd7"href="">"朴대통령, 정유라 친구 부모 소유 기업까지 챙겨"</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                <div class="left">
+                    <h2><span>이 시각 주요뉴스</span></h2>
+                    <ul>
+                        <li><a href="http://news.mk.co.kr/sforward.php?domain=news&amp;sc=30000001&amp;year=2016&amp;no=806609&amp;sID=504" target="_blank"><strong class="redtxt">[단독]</strong>&nbsp;'아프리카 체조'도 졸속 추진한 K스포츠재단</a></li>
+                        <li><a href="http://news.mk.co.kr/sforward.php?domain=news&amp;sc=30000001&amp;year=2016&amp;no=806661&amp;sID=301" target="_blank">금융권 新캐시카우로 뜨는 '월세 주택 시장'</a></li>
+                        <li><a href="http://news.mk.co.kr/sforward.php?domain=news&amp;sc=30000001&amp;year=2016&amp;no=806696&amp;sID=303" target="_blank">"보호무역 반대"…시진핑 中주석 트럼프에 역공</a></li>
+                        <li><a href="http://news.mk.co.kr/sforward.php?domain=news&amp;sc=30000001&amp;year=2016&amp;no=806697&amp;sID=301" target="_blank">2000만원 이하 임대소득, 내년부터 과세 추진</a></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <a href="">
+                        <img src="http://static.naver.net/newsstand/2016/1120/mkinternet/234656/003.jpg" alt="포토" width="129" height="129">
+                    </a>
+                    <h3>이세영, 초미니 <br>어쩔줄 몰라~</h3>
+                </div>
+                <div class="down">
+                    <div class="left">
+                        <dl class="top">
+                            <dd class="thumb">
+                                <a href="http://news.mk.co.kr/sforward.php?domain=star&amp;sc=40900002&amp;year=2016&amp;no=805864&amp;sID=504" target="_blank">
+                                    <img src="http://static.naver.net/newsstand/2016/1120/mkinternet/234656/004.jpg" alt="포토" width="65" height="45">
+                                </a>
+                            </dd>
+                            <dt>
+                                <a href="http://news.mk.co.kr/sforward.php?domain=star&amp;sc=40900002&amp;year=2016&amp;no=805864&amp;sID=504" target="_blank">최순득 집, 장시호 체포 후 뉴스로 여론 살핀다</a>
+                            </dt>
+                        </dl>
+                        <dl class="top">
+                            <dd class="thumb">
+                                <a href="http://news.mk.co.kr/sforward.php?domain=star&amp;sc=40900002&amp;year=2016&amp;no=806596&amp;sID=" target="_blank"><img src="http://static.naver.net/newsstand/2016/1120/mkinternet/234656/005.jpg" alt="포토" width="65" height="45"></a>
+                            </dd>
+                            <dt>
+                                <a href="http://news.mk.co.kr/sforward.php?domain=star&amp;sc=40900002&amp;year=2016&amp;no=806596&amp;sID=" target="_blank">서장훈, 김윤아♥김형규 금슬에 “겉만 봐선 몰라”</a>
+                            </dt>
+                        </dl>
+                        <div class="bottom">
+                            <dl class="pictures">
+                                <dt class="pic1">
+                                    <a href="http://news.mk.co.kr/sforward.php?domain=news&amp;year=2016&amp;no=806786" target="_blank">
+                                        <div class="thumb2">
+                                            <img src="http://static.naver.net/newsstand/2016/1120/mkinternet/234656/006.jpg" width="140" height="82" alt="섬네일 이미지">
+                                        </div>
+                                    </a>
+                                    <span>
+                                        <a href="http://news.mk.co.kr/sforward.php?domain=news&amp;year=2016&amp;no=806786" target="_blank">조치훈 9단, 일본판 <br>'알파고'와 1승 1패
+                                        </a>
+                                    </span>
+                                </dt>
+                                <dt class="pic1">
+                                    <a href="http://news.mk.co.kr/sforward.php?domain=news&amp;no=806603&amp;year=2016" target="_blank">
+                                        <div class="thumb2">
+                                            <img src="http://static.naver.net/newsstand/2016/1120/mkinternet/234656/007.jpg" width="140" height="82" alt="섬네일 이미지">
+                                        </div>
+                                    </a>
+                                    <span class="hotlist_txt">
+                                        <a href="http://news.mk.co.kr/sforward.php?domain=news&amp;no=806603&amp;year=2016" target="_blank">천호식품 회장, 촛불집회<br> 비난 뒤늦게 사과했지만…
+                                        </a>
+                                    </span>
+                                </dt>
+                            </dl>
+                    </div>
+
+                </div>
+                <div class="right_article">
+                    <dl>
+                        <dt class="pic_box1">
+                            <div class="thumb">
+                                <a href="http://news.mk.co.kr/sforward.php?domain=star&amp;sc=40900002&amp;year=2016&amp;no=805909" target="_blank">
+                                    <img src="http://static.naver.net/newsstand/2016/1120/mkinternet/234656/008.jpg" width="129" height="82" alt="포토">
+                                </a>
+                            </div>
+                            <span class="pic_txt"><a href="http://news.mk.co.kr/sforward.php?domain=star&amp;sc=40900002&amp;year=2016&amp;no=805909" target="_blank">김제동 '그알' 시청 후<br> "진실은 침몰하지 않는다"</a></span>
+                        </dt>
+                    </dl>
+                    <dl class="mr_top">
+                        <dt class="pic_box1">
+                            <div class="thumb">
+                                <a href="http://news.mk.co.kr/sforward.php?domain=news&amp;no=805790&amp;year=2016" target="_blank">
+                                    <img src="http://static.naver.net/newsstand/2016/1120/mkinternet/234656/009.jpg" width="129" height="82" alt="포토">
+                                </a>
+                            </div>
+                            <span class="pic_txt"><a href="http://news.mk.co.kr/sforward.php?domain=news&amp;no=805790&amp;year=2016" target="_blank">알루미늄 테이프 붙이면<br> 연비가 좋아진다고?</a></span>
+                        </dt>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <a class="footer" href="http://sportalkorea.com"><strong>스포탈코리아</strong> 사이트 바로가기</a>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</body>
+</html>

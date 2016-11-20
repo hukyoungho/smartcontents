@@ -49,7 +49,7 @@ input에서 인라인처럼 줄바뀜은 없지만 블록처럼 스타일 속성을 먹는다
 
 블록 인라인 요소 알아보기
 
-* ul 속성에 list-style:0; 하면 li 앞의 표시들이 사라진다./
+* ul 속성에 list-style:none; 하면 li 앞의 표시들이 사라진다./
 
 * list-item속성은 li말고도 많은 곳에 display가 먹는다.
 

@@ -42,9 +42,12 @@ ex. 자식의 정렬을 하려면 어미의 line-height값이 정해져야 한다.
 
 *단축키
 
-shift tab
+shift tab 열 뒤로가기
 
-tab
+tab 열 앞으로가기
 
+요소 줄 보이게 하기 환경설정
 setting show indent guide
 tab length 4
+
+edit 에서 라인 오토 해주면 자동으로 정렬됨

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+    <style>
+    *{margin: 0; padding: 0;}
+    /*.guide_line{outline: 1px #f00 solid;}*/
+    .wrapper{
+        width: 900px;
+        height: 540px;
+        margin: 50px auto;
+    }
+    .footer{
+        width: 840px;
+        display:block;
+        text-align: right;
+
+        margin: 0 auto;
+    }
+    .heading{
+        width: 840px;
+        height: 55px;
+        padding: 20px 0 30px;
+        margin: 0 auto;
+        text-align: left;
+        border-bottom: 3px solid #545454;
+        overflow: hidden;
+
+    }
+    .heading .logo{
+        display: block;
+        float: left;
+
+    }
+    .heading .banner{
+        display: block;
+        float: right;
+        margin-top: 10px;
+    }
+    .heading_banner{
+        width: 840px;
+        height: 25px;
+        margin: -31px auto 20px;
+    }
+    .read{
+        width: 66px;
+        height: 21px;
+        background-image: url(../images/dd.png);
+        background-position: -256px -199px;
+        float: left;
+
+    }
+    .user{
+        width: 106px;
+        height: 21px;
+        background-image: url(../images/dd.png);
+        background-position: -293px -174px;
+
+        float: left;
+        margin-left: 3px
+
+    }
+    .give{
+        width: 28px;
+        height: 21px;
+        background-position: -500px -270px;
+        background-image: url(../images/dd.png);
+        float: left;
+        margin-left: 3px;
+    }
+
+    .heading_bottom span{
+        font-size: 11px;
+        display: inline-block;
+        line-height: 30px;
+        margin-left: 3px;
+    }
+    .contents {
+        width: 840px;
+        height: 380px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .contents .first{
+        width: 366px;
+        height: 380px;
+        margin-right: 10px;
+        float: left;
+    }
+    .contents .first .upper{
+        width: 366px;
+        height: 214px;
+    }
+    .contents .first .upper .up{
+        width: 366px;
+        height: 22px;
+    }
+    .contents .first .upper .up p{
+
+        font: 16px "Dotum", Arial;
+        font-weight: bold;
+        padding-top: 2px;
+
+    }
+    .contents .first .upper .up p a{
+        color: #000;
+    }
+    .contents .first .upper .down{
+        width: 366px;
+        height: 192px;
+        overflow: hidden;
+    }
+
+    .contents .first .middle{
+        width: 366px;
+        height: 47px;
+        padding-top: 5px;
+    }
+    .contents .first .middle ul{
+        list-style: none;
+    }
+    .contents .first .middle ul li{
+        background: url(http://static.naver.net/newsstand/2016/1120/sportal/051651/011.jpg)no-repeat left 8px;
+        padding-left: 5px;
+        line-height: 18px;
+
+
+
+
+    }
+    .contents .first .middle ul li a{
+        font: 12px "Dotum";
+        color: #000;
+    }
+    .contents .first .middle ul li span{
+        color: blue;
+
+
+
+
+    }
+    .contents .first .lower{
+        width: 366px;
+        height: 114px;
+    }
+    .contents .first .lower .box{
+        width: 114px;
+        height: 114px;
+        float: left;
+        overflow: hidden;
+        margin-right: 12px;
+
+    }
+    .contents .first .lower .box:last-child{
+        margin: 0;
+    }
+    .contents .first .lower .box .thumb{
+        width: 114px;
+        height: 84px;
+        overflow: hidden;
+    }
+    .contents .first .lower .box .tit{
+        text-align: center;
+        font: 11px "Dotum";
+        padding: 5px 5px 0 5px;
+
+    }
+
+
+
+    .contents .second{
+        width: 236px;
+        height: 380px;
+        margin-right: 10px;
+        float: left;
+    }
+    .contents .second .upper{
+        width: 232px;
+        height: 185px;
+        margin-bottom: 10px;
+        background-color: #ffe4e4;
+        border: 2px solid #ff5353;
+
+    }
+    .contents .second .upper .thumb{
+        width: 233px;
+        height: 132px;
+        overflow: hidden;
+    }
+    .contents .second .upper .tit{
+        width: 233px;
+        height: 29px;
+        font: 12px "Dotum";
+        padding-top: 8px;
+        line-height: 20px;
+        font-weight: bold;
+    }
+    .contents .second .upper .tit ul li{
+        background: url(http://static.naver.net/newsstand/2016/1120/sportal/051651/012.jpg)no-repeat 5px;
+        padding-left: 10px;
+    }
+    .contents .second .upper .tit ul li a{
+        color: #000;
+
+    }
+    .contents .second .lower{
+        width: 216px;
+        height: 161px;
+        background-color: #f6f6f6;
+        border: 2px solid #d0d0d0;
+        padding: 8px;
+        overflow: hidden;
+    }
+    .contents .second .lower .first{
+        height: 23px;
+        border-bottom: 1px solid #d0d0d0;
+    }
+    .contents .second .lower .second{
+        height: 69px;
+    }
+    .contents .second .lower .second .thumb{
+        width: 57px;
+        height: 57px;
+        float: left;
+        overflow: hidden;
+        margin-top: 6px;
+        margin-right: 8px;
+    }
+    .contents .second .lower .second .tit{
+        height: 35px;
+        width: 145px;
+        padding-top: 16px;
+        overflow: hidden;
+        font: 13px "Dotum";
+        line-height: 18px;
+        font-weight: bold;
+    }
+    .contents .second .lower .second .tit a{
+        color: #f42c6d;
+
+    }
+    .contents .second .lower .third{
+        height: 71px;
+        overflow: hidden;
+    }
+    .contents .second .lower .third ul li{
+        font: 12px "Dotum";
+        color: #000;
+        padding-left: 8px;
+        line-height: 18px;
+        background: url(http://static.naver.net/newsstand/2016/1120/sportal/051651/012.jpg)no-repeat left 8px;
+
+    }
+    .contents .second .lower .third ul li a{
+        color: #000;
+    }
+
+
+    .contents .third{
+        width: 218px;
+        height: 380px;
+        float: left;
+    }
+    .contents .third .upper{
+        width: 218px;
+        height: 260px;
+        margin-bottom: 10px;
+
+    }
+    .contents .third .upper .up{
+        width: 218px;
+        height: 260px;
+        overflow: hidden;
+        position: relative;
+    }
+    .contents .third .upper .tit{
+        width: 218px;
+        height: 30px;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        background: url(http://static.naver.net/newsstand/2016/1120/sportal/051651/013.png)repeat-x;
+    }
+    .contents .third .upper .tit p{
+        font: 12px "dotum";
+        padding: 8px 5px;
+    }
+    .contents .third .upper .tit p a{
+        color: #fff
+    }
+    .contents .third .down{
+        width: 218px;
+        height: 110px;
+
+    }
+    .contents .third .down .first{
+        width: 104px;
+        height: 110px;
+        margin-right: 10px;
+        float: left;
+        overflow: hidden;
+    }
+    .contents .third .down .first:last-child{
+        margin: 0;
+    }
+    .contents .third .down .first .thumb{
+        width: 104px;
+        height: 78px;
+        overflow: hidden;
+    }
+    .contents .third .down .first .tit{
+        width: 104px;
+        height: 32px;
+        overflow: hidden;
+        font: 11px "dotum";
+        line-height: 15px;
+        text-align: center;
+        padding-top: 3px;
+        border: 1px;
+    }
+    .contents .third .down .first .tit a{
+        color: #2f5e96;
+
+    }
+
+
+    </style>
+
+<body>
+    <div class="wrapper guide_line">
+        <div class="heading guide_line">
+            <a  class="logo "href="">
+                <img src="http://static.naver.net/newsstand/up/2013/0813/nsd114556183.gif" width="260" height="55" alt="스포탈코리아">
+            </a>
+            <a class="banner"href="">
+                <img src="http://adcreative.naver.com/ad3/1004/1004874/468_60_01473227375503.jpg" width="468" height="60" title="" alt="광고 영역 입니다." border="0">
+            </a>
+        </div>
+        <div class="heading_banner guide_line">
+            <a class="read"href=""></a>
+            <a class="user"href=""></a>
+            <a class="give"href=""></a>
+            <span class="date">11-20 05:10</span>
+        </div>
+        <div class="contents guide_line">
+            <div class="first guide_line">
+                <div class="upper guide_line">
+                    <div class="up">
+                        <p>
+                            <a href="http://www.sportalkorea.com/news/view.php?gisa_uniq=2016112003173673&amp;section_code=20&amp;key=&amp;field=&amp;search_key=y" target="_blank">'손흥민 3호 도움+PK 유도' 토트넘, 웨스트...</a>
+                        </p>
+                    </div>
+                    <div class="down">
+                        <a href="http://www.sportalkorea.com/news/view.php?gisa_uniq=2016112003173673&amp;section_code=20&amp;key=&amp;field=&amp;search_key=y" target="_blank"><img src="http://static.naver.net/newsstand/2016/1120/sportal/051651/001.jpg" width="366" height="192" alt="메인포토 이미지"></a>
+                    </div>
+                </div>
+                <div class="middle guide_line">
+                    <ul>
+                        <li>
+                            <a href=""><span>맨유, TOP4 실패 시 약 329억 손해...적잖은 타격 예상</span></a>
+                        </li>
+                        <li>
+                            <a href="">메시, 축구협회 대신 경비원 월급 지급...6개월 동안</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lower guide_line">
+                    <div class="box">
+                        <div class="thumb">
+                            <a href="http://www.sportalkorea.com/news/view.php?gisa_uniq=2016111714502527&amp;section_code=20&amp;key=&amp;field=&amp;search_key=y" target="_blank"><img src="http://static.naver.net/newsstand/2016/1120/sportal/051651/002.jpg" width="114" height="84" alt="기사 이미지"></a>
+                        </div>
+                        <div class="tit">
+                            <a href="http://www.sportalkorea.com/news/view.php?gisa_uniq=2016111714502527&amp;section_code=20&amp;key=&amp;field=&amp;search_key=y" target="_blank">오카자키 "박지성, 아시아 최고의 프리미어...</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="thumb">
+                            <img src="http://static.naver.net/newsstand/2016/1120/sportal/051651/003.jpg" width="114" height="84" alt="기사 이미지">
+                        </div>
+                        <div class="tit">
+                            <a href="http://www.sportalkorea.com/news/view_sub.php?gisa_uniq=20161116093746&amp;section_code=7063&amp;key=&amp;field=&amp;search_key=y" target="_blank">‘바르사 팬’ 브라질 모델, 매력적 뒤태 인...</a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="thumb">
+                            <img src="http://static.naver.net/newsstand/2016/1120/sportal/051651/003.jpg" width="114" height="84" alt="기사 이미지">
+                        </div>
+                        <div class="tit">
+                            <a href="http://www.sportalkorea.com/news/view_sub.php?gisa_uniq=20161116093746&amp;section_code=7063&amp;key=&amp;field=&amp;search_key=y" target="_blank">‘바르사 팬’ 브라질 모델, 매력적 뒤태 인...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="second guide_line">
+                <div class="upper">
+                    <div class="thumb">
+                        <a href="http://www.sportalkorea.com/news/view_sub.php?gisa_uniq=20161118094045&amp;section_code=7063&amp;key=&amp;field=&amp;search_key=y" target="_blank"><img src="http://static.naver.net/newsstand/2016/1120/sportal/051651/005.jpg" width="233" height="132" alt="기사 이미지">
+                            <img src="http://static.naver.net/newsstand/2016/1120/sportal/051651/005.jpg" width="233" height="132" alt="기사 이미지">
+                        </a>
+                    </div>
+                    <div class="tit">
+                        <ul>
+    						<li><a href="http://www.sportalkorea.com/news/view_sub.php?gisa_uniq=20161118094045&amp;section_code=7063&amp;key=&amp;field=&amp;search_key=y" target="_blank">낚시대로 상어를 낚은 여성</a></li>
+    						<li><a href="http://www.sportalkorea.com/news/view_sub.php?gisa_uniq=20161116114200&amp;section_code=7063&amp;key=&amp;field=&amp;search_key=y" target="_blank">서퍼를 향해 돌진하는 거대 상어</a></li>
+    					</ul>
+                    </div>
+                </div>
+                <div class="lower">
+                    <div class="first">
+                        <img src="http://static.naver.net/newsstand/2016/1120/sportal/051651/006.jpg" alt="핫눈뉴스">
+
+                    </div>
+                    <div class="second">
+                        <div class="thumb">
+                            <img src="http://static.naver.net/newsstand/2016/1120/sportal/051651/007.jpg" width="57" height="57" alt="핫눈뉴스">
+                        </div>
+                        <div class="tit">
+                            <a href="http://www.sportalkorea.com/news/view.php?gisa_uniq=2016111718015255&amp;section_code=10&amp;key=&amp;field=&amp;search_key=y" target="_blank">이수그니에스타 드리블 실력.gif</a>
+                        </div>
+                    </div>
+                    <div class="third">
+                        <ul>
+                            <li>
+                                <a href="http://www.sportalkorea.com/news/view_sub.php?gisa_uniq=20161118093420&amp;section_code=7063&amp;key=&amp;field=&amp;search_key=y" target="_blank"> 쓰레기통에 버려진 자동차</a>
+                            </li>
+                            <li>
+                                <a href="http://www.sportalkorea.com/news/view.php?gisa_uniq=2016111718183555&amp;section_code=10&amp;key=&amp;field=&amp;search_key=y" target="_blank">인조잔디 축구장, 득일까 실일까?</a>
+                            </li>
+                            <li>
+                                <a href="http://www.sportalkorea.com/news/view.php?gisa_uniq=2016111718183555&amp;section_code=10&amp;key=&amp;field=&amp;search_key=y" target="_blank">인조잔디 축구장, 득일까 실일까?</a>
+                            </li>
+                            <li>
+                                <a href="http://www.sportalkorea.com/news/view.php?gisa_uniq=2016111718183555&amp;section_code=10&amp;key=&amp;field=&amp;search_key=y" target="_blank">인조잔디 축구장, 득일까 실일까?</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="third guide_line">
+                <div class="upper">
+                    <div class="up">
+                        <a href="http://www.sportalkorea.com/news/view_sub.php?gisa_uniq=20161117101553&amp;section_code=7063&amp;key=&amp;field=&amp;search_key=y" target="_blank"><img src="http://static.naver.net/newsstand/2016/1120/sportal/051651/008.jpg" alt="가십01" width="218" height="260">
+
+                        <img src="http://static.naver.net/newsstand/2016/1120/sportal/051651/008.jpg" alt="가십01" width="218" height="260"></a>
+                        <div class="tit">
+                            <p>
+                                <a href="http://www.sportalkorea.com/news/view_sub.php?gisa_uniq=20161117101553&amp;section_code=7063&amp;key=&amp;field=&amp;search_key=y" target="_blank">운동은 이렇게 하는거야!</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="down">
+                    <div class="first">
+                        <div class="thumb">
+                            <a href="http://www.sportalkorea.com/news/view_sub.php?gisa_uniq=20161118123324&amp;section_code=7063&amp;key=&amp;field=&amp;search_key=y" target="_blank">
+                                <img src="http://static.naver.net/newsstand/2016/1120/sportal/051651/009.jpg" alt="가십03" width="104" height="78">
+                            </a>
+                        </div>
+                        <div class="tit">
+                            <a href="http://www.sportalkorea.com/news/view_sub.php?gisa_uniq=20161118123324&amp;section_code=7063&amp;key=&amp;field=&amp;search_key=y" target="_blank">두 사람의 다리찢기?</a>
+                        </div>
+                    </div>
+                    <div class="first">
+                        <div class="thumb">
+                            <a href="http://www.sportalkorea.com/news/view_sub.php?gisa_uniq=20161118123324&amp;section_code=7063&amp;key=&amp;field=&amp;search_key=y" target="_blank">
+                                <img src="http://static.naver.net/newsstand/2016/1120/sportal/051651/009.jpg" alt="가십03" width="104" height="78">
+                            </a>
+                        </div>
+                        <div class="tit">
+                            <a href="http://www.sportalkorea.com/news/view_sub.php?gisa_uniq=20161118123324&amp;section_code=7063&amp;key=&amp;field=&amp;search_key=y" target="_blank">두 사람의 다리찢기?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="footer" href="http://sportalkorea.com"><strong>스포탈코리아</strong> 사이트 바로가기</a>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</body>
+</html>

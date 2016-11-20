@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Documen</title>
+</head>
+    <style>
+    /*.guide_line{outline: 1px red solid;}*/
+    *{margin: 0; padding: 0; font-family: "돋움";font-size: 11px;}
+    .wrapper{
+        width: 900px;
+        height: 540px;
+        margin: 30px auto;
+
+
+    }
+    .heading{
+        width: 840px;
+        height: 83px;
+        margin: 0 auto ;
+
+
+    }
+    .heading h1{
+        width: 260px;
+        height: 55px;
+        overflow: hidden;
+        float: left;
+
+    }
+    .heading h1 img{
+        width: 100%;
+    }
+    .heading div{
+        width: 468px;
+        height: 60px;
+        overflow: hidden;
+        float: right;
+
+        margin-top: 40px;
+
+
+    }
+    .heading div img{
+        width: 100%;
+    }
+    .heading_bottom{
+        border-bottom: 4px black solid;
+        width: 840px;
+
+        margin: 0 auto;
+    }
+    .heading_bottom{
+        width: 840px;
+        height: 24px;
+        border-bottom: 3px black solid;
+        margin: 0 auto;
+
+    }
+    .read{
+        width: 66px;
+        height: 21px;
+        background-image: url(../images/dd.png);
+        background-position: -256px -199px;
+        float: left;
+
+    }
+    .user{
+        width: 106px;
+        height: 21px;
+        background-image: url(../images/dd.png);
+        background-position: -293px -174px;
+
+        float: left;
+        margin-left: 3px
+
+    }
+    .give{
+        width: 28px;
+        height: 21px;
+        background-position: -500px -270px;
+        background-image: url(../images/dd.png);
+        float: left;
+        margin-left: 3px;
+    }
+
+    .heading_bottom span{
+        font-size: 11px;
+        display: inline-block;
+        line-height: 30px;
+        margin-left: 3px;
+    }
+
+
+
+
+    .contents{
+        width: 840px;
+        height: 380px;
+        margin: 20px auto 0;
+    }
+    .contents .upper{
+        width: 840px;
+        border: 1px solid #d2d2d2;
+        overflow: hidden;
+    }
+    .contents .left{
+        width: 581px;
+        float: left;
+        border: 1px solid #d2d2d2;
+
+    }
+    .contents .left h1{
+        padding: 0 0 12px;
+    }
+    .contents .left h1 span{
+        padding: 0 20px 2px 30px;
+        font-size: 25px;
+        line-height: 27px;
+        letter-spacing: -2px;
+        color: #133f9a;
+        text-overflow: nowrap;
+        overflow: hidden;
+        display: block;
+        background: url(http://image.donga.com/sportsdonga/2015/images/bg_main.gif) no-repeat 0 -77px;
+        font-family: 'Malgun Gothic'
+
+    }
+    .contents .left > a{
+        width: 262px;
+        margin-right: 15px;
+        position: relative;
+        float: left;
+        overflow: hidden;
+    }
+    .contents .left > a img{
+        width: 262px;
+        height: 138px;
+    }
+    .contents .left > a .tit{
+        width: 250px;
+        height: 34px;
+        line-height: 34px;
+        padding: 0 6px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        color: #fff;
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+        text-overflow: ellipsis;
+
+        overflow: hidden;
+        background: url(http://image.donga.com/sportsdonga/2015/images/bg_transparent_01.png) repeat 0 0;
+
+    }
+    .contents .left .right {
+        width: 288px;
+        padding: 3px 0px 4px;
+        border-bottom: 1px solid #e3e3e3;
+        float: right;
+        margin-right: 15px;
+
+    }
+    .contents .left  li{
+        padding-left: 8px;
+        background: url(http://image.donga.com/sportsdonga/2015/images/bul_rect_01.gif) no-repeat 0 12px;
+
+    }
+    .contents .left li a{
+        width: 280px;
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: bold;
+        color: #282828;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        display: block;
+    }
+    .contents .left .down {
+        width: 580px;
+        padding: 8px 0;
+        clear: both;
+
+    }
+    .contents .left .down li{
+        margin-right: 12px;
+        float: left;
+        background: url(http://image.donga.com/sportsdonga/2015/images/bul_rect_02.gif) no-repeat 0 12px;
+
+    }
+    .contents .left .down li a{
+        width: 257px;
+        color: #133f9a;
+    }
+    .contents .right_article{
+        width: 235px;
+        height: 225px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        float: right;
+
+    }
+    .contents .right_article li{
+        display: block;
+        overflow: hidden;
+    }
+    .contents .right_article li a + a{
+
+        width: 100px;
+        float: right;
+        margin-top: 10px;
+        margin-right: 10px;
+        font-size: 12px;
+        line-height: 18px;
+
+    }
+    .contents .right_article .pic{
+        width: 112px;
+        height: 63px;
+        overflow: hidden;
+        float: left;
+        margin-bottom: 19px;
+
+    }
+    .contents .right_article .pic img{
+        width: 112px;
+        height: 63px;
+    }
+    .contents .lower{
+        width: 840px;
+        overflow: hidden;
+        padding: 12px 0 18px 0;
+    }
+    .contents .lower ul li{
+        float: left;
+        display: block;
+        width: 152px;
+        height: 121px;
+        margin-right: 16px;
+
+    }
+    .contents .lower ul li .box{
+        width: 152px;
+        height: 80px;
+        overflow: hidden;
+
+
+    }
+    .contents .lower ul li .box img{
+        width: 152px;
+        height: 80px;
+    }
+    .btn_gomedia{
+        float: right;
+        font-size: 11px;
+        color: #494949
+    }
+
+
+
+
+
+
+
+
+
+    </style>
+<body>
+    <div class="wrapper guide_line">
+        <div class="heading">
+            <h1>
+                <img src="http://static.naver.net/newsstand/up/2013/0813/nsd114516931.gif" alt="">
+            </h1>
+            <div>
+                <img src="http://adcreative.naver.com/ad3/1004/1004874/468_60_01475642087174.jpg" alt="">
+            </div>
+        </div>
+        <div class="heading_bottom">
+            <a class="read" href=""></a>
+            <a class="user" href=""></a>
+            <a class="give" href=""></a>
+            <span>11-18 16:13편집</span>
+
+
+        </div>
+        <div class="contents guide_line">
+            <div class="upper guide_line">
+                <div class="left guide_line">
+                    <h1>
+                        <span>이병헌 동생 이은희 결국 이혼, 남편 불미스런 일 탓</span>
+                    </h1>
+                    <a href="http://sports.donga.com/NewsStand/3/all/20161118/81411605/1" target="_blank">
+                        <img src="http://static.naver.net/newsstand/2016/1118/sportsdonga/210749/001.jpg" alt="허경영, 예상 뒤엎는 충격 행보…고가 외제차까지 동원">
+                        <span class="tit">허경영, 예상 뒤엎는 충격 행보…고가 외제차까지 동원</span>
+                        <span class="line"></span>
+                    </a>
+                    <ul class="right">
+                        <li>
+                            <a href="http://sports.donga.com/NewsStand/3/all/20161118/81403094/1" target="_blank">이병헌 동생 이은희 결국 이혼, 남편 불미스런 일 탓</a>
+                        </li>
+                        <li>
+                            <a href="http://sports.donga.com/NewsStand/3/all/20161119/81414244/1" target="_blank">채리나 “시국이 시끄러워 결혼축하도 사치…감사해”</a>
+                        </li>
+                        <li>
+                            <a href="<a href="http://sports.donga.com/NewsStand/3/all/20161118/81401116/1" target="_blank">최민수 오토바이 사고에 아내 눈물…큰 부상 당해"</a>
+                        </li>
+                        <li>
+                            <a href="<a href="http://sports.donga.com/NewsStand/3/all/20161118/81406535/1" target="_blank">친딸 성폭행-몰카…짐승만도 못한 父 형량이 ‘경악’"</a>
+                        </li>
+                        <li>
+                            <a href="<a href="http://sports.donga.com/NewsStand/3/all/20161118/81405235/1" target="_blank">남궁원 “에로물 집중 출연 했던 이유…” 짠한 진심"</a>
+                        </li>
+                    </ul>
+                    <ul class="down">
+                        <li>
+                            <a href="http://sports.donga.com/NewsStand/3/all/20161119/81414471/1" target="_blank">“졸리 한방에 훅갈 수 있어” 피트 녹취록 보유</a>
+                        </li>
+                        <li>
+                            <a href="http://sports.donga.com/NewsStand/3/all/20161118/81406473/1" target="_blank">김성주 막내딸 폭풍성장, 민국-민율 쏙 빼닮은 얼굴</a>
+                        </li>
+                        <li>
+                            <a href="http://sports.donga.com/NewsStand/3/all/20161119/81414301/1" target="_blank">유이, 트레이닝복만 입었는데… ‘시선강탈자’</a>
+                        </li>
+                        <li>
+                            <a href="http://sports.donga.com/NewsStand/3/all/20161118/81409354/1" target="_blank">최순실 조카 장시호, 반 꼴찌하고도 명문대 떡하니…</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <ul class="right_article guide_line">
+                    <li>
+                        <a class="pic" href="">
+                            <img src="http://static.naver.net/newsstand/2016/1119/sportsdonga/133751/002.jpg" alt="안소희 전 남친이 강하늘? 경악 전개">
+                        </a>
+                        <a href="http://sports.donga.com/NewsStand/3/all/20161118/81412611/1" target="_blank">안소희 전 남친이 강하늘? 경악 전개</a>
+                    </li>
+                    <li>
+                        <a  class="pic" href="">
+                            <img src="http://static.naver.net/newsstand/2016/1119/sportsdonga/133751/003.jpg" alt="칩거 중인 정윤회 “아내 최순실 날 질투했었다”">
+                        </a>
+                        <a href="http://sports.donga.com/NewsStand/3/all/20161118/81400654/1" target="_blank">칩거 중인 정윤회 “아내 최순실 날 질투했었다”</a>
+                    </li>
+                    <li>
+                        <a  class="pic" href="">
+                            <img src="http://static.naver.net/newsstand/2016/1119/sportsdonga/133751/004.jpg" alt="“예쁘니까 세금 감면해달라”… 여배우 얼굴보니">
+                        </a>
+                        <a href="http://sports.donga.com/NewsStand/3/all/20161117/81382157/1" target="_blank">“예쁘니까 세금 감면해달라”… 여배우 얼굴보니</a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="lower guide_line">
+                <ul>
+                    <li>
+                        <a  class="box"href="">
+                            <img src="http://static.naver.net/newsstand/2016/1119/sportsdonga/133751/005.jpg" alt="[엔터카툰 제7화 ‘길라임’] 이 바보 같은 여자 이 거지 같은 여자">
+                        </a>
+                        <a href="http://sports.donga.com/NewsStand/3/all/20161118/81401181/2" target="_blank">[엔터카툰 제7화 ‘길라임’] 이 바보 같은 여자 이 거지 같은 여자</a>
+                    </li>
+                    <li>
+                        <a class="box" href="">
+                            <img src="http://static.naver.net/newsstand/2016/1119/sportsdonga/133751/006.jpg" alt="‘태국 재벌과 결혼’ 신주아 “돈이 중요하지만…”">
+                        </a>
+                        <a href="http://sports.donga.com/NewsStand/3/all/20161117/81389657/1" target="_blank">‘태국 재벌과 결혼’ 신주아 “돈이 중요하지만…”</a>
+                    </li>
+                    <li>
+                        <a class="box" href="">
+                            <img src="http://static.naver.net/newsstand/2016/1119/sportsdonga/133751/007.jpg" alt="‘댄서킴’ 김기수, 경악 비주얼…하리수 뛰어 넘을 듯">
+                        </a>
+                        <a href="http://sports.donga.com/NewsStand/3/all/20161117/81381601/1" target="_blank">‘댄서킴’ 김기수, 경악 비주얼…하리수 뛰어 넘을 듯</a>
+                    </li>
+                    <li>
+                        <a class="box"href="">
+                            <img src="http://static.naver.net/newsstand/2016/1119/sportsdonga/133751/008.jpg" alt="‘엉덩이가 예쁜 여자’ 정선경, 늙지 않는 미모">
+                        </a>
+                        <a href="http://sports.donga.com/NewsStand/3/all/20161117/81391764/1" target="_blank">‘엉덩이가 예쁜 여자’ 정선경, 늙지 않는 미모</a>
+                    </li>
+                    <li>
+                        <a class="box"href="">
+                            <img src="http://static.naver.net/newsstand/2016/1119/sportsdonga/133751/008.jpg" alt="‘엉덩이가 예쁜 여자’ 정선경, 늙지 않는 미모">
+                        </a>
+                        <a href="http://sports.donga.com/NewsStand/3/all/20161117/81391764/1" target="_blank">‘엉덩이가 예쁜 여자’ 정선경, 늙지 않는 미모</a>
+                    </li>
+                </ul>
+
+            </div>
+            <a href="http://sports.donga.com/" target="_blank" class="btn_gomedia"><strong>스포츠동아</strong> 사이트 바로가기<span class="ico"></span></a>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+</body>
+</html>
