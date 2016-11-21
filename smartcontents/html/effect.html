@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    /*http://www.w3schools.com/cssref/css3_pr_transform.asp*/
+        a{
+            display:inline-block;
+            border:1px #F00 solid;
+            width:200px;
+            height:100px;
+            text-align:center;
+            font-size:50px;
+            text-decoration: none;
+            color:#000;
+            line-height: 100px;
+            transition:1000ms;
+        }
+        a:hover{
+            background-color:#F00;
+            color:#FFF;
+            border-radius:10px;
+            animation: myani 3s;
+        }
+
+
+        .box1{
+            width:100px;
+            height:100px;
+            border:1px #F00 solid;
+            animation: myani 3s;
+            position:relative;
+            font-size:100px;
+        }
+
+        @keyframes myani {
+            0%{left:0; top:0;}
+            20%{left:500px; top:0; transform:rotate(100deg)}
+            50%{left:500px; top:200px; transform:rotateX(100deg)}
+            70%{left:0; top:700px;transform:skew(2,2)}
+            100%{left:0; top:0;}
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+
+    <a href="">text</a>
+    <!--<a href="">text</a>-->
+    <!--<a href="">text</a>-->
+    <!--<a href="">text</a>
+
+    <div class="box1">
+
+        밗박수!
+    </div>
+
+
+
+
+</body>
+</html>

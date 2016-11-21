@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+    </style>
+</head>
+<style>
+  *{margin:0; padding:0;}
+  body,html{height:100%;}
+  .intro{position:relative; border:1px #F00 solid; height:100%; overflow:hidden;}
+  .wrap{position:absolute; top:0; left:0; border:1px #00F solid; width:100%;
+      color:#FFF;
+      text-align:center;
+      display:table;
+      height:100%;
+   }
+   h1{
+       display:table-cell;
+       vertical-align: middle;
+       border:1px #F00 solid;
+       font-size: 50px;
+       text-transform: capitalize;
+   }
+  .box{position:absolute; width:500px; height:500px; background-color:rgba(0,0,0,.8);
+      right:-250px;
+      bottom:-250px;
+      transform:rotate(45deg);
+  }
+  video{ width:1920px; position:relative; left:50%; margin-left:calc( -1 * 1920px / 2);}
+  /*박스 값이 고정 일때 쓸쑤 있고 고정이 아니면 script로 연산해야한다.*/
+</style>
+<body>
+    <div class="intro">
+        <video width="100%;" autoplay loop>
+          <source src="../images/Happy New Year - 3565.mp4" type="video/mp4">
+        </video>
+        <div class="box"></div>
+        <div class="wrap">
+            <h1>Your christmas is very happy to you. arent you?</h1>
+        </div>
+    </div>
+
+        <!--controls는 재생바  autoplay는 자동 재생 loop는 반복 재생 -->
+        <!-- video 태그는 모바일에서 지원 안함. -->
+
+
+
+
+
+</body>
+</html>

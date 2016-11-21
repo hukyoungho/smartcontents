@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <style>
+    .wrapper {
+        width: 500px;
+        height: 500px;
+        position: relative;
+        outline: 1px solid black;
+        overflow: hidden;
+
+    }
+    div[class^="box"]{
+        outline: 1px solid black;
+        position: absolute;
+    }
+    .box1:hover{
+
+        animation: myani 3s;
+    }
+    @keyframes myani {
+        0%{left:0; top:0; transform:rotate(100deg)}
+        20%{left:0px; top:0; transform:skew(2,2)}
+        50%{left:0px; top:0; transform:rotateX(100deg)}
+        70%{left:0; top:0;transform:skew(2,2)}
+        100%{left:0; top:0; transform:skew(2,2)}
+    }
+
+
+    .box1{
+        border-bottom: 9px solid black;
+
+        width: 25%;
+        height: 25%;
+        z-index: 1;
+
+
+    }
+    .box2:hover{
+
+        animation: myani2 3s;
+    }
+    @keyframes myani2 {
+        0%{left:0; top:25%; transform:rotate(100deg)}
+        20%{left:0px; top:25%; transform:skew(2,2)}
+        50%{left:0px; top:25%; transform:rotateX(100deg)}
+        70%{left:0; top:25%;transform:skew(2,2)}
+        100%{left:0; top:25%; transform:skew(2,2)}
+    }
+    .box2{
+        border-bottom: 5px solid black;
+        width: 25%;
+        height: 50%;
+        top:25%;
+        z-index: 1;
+
+    }
+    .box3:hover{
+
+        animation: myani3 3s;
+    }
+    @keyframes myani3 {
+        0%{left:0%; top:75%; transform:rotate(100deg)}
+        20%{left:0%; top:75%; transform:skew(2,2)}
+        50%{left:0%; top:75%; transform:rotateX(100deg)}
+        70%{left:0%; top:75%;transform:skew(2,2)}
+        100%{left:0%; top:75%; transform:skew(2,2)}
+    }
+    .box3{
+        background-color: #0d4590;
+        border-right: 5px solid black;
+        width: 25%;
+        height: 25%;
+        top:75%;
+
+    }
+    .box4:hover{
+
+        animation: myani4 3s;
+    }
+    @keyframes myani4 {
+        0%{left:25%; top:0%; transform:rotate(100deg)}
+        20%{left:25%; top:0%; transform:skew(2,2)}
+        50%{left:25%; top:0%; transform:rotateX(100deg)}
+        70%{left:25%; top:0%;transform:skew(2,2)}
+        100%{left:25%; top:0%; transform:skew(2,2)}
+    }
+    .box4{
+        background-color: #d10101;
+        border-bottom: 5px solid black;
+        border-left: 5px solid black;
+        width: 75%;
+        height: 75%;
+        left:25%
+
+    }
+    .box5:hover{
+
+        animation: myani5 3s;
+    }
+    @keyframes myani5 {
+        0%{left:25%; top:75%; transform:rotate(100deg)}
+        20%{left:25%; top:75%; transform:skew(2,2)}
+        50%{left:25%; top:75%; transform:rotateX(100deg)}
+        70%{left:25%; top:75%;transform:skew(2,2)}
+        100%{left:25%; top:75%; transform:skew(2,2)}
+    }
+    .box5{
+        border-right: 5px solid black;
+        width: 70%;
+        height: 25%;
+        left:25%;
+        top:75%;
+        z-index: 2;
+
+    }
+    .box6:hover{
+
+        animation: myani6 3s;
+    }
+    @keyframes myani6 {
+        0%{right:0; top:75%; transform:rotate(100deg)}
+        20%{right:0; top:75%; transform:skew(2,2)}
+        50%{right:0; top:75%; transform:rotateX(100deg)}
+        70%{right:0; top:75%;transform:skew(2,2)}
+        100%{right:0; top:75%; transform:skew(2,2)}
+    }
+    .box6{
+        border-bottom: 5px solid black;
+
+        width: 5%;
+        height: 12.5%;
+        right:0;
+        top:75%;
+        z-index: 1;
+
+    }
+    .box7:hover{
+
+        animation: myani7 3s;
+    }
+    @keyframes myani7 {
+        0%{right:0; top:87.5%; transform:rotate(100deg)}
+        20%{right:0px; top:87.5%; transform:skew(2,2)}
+        50%{right:0px; top:87.5%; transform:rotateX(100deg)}
+        70%{right:0; top:87.5%;transform:skew(2,2)}
+        100%{right:0; top:87.5%; transform:skew(2,2)}
+    }
+    .box7{
+        background-color: #cfaa11;
+
+        width: 5%;
+        height: 12.5%;
+        right:0;
+        top:87.5%;
+
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+    </div>
+
+
+</body>
+</html>

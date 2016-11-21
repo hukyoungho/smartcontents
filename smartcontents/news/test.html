@@ -1,47 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style type="text/css">
+        /*p:target{color:#F00;}*/
+
+
+        *{margin:0; padding:0;}
+        ul{
+            list-style:none;
+            width:300px;
+            border:1px #F00 solid;
+            border-radius:30px;
+            padding:20px 0;
+        }
+
+        li {
+            margin:0 20px;
+
+        }
+
+        li div{
+            border:1px #F00 solid;
+            height:0px;
+            overflow-y: scroll;
+            transition:1s ;
+        }
+        div:target.box{
+            height:100px;
+            animation: myani 3s;
+        }
+        @keyframes myani {
+            0%{left:0; top:0;}
+            20%{left:500px; top:0; transform:rotate(100deg)}
+            50%{left:500px; top:200px; transform:rotateX(100deg)}
+            70%{left:0; top:700px;transform:skew(2,2)}
+            100%{left:0; top:0;}
+        }
+        .left{
+
+        }
+        .right{
+            position: absolute;
+            top:0;
+            left:300px;
+        }
+
+
+    </style>
 </head>
-<style >
-    .span{
-        outline:  1px black solid;
-
-    }
-    .div{
-        outline:  1px orange solid;
-        width: 300px;
-        height: 200px;
-
-        display: inline-block;
-        line-height: 200px;
-
-    }
-    .div ul{
-        outline:  1px powderblue solid;
-        margin: 0px;
-        vertical-align: top;
-        line-height: 200px;
-
-
-
-
-    }
-    .div ul li{
-        padding-left: 0ptop
-</style>
-
 <body>
-    <span class="span">
-        <a href="">허경호 입니다.</a>
-    </span>
-    <div class="div">
-        <ul>
-            <li>허경호는 천재입니다</ltop
-        </ul>
-    </div>
+
+
+
+
+
+<ul class="left">
+    <li ><a href="#menu3">open</a>
+        <div id="menu3" class="box">
+            점차 사용자가 위지윅(WYSIWYG) 편집을 할 수 있도록 지원하는 위키가 늘고 있다. 위지윅 편집은 위키 마크업의 모든 기능을 제공하지 못하므로, 이들 사이트에서는 편집자가 위키 문서를 직접 수정하는 방법을 제공하기도 한다.
+            점차 사용자가 위지윅(WYSIWYG) 편집을 할 수 있도록 지원하는 위키가 늘고 있다. 위지윅 편집은 위키 마크업의 모든 기능을 제공하지 못하므로, 이들 사이트에서는 편집자가 위키 문서를 직접 수정하는 방법을 제공하기도 한다.
+        </div>
+
+    </li>
+
+</ul>
+<div class="right"><a href="">close</a></div>
+
+
 </body>
 </html>
