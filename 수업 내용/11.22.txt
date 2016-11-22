@@ -1,0 +1,19 @@
+https://www.udemy.com/courses/development/web-development/
+
+강의
+
+less 사용하려면 node js 설치해야한다.
+
+
+less 설치
+
+npm install -g less
+
+
+아톰에 less 설치하려면 저장소 있는 폴더에서 깃배쉬를 통해 받는다.
+
+깃배쉬에서 lessc치면
+
+아무 멘트가 안나온다. 그러면 안깔린거임.
+
+컨파일 하면 오류메시지 나오면서 컨파일이 안된다.

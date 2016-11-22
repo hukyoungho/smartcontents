@@ -1,73 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <title>Document</title>
-    <style type="text/css">
-        /*p:target{color:#F00;}*/
-
-
-        *{margin:0; padding:0;}
-        ul{
-            list-style:none;
-            width:300px;
-            border:1px #F00 solid;
-            border-radius:30px;
-            padding:20px 0;
-        }
-
-        li {
-            margin:0 20px;
-
-        }
-
-        li div{
-            border:1px #F00 solid;
-            height:0px;
-            overflow-y: scroll;
-            transition:1s ;
-        }
-        div:target.box{
-            height:100px;
-            animation: myani 3s;
-        }
-        @keyframes myani {
-            0%{left:0; top:0;}
-            20%{left:500px; top:0; transform:rotate(100deg)}
-            50%{left:500px; top:200px; transform:rotateX(100deg)}
-            70%{left:0; top:700px;transform:skew(2,2)}
-            100%{left:0; top:0;}
-        }
-        .left{
-
-        }
-        .right{
-            position: absolute;
-            top:0;
-            left:300px;
-        }
-
-
-    </style>
 </head>
 <body>
+    <style>
+    *{margin:0; padding:0;}
+    ul{
+        list-style:none;
+        width:500px;
+        border:1px #F00 solid;
+        border-radius:30px;
+        padding:20px 0;
 
+    }
 
+    li {
+        margin:0 20px;
 
+    }
+    li div.box{
 
+        height:0px;
+        overflow-y: scroll;
+        transition:1s ;
+        animation: myani 1s;
+    }
+    div:target.box{
+        height:100px;
+        
+    }
 
-<ul class="left">
-    <li ><a href="#menu3">open</a>
-        <div id="menu3" class="box">
+    @keyframes myani {
+        0%{left:0; top:0;}
+        20%{left:500px; top:0; transform:rotate(100deg)}
+        50%{left:500px; top:200px; transform:rotateX(100deg)}
+        70%{left:0; top:700px; transform:skew(2,2)}
+        100%{left:0; top:0;}
+    }
+    li div.boxx{
+
+        height:0px;
+        overflow-y: scroll;
+        transition:1s ;
+        animation: myani2 2s;
+    }
+    div:target.boxx{
+        height:100px;
+        width: 300px;
+
+    }
+    @keyframes myani2 {
+        0%{left:0; top:0;}
+
+    }
+
+    </style>
+
+</body>
+<ul>
+    <li><a  href="#menu1">open</a>
+        <div id="menu1" class="box">
             점차 사용자가 위지윅(WYSIWYG) 편집을 할 수 있도록 지원하는 위키가 늘고 있다. 위지윅 편집은 위키 마크업의 모든 기능을 제공하지 못하므로, 이들 사이트에서는 편집자가 위키 문서를 직접 수정하는 방법을 제공하기도 한다.
             점차 사용자가 위지윅(WYSIWYG) 편집을 할 수 있도록 지원하는 위키가 늘고 있다. 위지윅 편집은 위키 마크업의 모든 기능을 제공하지 못하므로, 이들 사이트에서는 편집자가 위키 문서를 직접 수정하는 방법을 제공하기도 한다.
+        <a class="boxx"href="#menu2">close</a>
         </div>
 
     </li>
 
 </ul>
-<div class="right"><a href="">close</a></div>
 
 
-</body>
 </html>
