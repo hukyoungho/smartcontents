@@ -1,0 +1,52 @@
+ 아톰 에디터
+
+* webbox-color
+컬러 확인 가능
+
+*atom-beautify
+css ,html setting에서 save 모드 바꿔주면
+
+저장후 들여쓰기 해줌.
+
+*
+
+
+https://www.wishket.com/project/
+
+
+최대 최소값------------------
+
+*max-width 최대값 안되는
+*min-width 최소값 보다 위
+
+    hdpi 정의를 알아보자.
+
+    https://material.io/devices/
+
+        디바이스 해상도
+
+깃허브 위키정리---------------------
+
+:목차 만들어서 자기만의 공부책을 만들 수 있다.
+
+cmd를 통한 less 이용 방법-----------------------
+
+dir 목록 보기
+
+mkdir 이름 폴더 만들기
+
+cd 이름 들어가기
+cd .. 나가기
+cd ../.. 두번 나가기
+
+background-size--------------
+
+* cover: 이미지를 부모사이즈 가로
+* contain : " " 부모사이즈 세로
+
+벤더프리픽스---------
+-webkit- background-size:cover; 크롬
+-moz-   background-size:cover; 파이어폭스
+-o-    background-size:cover; 오페라
+-ms-   background-size:cover; IE
+표준   background-size:cover;

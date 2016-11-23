@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*반응형 웹 만들기*/
+        /*and 끝나고 붙이지마라.*/
+        /*min max 에는 ;을 붙이지 않는다.*/
+        /*http://blog.saltfactory.net/css/using-css-media-query-for-responsive-web.html*/
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #fff;
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            border: 2px #00f solid;
+            margin: 0 auto;
+            transition: 1s;
+            /*vw는 witdh값의 1%크기이다.*/
+            /*vh는 height값의 1%크기이다.*/
+            display: table;
+        }
+
+        .box p {
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 3vw;
+        }
+        /*pc*/
+
+        @media screen and (max-width:1200px) {
+            body {
+                background-color: #aaf;
+            }
+            .box {
+                animation: myani 3s;
+                width: 300px;
+                height: 300px;
+            }
+            @keyframes myani {
+                0% {
+                    left: 0;
+                    top: 0;
+                }
+                20% {
+                    left: 500px;
+                    top: 0;
+                    transform: rotate(100deg)
+                }
+                50% {
+                    left: 500px;
+                    top: 200px;
+                    transform: rotateX(100deg)
+                }
+                70% {
+                    left: 0;
+                    top: 700px;
+                    transform: skew(2, 2)
+                }
+                100% {
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
+        /*tablet*/
+
+        @media screen and (max-width:1024px) {
+            body {
+                background-color: #f00;
+            }
+            .box {
+                width: 200px;
+                height: 200px;
+            }
+        }
+        /*mobile*/
+
+        @media screen and (max-width:480px) {
+            body {
+                background-color: #ff0;
+            }
+            .box {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p>허경호
+        </p>
+
+
+
+    </div>
+
+</body>
+
+</html>
