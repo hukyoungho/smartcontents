@@ -115,9 +115,8 @@ body {
     top: 55px;
     display: none;
     width: 200px;
-    height: 700px;
+    height: auto;
     opacity: 1;
-    overflow: hidden;
   }
   .header .nav .menu li {
     width: 100%;
@@ -128,9 +127,10 @@ body {
     margin: 0;
   }
   .header .nav .menu li a {
-    width: 100%;
+    width: 182px;
     height: auto;
     background: rgba(255, 255, 255, 0.2);
     color: #aeaeae;
+    padding: 0 0 0 18px;
   }
 }
