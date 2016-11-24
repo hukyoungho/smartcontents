@@ -59,6 +59,20 @@ body {
   color: #FFF;
   text-decoration: none;
 }
+.header .nav .smallmenu1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  display: none;
+  height: 55px;
+  width: 200px;
+  background-color: #252525;
+  position: relative;
+  left: 20px;
+  line-height: 55px;
+  text-align: center;
+  color: #FFF;
+  text-decoration: none;
+}
 .header .nav .menu {
   height: 100px;
   margin: 0;
@@ -106,8 +120,8 @@ body {
   .header .nav .smallmenu {
     display: block;
   }
-  .header .nav .smallmenu:hover + .menu {
-    display: block;
+  .header .nav .smallmenu1 {
+    display: none;
   }
   .header .nav .menu {
     position: absolute;
@@ -117,6 +131,10 @@ body {
     width: 200px;
     height: auto;
     opacity: 1;
+    transition: 1s;
+  }
+  .header .nav .menu:target {
+    display: block;
   }
   .header .nav .menu li {
     width: 100%;

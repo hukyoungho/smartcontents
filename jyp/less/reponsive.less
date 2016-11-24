@@ -8,9 +8,10 @@
         .nav{
             .smallmenu{
                 display: block;
-                &:hover + .menu{
-                    display: block;
-                }
+
+            }
+            .smallmenu1{
+                display: none;
             }
             .menu{
                 position: absolute;
@@ -20,6 +21,10 @@
                 width: 200px;
                 height: auto;
                 opacity: 1;
+                transition: 1s;
+                &:target{
+                    display: block;
+                }
 
 
                 li{
