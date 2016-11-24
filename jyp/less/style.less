@@ -8,8 +8,8 @@ body{
     background-repeat: no-repeat;
     background-position: center 0;
     .bgsize(cover);
-
 }
+*{margin: 0; padding: 0;}
 
 .header{
 
@@ -17,41 +17,93 @@ body{
     padding: 0 20px;
     background-image: none;
     background-color: rgba(255,255,255,0.1);
-    h1{
-        background-image: url(@logo);
-        display: block;
-        width: 104px;
-        height:52px;
-        background-repeat: no-repeat;
-        background-position: center;
-        position: absolute;
-        left: 40px;
-        top: px;
+    -webkit-box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.1);
+
+    h1{ float: left;
+        a{
+
+             display:block;
+             background-image: url(@logo);
+             width:104px;
+             height:52px;
+             text-indent: -9999px;
+             font-size:0;
+             transition: 1s;
+             margin: 25px;
+             background-repeat: no-repeat;
+             background-position: center;
+             &:hover{
+                 transform: rotate(360deg);
+             }
+            }
 
     }
     .nav{
-        display: block;
+
         float: right;
+
+        .smallmenu{
+            font-family: 'Oswald', sans-serif;
+            font-size: 14px;
+            display: none;
+            height:55px;
+            width:200px;
+            background-color:#252525;
+            position:relative;
+            left:20px;
+            line-height: 55px;
+            text-align: center;
+            color:#FFF;
+            text-decoration: none;
+        }
         .menu{
             height: 100px;
             margin: 0;
+
             li{
                 list-style: none;
                 float: left;
                 line-height: 100px;
                 height: 100px;
-                a{
-                    color: #aeaeae;
+                // cursor: pointer; 자식 영역에 display:block 처리 되면 안써도 됨. 접근성 때문에 height값을 줌.
 
+                &:hover{
+                    background-color:rgba(255, 255, 255,0.113725);
+
+
+                }
+                a{
+                    display: block;
+                    // /부모 영역만큼 커져서/
+                    color: @text-color;
                     padding: 0px 18px;
                     text-decoration: none;
-                    font-family: '고딕';
+                    font-family: 'Oswald', sans-serif;
                     font-weight: bold;
                     font-size: 16px;
+                    transition-delay: 0s;
+                    transition-duration: .15s;
+                    &:hover{
+                        border-top: 3px solid #fff;
+
+                    }
                 }
     }
 
         }
 
     }
+}
+.mainlogo{
+    margin: 16% 0 0 41%;
+    width: 240px;
+    height: 100px;
+    background-image: url(@mainlogo);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+
+
+
 }
