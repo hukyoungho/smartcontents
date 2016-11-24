@@ -106,16 +106,18 @@ body {
   .header .nav .smallmenu {
     display: block;
   }
-  .header .nav .smallmenu:hover + ul {
+  .header .nav .smallmenu:hover + .menu {
     display: block;
   }
   .header .nav .menu {
     position: absolute;
     right: 0;
-    top: 50px;
-    display: block;
+    top: 55px;
+    display: none;
     width: 200px;
+    height: 700px;
     opacity: 1;
+    overflow: hidden;
   }
   .header .nav .menu li {
     width: 100%;
@@ -130,9 +132,5 @@ body {
     height: auto;
     background: rgba(255, 255, 255, 0.2);
     color: #aeaeae;
-  }
-  .header .nav .menu li a:hover {
-    border-top: 0px;
-    border-left: 3px solid #fff;
   }
 }

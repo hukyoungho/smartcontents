@@ -46,3 +46,6 @@ user agent 태초에 만들어질때 값.
 
 *display:none눈에도 안보이고 소스상에도 없어 리딩기도 안읽는다.
 *visibility:hidden : 눈에만 안보이고 소스상에는 있어 리딩기 읽는다.
+
+
+*https://ide.c9.io/kimminchul/project-study
