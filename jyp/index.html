@@ -6,6 +6,31 @@
 
     <title>Document</title>
     <link rel="stylesheet" href="css/import.css" type="text/css" />
+    <link rel="stylesheet" href="font/flaticon.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.smallmenu').click(function() {
+                $(this).next('.menu').slideToggle(1000);
+            })
+        })
+    </script>
+    <style>
+        .flaticon-facebook-logo::before {
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .flaticon-instagram::before {
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .flaticon-twitter-logo::before {
+            font-size: 30px;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,8 +41,9 @@
                 <a href="index.html">선미</a>
             </h1>
             <div class="nav">
-                <a id="aaa" href="#menu1" class="smallmenu">Main Menu</a>
-                <a id="bbb" href="#aaa" class="smallmenu1">Close Menu</a>
+
+                <a href="javascript:void(0);" class="smallmenu">Main Menu</a>
+
                 <ul class="menu" id="menu1">
                     <li><a href="">PROFILE</a></li>
                     <li><a href="">DISCOGRAPHY</a></li>
@@ -30,11 +56,22 @@
         </header>
 
     </div>
-    <div class="mainlogo">
-        <h1>
+    <section class="mainlogo">
+        <div class="biglogo">
             <a href="">mainlogo</a>
-        </h1>
-    </div>
+        </div>
+        <footer>
+            <div class="jypicon">
+                <a href="">jyp</a>
+
+            </div>
+            <div class="icon">
+                <a href="" class="flaticon-facebook-logo"></a>
+                <a href="" class="flaticon-instagram"></a>
+                <a href="" class="flaticon-twitter-logo"></a>
+            </div>
+        </footer>
+    </section>
 
 
 

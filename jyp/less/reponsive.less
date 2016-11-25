@@ -5,14 +5,28 @@
     }
     .header{
         height: 55px;
+        transition: 2s;
+        h1{
+            a{
+                display:block;
+                background-image: url(@slogo);
+                width:65px;
+                height:30px;
+                text-indent: -9999px;
+                font-size:0;
+                transition: 1s;
+                margin: 10px 0 10px 10px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+        }
         .nav{
             .smallmenu{
                 display: block;
 
             }
-            .smallmenu1{
-                display: none;
-            }
+
             .menu{
                 position: absolute;
                 right: 0;
@@ -21,15 +35,11 @@
                 width: 200px;
                 height: auto;
                 opacity: 1;
-                transition: 1s;
-                &:target{
-                    display: block;
-                }
 
 
                 li{
-
-                    width: 100%;
+                    float: none;
+                    display: block;
                     height: auto;
                     background-color: rgba(255,255,255,0.2);
 
@@ -38,17 +48,61 @@
 
                     padding: 0;
                     margin: 0;
-                    a{
-                        width: 182px;
-                        height: auto;
-                        background: rgba(255,255,255,0.2);
-                        color: #aeaeae;
-                        padding: 0 0 0 18px;
+                    &:hover{
+                        background-color: #ffe;
                     }
+                    a{
+                        transition: .1s;
+                        border-left:0px #fff solid;
+                        width: auto;
+                        &:hover{
+                            border-top:0;
+                            border-left:5px #fff solid;
+                        }
+                    }
+
                 }
 
             }
-
         }
+    }
+    .mainlogo{
+        .biglogo{
+            top:40%;
+            left:50%;
+            margin-left: -120px;
+            transform: scale(0.5);
+            &:hover{
+                transform:scale(1);
+                opacity:0;
+            }
+        }
+        footer{
+            transition: 1s;
+            height: 37px;
+
+            .jypicon{
+                transition: 1s;
+                padding-left: 30px;
+                a{
+                    height: 27px;
+                    width: 69px;
+
+                    background-position: center center;
+
+                }
+            }
+            .icon{
+                transition: 1s;
+                padding-right: 30px;
+
+                a[class^=flaticon]::before{
+                    transition: 1s;
+                    font-size: 20px;
+
+                }
+            }
+        }
+
     }
 }
