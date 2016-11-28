@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>target selector</title>
+    <style>
+        .contents{height:500px; border:1px #F00 solid;
+            position:absolute;
+            width:100%;
+            display:none;
+        }
+        
+        div:target + a + div{display:block; color:#F00;}
+        div:target {display:block; color:#F00;}
+    </style>
+</head>
+<body>
+      
+      
+      <a href="#cont1">link</a>
+      <div class="contents" id="cont1">content1</div>
+      <a href="#cont2">link</a>
+      <div class="contents" id="cont2">content2</div>
+      <a href="#cont3">link</a>
+      <div class="contents" id="cont3">content3</div>
+      <a href="#cont4">link</a>
+      <div class="contents" id="cont4">content4</div>
+      <a href="#cont5">link</a>
+      <div class="contents" id="cont5">content5</div>
+      
+      
+      
+      
+      
+      
+      
+    
+    
+    
+    
+</body>
+</html>

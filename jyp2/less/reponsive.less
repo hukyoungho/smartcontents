@@ -1,0 +1,97 @@
+@media screen and (max-width:845px) {
+    body{
+    }
+    .header{
+        height: 55px;
+        transition: 2s;
+        h1{
+            a{
+                display:block;
+                background-image: url(@slogo);
+                width:65px;
+                height:30px;
+                text-indent: -9999px;
+                font-size:0;
+                transition: 1s;
+                margin: 10px 0 10px 10px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+        }
+        .nav{
+            .smallmenu{
+                display: block;
+
+            }
+
+            .menu{
+                position: absolute;
+                right: 0;
+                top: 55px;
+                display: none;
+                width: 200px;
+                height: auto;
+                opacity: 1;
+
+
+                li{
+                    float: none;
+                    display: block;
+                    height: auto;
+                    background-color: rgba(255,255,255,0.2);
+
+
+                    line-height: 50px;
+
+                    padding: 0;
+                    margin: 0;
+                    &:hover{
+                        background-color: #ffe;
+                    }
+                    a{
+                        transition: .1s;
+                        border-left:0px #fff solid;
+                        width: auto;
+                        &:hover{
+                            border-top:0;
+                            border-left:5px #fff solid;
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+    .wrap{
+
+        footer{
+            transition: 1s;
+            height: 37px;
+
+            .jypicon{
+                transition: 1s;
+                padding-left: 30px;
+                a{
+                    height: 27px;
+                    width: 69px;
+
+                    background-position: center center;
+
+                }
+            }
+            .icon{
+                transition: 1s;
+                padding-right: 30px;
+
+                a[class^=flaticon]::before{
+                    transition: 1s;
+                    font-size: 20px;
+
+                }
+            }
+        }
+
+    }
+}

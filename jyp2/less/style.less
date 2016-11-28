@@ -1,0 +1,350 @@
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+html,body{height:100%; margin: 0; padding: 0;}
+
+
+body{
+    margin: 0;
+
+}
+*{margin: 0; padding: 0;}
+
+.header{
+    position: relative;
+    z-index: 1;
+    height: 100px;
+    padding: 0 20px;
+    background-image: none;
+    background-color: rgba(255,255,255,0.1);
+    -webkit-box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.1);
+    transition: 3s;
+
+    h1{ float: left;
+        a{
+
+             display:block;
+             background-image: url(@logo);
+             width:104px;
+             height:52px;
+             text-indent: -9999px;
+             font-size:0;
+             transition: 1s;
+             margin: 25px;
+             background-repeat: no-repeat;
+             background-position: center;
+             background-size: contain;
+             &:hover{
+                 transform: rotate(360deg);
+             }
+            }
+
+    }
+    .nav{
+
+        float: right;
+
+        .smallmenu{
+            font-family: 'Oswald', sans-serif;
+            font-size: 14px;
+            display: none;
+            height:55px;
+            width:200px;
+            background-color:#252525;
+            margin-right: -20px;
+            line-height: 55px;
+            text-align: center;
+            color:#FFF;
+            text-decoration: none;
+        }
+
+        .menu{
+            height: 100px;
+            margin: 0;
+
+            li{
+                list-style: none;
+                float: left;
+                line-height: 100px;
+                height: 100px;
+                // cursor: pointer; 자식 영역에 display:block 처리 되면 안써도 됨. 접근성 때문에 height값을 줌.
+
+                &:hover{
+                    background-color:rgba(255, 255, 255,0.113725);
+
+
+                }
+                a{
+                    display: block;
+                    // /부모 영역만큼 커져서/
+                    color: @text-color;
+                    padding: 0px 18px;
+                    text-decoration: none;
+                    font-family: 'Oswald', sans-serif;
+                    font-weight: bold;
+                    font-size: 16px;
+                    transition-delay: 0s;
+                    transition-duration: .15s;
+                    &:hover{
+                        border-top: 3px solid #fff;
+
+                    }
+                }
+    }
+
+        }
+
+    }
+}
+.wrap{
+    max-width: 1000px;
+    margin: 0 auto 100px;
+
+    section{
+        width: 100%;
+
+
+        .title{
+            background-color: #f4f4f4;
+
+            height: auto;
+            div{
+                margin: 0 auto;
+                background-image: url(@discologo);
+                background-repeat: no-repeat;
+                background-position: center center;
+                width: 500px;
+                height: 60px;
+                background-size: auto;
+                text-indent: -9999px;
+                padding: 35px 0 10px;
+                transition: 2s;
+            }
+        }
+        .global{
+            padding: 50px 0 5px 15px;
+            max-width: 1000px;
+            width: 85%;
+            margin: 0 auto;
+            a{
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                margin-left: 5px;
+                background-image: url(../image/a-titlebg.png);
+                background-position: center center;
+                background-size: contain;
+                border-radius: 20px;
+                color: #fff;
+                text-decoration: none;
+                font-size: 13px;
+
+
+            }
+
+        }
+        .content{
+
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+
+            background-color: #fff;
+
+                a{
+                    width: 150px;
+                    float: left;
+                    display: block;
+                    padding: 5px;
+                    color: #fff;
+                    text-decoration: none;
+
+                }
+
+
+            .box{
+                display: table;
+                max-width: 1000px;
+                width: 85%;
+                margin: 0 auto;
+
+                overflow: hidden;
+                .left{
+                    display: table-cell;
+                    padding:0 10px;
+
+
+                    span{width: 100%;
+                        display: block;
+                        img{
+                            width: 100%;
+                     }
+                    }
+                P{
+                    font-size: 12px;
+                    line-height: 17px;
+                    font-weight: bold;
+                    margin: 10px 0;
+                    color: #3F3F3F;
+                }
+                ol{
+                    font-family: 'Nanum Gothic',monospace;
+                    list-style-position: inside;
+                    font-size: 11px;
+                    margin-bottom: 5px;
+                    color: #3F3F3F;
+                    line-height: 20px;
+                }
+
+
+
+                }
+                .right{
+                    width: 62%;
+                    font-size: 12px;
+                    display: table-cell;
+                    padding-left: 20px;
+
+
+
+                    vertical-align: top;
+
+                    div{
+                        width: 100%;
+                        height: 63px;
+                        background-image: url(http://sunmi.jype.com/images/discography/a-titlebg.png);
+                        h2{
+                            padding: 15px;
+                            float: left;
+                            color: #fff;
+                            text-align: center;
+                            font-size: 23px;
+                            font-weight: bold;
+                        }
+                        p{
+                            font-size: 12px;
+                            line-height: 17px;
+                            float: right;
+                            margin: 20px 20px 0 0;
+                            color: #fff;
+                            font-family: 'Nanum Gothic',monospace;
+                        }
+                     }
+                     h3{
+                         padding: 20px 0 10px 0;
+                         font-size: 13px;
+                         line-height: 20px;
+                         color: #3F3F3F;
+                     }
+                     p{
+                         font-size: 12px;
+                         line-height: 17px;
+                         color: #3F3F3F;
+                     }
+                }
+
+            }
+        }
+            .fcontent{
+
+                max-width: 1000px;
+                width: 85%;
+                padding: 30px 0 0;
+
+                margin: 0 auto;
+                .pic{
+
+                    text-align: center;
+                    list-style: none;
+                    li{
+                        width: 152px;
+                        display: inline-block;
+                        font-size: 12px;
+                        line-height: 17px;
+                        color: #3F3F3F;
+
+
+                    }
+                }
+
+            }
+            .list_btn{
+
+                list-style: none;
+                text-decoration: none;
+                li{
+                    margin: 10px auto;
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: #ccc;
+                }
+            }
+
+    }
+
+
+
+
+
+
+    footer{
+        height: 57px;
+        width: 100%;
+        background-image: url(http://sunmi.jype.com/images/footerbg.png);
+        display: table;
+        position: fixed;
+        bottom: 0;
+        text-align: right;
+        transition: 1s;
+
+        .jypicon{
+            display: table-cell;
+            padding-left: 50px;
+            vertical-align: middle;
+            transition: 3s;
+            a{
+                height: 45px;
+                width: 115px;
+                background-image: url(@jyplogo);
+                background-repeat: no-repeat;
+                background-size: contain;
+                text-indent: -9999px;
+                font-size: 0;
+                display: block;
+
+
+            }
+        }
+
+        .icon{
+            transition: 1s;
+            display: table-cell;
+            vertical-align: middle;
+            padding-right: 50px;
+            a{
+                text-decoration: none;
+            }
+            a[class^=flaticon]::before{
+                transition: 1s;
+                font-size: 30px;
+
+
+            }
+
+
+
+
+
+
+        }
+
+
+
+    }
+
+
+}

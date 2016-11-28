@@ -1,0 +1,358 @@
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700);
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  position: relative;
+  z-index: 1;
+  height: 100px;
+  padding: 0 20px;
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.1);
+  transition: 3s;
+}
+.header h1 {
+  float: left;
+}
+.header h1 a {
+  display: block;
+  background-image: url("../image/logo.png");
+  width: 104px;
+  height: 52px;
+  text-indent: -9999px;
+  font-size: 0;
+  transition: 1s;
+  margin: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.header h1 a:hover {
+  transform: rotate(360deg);
+}
+.header .nav {
+  float: right;
+}
+.header .nav .smallmenu {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  display: none;
+  height: 55px;
+  width: 200px;
+  background-color: #252525;
+  margin-right: -20px;
+  line-height: 55px;
+  text-align: center;
+  color: #FFF;
+  text-decoration: none;
+}
+.header .nav .menu {
+  height: 100px;
+  margin: 0;
+}
+.header .nav .menu li {
+  list-style: none;
+  float: left;
+  line-height: 100px;
+  height: 100px;
+}
+.header .nav .menu li:hover {
+  background-color: rgba(255, 255, 255, 0.113725);
+}
+.header .nav .menu li a {
+  display: block;
+  color: #aeaeae;
+  padding: 0px 18px;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  transition-delay: 0s;
+  transition-duration: .15s;
+}
+.header .nav .menu li a:hover {
+  border-top: 3px solid #fff;
+}
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto 100px;
+}
+.wrap section {
+  width: 100%;
+}
+.wrap section .title {
+  background-color: #f4f4f4;
+  height: auto;
+}
+.wrap section .title div {
+  margin: 0 auto;
+  background-image: url("../image/title-discography.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 500px;
+  height: 60px;
+  background-size: auto;
+  text-indent: -9999px;
+  padding: 35px 0 10px;
+  transition: 2s;
+}
+.wrap section .global {
+  padding: 50px 0 5px 15px;
+  max-width: 1000px;
+  width: 85%;
+  margin: 0 auto;
+}
+.wrap section .global a {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-left: 5px;
+  background-image: url(../image/a-titlebg.png);
+  background-position: center center;
+  background-size: contain;
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+.wrap section .content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #fff;
+}
+.wrap section .content a {
+  width: 150px;
+  float: left;
+  display: block;
+  padding: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+.wrap section .content .box {
+  display: table;
+  max-width: 1000px;
+  width: 85%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.wrap section .content .box .left {
+  display: table-cell;
+  padding: 0 10px;
+}
+.wrap section .content .box .left span {
+  width: 100%;
+  display: block;
+}
+.wrap section .content .box .left span img {
+  width: 100%;
+}
+.wrap section .content .box .left P {
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #3F3F3F;
+}
+.wrap section .content .box .left ol {
+  font-family: 'Nanum Gothic', monospace;
+  list-style-position: inside;
+  font-size: 11px;
+  margin-bottom: 5px;
+  color: #3F3F3F;
+  line-height: 20px;
+}
+.wrap section .content .box .right {
+  width: 62%;
+  font-size: 12px;
+  display: table-cell;
+  padding-left: 20px;
+  vertical-align: top;
+}
+.wrap section .content .box .right div {
+  width: 100%;
+  height: 63px;
+  background-image: url(http://sunmi.jype.com/images/discography/a-titlebg.png);
+}
+.wrap section .content .box .right div h2 {
+  padding: 15px;
+  float: left;
+  color: #fff;
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+}
+.wrap section .content .box .right div p {
+  font-size: 12px;
+  line-height: 17px;
+  float: right;
+  margin: 20px 20px 0 0;
+  color: #fff;
+  font-family: 'Nanum Gothic', monospace;
+}
+.wrap section .content .box .right h3 {
+  padding: 20px 0 10px 0;
+  font-size: 13px;
+  line-height: 20px;
+  color: #3F3F3F;
+}
+.wrap section .content .box .right p {
+  font-size: 12px;
+  line-height: 17px;
+  color: #3F3F3F;
+}
+.wrap section .fcontent {
+  max-width: 1000px;
+  width: 85%;
+  padding: 30px 0 0;
+  margin: 0 auto;
+}
+.wrap section .fcontent .pic {
+  text-align: center;
+  list-style: none;
+}
+.wrap section .fcontent .pic li {
+  width: 152px;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 17px;
+  color: #3F3F3F;
+}
+.wrap section .list_btn {
+  list-style: none;
+  text-decoration: none;
+}
+.wrap section .list_btn li {
+  margin: 10px auto;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+.wrap footer {
+  height: 57px;
+  width: 100%;
+  background-image: url(http://sunmi.jype.com/images/footerbg.png);
+  display: table;
+  position: fixed;
+  bottom: 0;
+  text-align: right;
+  transition: 1s;
+}
+.wrap footer .jypicon {
+  display: table-cell;
+  padding-left: 50px;
+  vertical-align: middle;
+  transition: 3s;
+}
+.wrap footer .jypicon a {
+  height: 45px;
+  width: 115px;
+  background-image: url("../image/jyplogo-w.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-indent: -9999px;
+  font-size: 0;
+  display: block;
+}
+.wrap footer .icon {
+  transition: 1s;
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 50px;
+}
+.wrap footer .icon a {
+  text-decoration: none;
+}
+.wrap footer .icon a[class^=flaticon]::before {
+  transition: 1s;
+  font-size: 30px;
+}
+@media screen and (max-width: 845px) {
+  .header {
+    height: 55px;
+    transition: 2s;
+  }
+  .header h1 a {
+    display: block;
+    background-image: url("../image/smalllogo-sw.png");
+    width: 65px;
+    height: 30px;
+    text-indent: -9999px;
+    font-size: 0;
+    transition: 1s;
+    margin: 10px 0 10px 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .header .nav .smallmenu {
+    display: block;
+  }
+  .header .nav .menu {
+    position: absolute;
+    right: 0;
+    top: 55px;
+    display: none;
+    width: 200px;
+    height: auto;
+    opacity: 1;
+  }
+  .header .nav .menu li {
+    float: none;
+    display: block;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    line-height: 50px;
+    padding: 0;
+    margin: 0;
+  }
+  .header .nav .menu li:hover {
+    background-color: #ffe;
+  }
+  .header .nav .menu li a {
+    transition: .1s;
+    border-left: 0px #fff solid;
+    width: auto;
+  }
+  .header .nav .menu li a:hover {
+    border-top: 0;
+    border-left: 5px #fff solid;
+  }
+  .wrap footer {
+    transition: 1s;
+    height: 37px;
+  }
+  .wrap footer .jypicon {
+    transition: 1s;
+    padding-left: 30px;
+  }
+  .wrap footer .jypicon a {
+    height: 27px;
+    width: 69px;
+    background-position: center center;
+  }
+  .wrap footer .icon {
+    transition: 1s;
+    padding-right: 30px;
+  }
+  .wrap footer .icon a[class^=flaticon]::before {
+    transition: 1s;
+    font-size: 20px;
+  }
+}

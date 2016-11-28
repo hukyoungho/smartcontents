@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<style>
+    a {
+        display: inline-block;
+        border: 1px solid #f00;
+        border-radius: 25px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        text-decoration: none;
+        margin-right: 40px;
+    }
+
+    div[class^="box"] {
+        margin: 60px 40px 0 0;
+        float: left;
+        border: 1px solid #f0f;
+        border-radius: 25px;
+        text-align: center;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        transition: 1s;
+    }
+
+    .box1:target {
+        margin: 20px 40px 0 0;
+    }
+
+    .box2:target {
+        margin: 20px 40px 0 0;
+    }
+
+    .box3:target {
+        margin: 20px 40px 0 0;
+    }
+</style>
+
+<body>
+    <div>
+        <a href="#box1">1</a>
+
+        <a href="#box2">2</a>
+
+        <a href="#box3">3</a>
+    </div>
+
+    <div class="box1" id=box1>1</div>
+    <div class="box2" id=box2>2</div>
+    <div class="box3" id=box3>3</div>
+
+
+</body>
+
+</html>
