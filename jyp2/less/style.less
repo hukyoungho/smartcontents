@@ -274,12 +274,13 @@ body{
             list-style: none;
             text-decoration: none;
             li{
-                margin: 10px auto;
+                margin: 10px;
                 display: block;
                 width: 10px;
                 height: 10px;
                 border-radius: 50%;
                 background-color: #ccc;
+
             }
         }
 
@@ -441,4 +442,147 @@ body{
 
 
     }
+}
+
+//bbs start
+
+.wrap{
+    margin: 0 auto 150px;
+    height: auto;
+
+    background-color: #fff;
+    section{
+        .title{
+            background-color: #f4f4f4;
+            height: auto;
+            div{
+
+                margin: 0 auto;
+                background-image: url(@gallerylogo);
+                background-repeat: no-repeat;
+                background-position: center center;
+                width: 500px;
+                height: 60px;
+                background-size: 60%;
+                text-indent: -9999px;
+                padding: 35px 0 10px;
+                transition: 1s;
+            }
+        }
+        .list{
+            width: 85%;
+            max-width:1000px;
+            margin: 0 auto;
+
+            table{
+
+                font-family: 'Nanum Gothic',monospace;
+                font-size: 13px;
+                width: 100%;
+                max-width:1000px;
+                border-collapse: collapse;
+                thead{
+                    visibility: hidden;
+                }
+                td,th{
+                    border-bottom: 1px #000 solid;
+                    padding: 4px 0;
+                }
+                tr>td:first-child{
+                    text-align: center;
+                }
+                tr>td:nth-child(3){
+                    text-align: right;
+                    padding-right: 10px;
+                }
+                .first{
+                    border-top: 2px solid #d4d3d3;
+                    border-bottom: 1px solid #d4d3d3;
+                    background: #f8f5f2;
+                    height: 45px;
+
+
+                }
+                .first ~ tr{
+                    height: 40px;
+                    padding: 11px 0 9px;
+                    color: #848280;
+                    border-bottom: 1px solid #d4d3d3;
+                    background-color: #fcfcfc;
+                }
+                .first ~ tr span{
+
+                    color: #000;
+                    font-weight: bold;
+                }
+                .second{
+                    background-color: #fff!important;
+                    td[colspan="3"]{
+                        .board_article{
+                            padding: 40px;
+                            p{
+                                text-align: left;
+                                margin-bottom: 40px;
+                                color: #000;
+
+                            }
+                            .movie{
+                                max-width: 640px;
+
+
+
+
+                                margin: 0 auto;
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                            .pic{
+
+
+
+                                max-width: 640px;
+                                margin: 60px auto;
+                                img{
+                                    width: 100%;
+                                }
+
+                            }
+
+                        }
+                    }
+                }
+                .elip{
+                    max-width: 400px;
+
+                    display: block;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    color: #05abf6;
+                }
+
+
+            }
+
+        }
+        .list_btn{
+
+            text-align: center;
+            list-style: none;
+            text-decoration: none;
+            margin-top: 10px;
+            li{
+                margin: 5px;
+                display: block;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #ccc;
+                display: inline-block;
+            }
+        }
+
+    }
+
 }
