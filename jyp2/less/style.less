@@ -24,21 +24,21 @@ body{
     h1{ float: left;
         a{
 
-             display:block;
-             background-image: url(@logo);
-             width:104px;
-             height:52px;
-             text-indent: -9999px;
-             font-size:0;
-             transition: 1s;
-             margin: 25px;
-             background-repeat: no-repeat;
-             background-position: center;
-             background-size: contain;
-             &:hover{
-                 transform: rotate(360deg);
-             }
+            display:block;
+            background-image: url(@logo);
+            width:104px;
+            height:52px;
+            text-indent: -9999px;
+            font-size:0;
+            transition: 1s;
+            margin: 25px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            &:hover{
+                transform: rotate(360deg);
             }
+        }
 
     }
     .nav{
@@ -91,7 +91,7 @@ body{
 
                     }
                 }
-    }
+            }
 
         }
 
@@ -174,24 +174,24 @@ body{
                         display: block;
                         img{
                             width: 100%;
-                     }
+                        }
                     }
-                P{
-                    font-family: 'Oswald', sans-serif;
-                    font-size: 12px;
-                    line-height: 17px;
-                    font-weight: bold;
-                    margin: 10px 0;
-                    color: #3F3F3F;
-                }
-                ol{
+                    P{
+                        font-family: 'Oswald', sans-serif;
+                        font-size: 12px;
+                        line-height: 17px;
+                        font-weight: bold;
+                        margin: 10px 0;
+                        color: #3F3F3F;
+                    }
+                    ol{
 
-                    list-style-position: inside;
-                    font-size: 11px;
-                    margin-bottom: 5px;
-                    color: #3F3F3F;
-                    line-height: 20px;
-                }
+                        list-style-position: inside;
+                        font-size: 11px;
+                        margin-bottom: 5px;
+                        color: #3F3F3F;
+                        line-height: 20px;
+                    }
 
 
 
@@ -226,62 +226,62 @@ body{
                             color: #fff;
                             font-family: 'Nanum Gothic',monospace;
                         }
-                     }
-                     h3{
-                         padding: 20px 0 10px 0;
-                         font-size: 13px;
-                         line-height: 20px;
-                         color: #3F3F3F;
-                     }
-                     p{
-                         font-size: 12px;
-                         line-height: 17px;
-                         color: #3F3F3F;
-                     }
-                }
-
-            }
-        }
-            .fcontent{
-
-                max-width: 1000px;
-                width: 85%;
-                padding: 30px 0 0;
-
-                margin: 0 auto;
-                .pic{
-
-                    text-align: center;
-                    list-style: none;
-                    li{
-                        width: atuo;
-                        display: inline-block;
+                    }
+                    h3{
+                        padding: 20px 0 10px 0;
+                        font-size: 13px;
+                        line-height: 20px;
+                        color: #3F3F3F;
+                    }
+                    p{
                         font-size: 12px;
                         line-height: 17px;
                         color: #3F3F3F;
-                        padding: 10px;
-                        span{
-                            display: block;
-                        }
-
-
                     }
                 }
 
             }
-            .list_btn{
+        }
+        .fcontent{
 
+            max-width: 1000px;
+            width: 85%;
+            padding: 30px 0 0;
+
+            margin: 0 auto;
+            .pic{
+
+                text-align: center;
                 list-style: none;
-                text-decoration: none;
                 li{
-                    margin: 10px auto;
-                    display: block;
-                    width: 10px;
-                    height: 10px;
-                    border-radius: 50%;
-                    background-color: #ccc;
+                    width: atuo;
+                    display: inline-block;
+                    font-size: 12px;
+                    line-height: 17px;
+                    color: #3F3F3F;
+                    padding: 10px;
+                    span{
+                        display: block;
+                    }
+
+
                 }
             }
+
+        }
+        .list_btn{
+
+            list-style: none;
+            text-decoration: none;
+            li{
+                margin: 10px auto;
+                display: block;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #ccc;
+            }
+        }
 
     }
 
@@ -346,4 +346,99 @@ body{
     }
 
 
+}
+
+// gallery start
+
+.wrap{
+    margin: 0 auto;
+    height: 85%;
+
+    background-color: #f4f4f4;
+    section{
+        .title{
+            background-color: #f4f4f4;
+            height: auto;
+            div{
+
+                margin: 0 auto;
+                background-image: url(@gallerylogo);
+                background-repeat: no-repeat;
+                background-position: center center;
+                width: 500px;
+                height: 60px;
+                background-size: 60%;
+                text-indent: -9999px;
+                padding: 35px 0 10px;
+                transition: 1s;
+            }
+        }
+        .wrapgrid{
+            background-color: #fff;
+            padding: 20px 20px 0px 20px;
+            .grid-list{
+                transition: 1s;
+                max-width: 769px;
+
+
+                margin: 0px auto;
+                overflow: hidden;
+
+                ul{
+                    list-style: none;
+
+                    overflow: hidden;
+
+
+
+                    li{
+                        width: 20%;
+                        max-width: 153px;
+
+                        float: left;
+
+                        a{
+                            img{
+                                width: 100%;
+                                max-width: 150px;
+
+                                margin-bottom: 3px;
+
+                                vertical-align: top;
+                                //이미지는 인라인 블록으로 버티칼 미들이 고유값이다
+                                // 그러므로 밑에 하단에 공간이생기는데 이럴땐 버티칼 하이로
+                                // 그 값을 없애준다.
+
+
+
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+        .content{
+            width: auto;
+            background-color: #fff;
+            padding: 20px;
+            .list_btn{
+
+                list-style: none;
+                text-decoration: none;
+
+                li{
+                    margin: 0px auto;
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: #ccc;
+                }
+            }
+
+        }
+
+
+    }
 }

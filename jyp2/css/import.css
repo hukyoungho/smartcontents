@@ -279,6 +279,69 @@ body {
   transition: 1s;
   font-size: 30px;
 }
+.wrap {
+  margin: 0 auto;
+  height: 85%;
+  background-color: #f4f4f4;
+}
+.wrap section .title {
+  background-color: #f4f4f4;
+  height: auto;
+}
+.wrap section .title div {
+  margin: 0 auto;
+  background-image: url("../image/title-gallery.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 500px;
+  height: 60px;
+  background-size: 60%;
+  text-indent: -9999px;
+  padding: 35px 0 10px;
+  transition: 1s;
+}
+.wrap section .wrapgrid {
+  background-color: #fff;
+  padding: 20px 20px 0px 20px;
+}
+.wrap section .wrapgrid .grid-list {
+  transition: 1s;
+  max-width: 769px;
+  margin: 0px auto;
+  overflow: hidden;
+}
+.wrap section .wrapgrid .grid-list ul {
+  list-style: none;
+  overflow: hidden;
+}
+.wrap section .wrapgrid .grid-list ul li {
+  width: 20%;
+  max-width: 153px;
+  float: left;
+}
+.wrap section .wrapgrid .grid-list ul li a img {
+  width: 100%;
+  max-width: 150px;
+  margin-bottom: 3px;
+  vertical-align: top;
+}
+.wrap section .content {
+  width: auto;
+  background-color: #fff;
+  padding: 20px;
+}
+.wrap section .content .list_btn {
+  list-style: none;
+  text-decoration: none;
+}
+.wrap section .content .list_btn li {
+  margin: 0px auto;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
 @media screen and (max-width: 845px) {
   .header {
     height: 55px;
@@ -367,5 +430,15 @@ body {
   .wrap footer .icon a[class^=flaticon]::before {
     transition: 1s;
     font-size: 20px;
+  }
+  .wrap section .wrapgrid .grid-list {
+    max-width: 300px;
+    transition: 1s;
+  }
+  .wrap section .wrapgrid .grid-list ul li {
+    width: 25%;
+  }
+  .wrap section .wrapgrid .grid-list ul li a img {
+    max-width: 72px;
   }
 }
