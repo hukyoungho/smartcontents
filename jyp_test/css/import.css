@@ -1,0 +1,232 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  background-image: url("../image/sunmi.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  height: 100px;
+  padding: 0 20px;
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.1);
+  transition: 3s;
+}
+.header h1 {
+  float: left;
+}
+.header h1 a {
+  display: block;
+  background-image: url("../image/logo.png");
+  width: 104px;
+  height: 52px;
+  text-indent: -9999px;
+  font-size: 0;
+  transition: 1s;
+  margin: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.header h1 a:hover {
+  transform: rotate(360deg);
+}
+.header .nav {
+  float: right;
+}
+.header .nav .smallmenu {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  display: none;
+  height: 55px;
+  width: 200px;
+  background-color: #252525;
+  margin-right: -20px;
+  line-height: 55px;
+  text-align: center;
+  color: #FFF;
+  text-decoration: none;
+}
+.header .nav .menu {
+  height: 100px;
+  margin: 0;
+}
+.header .nav .menu li {
+  list-style: none;
+  float: left;
+  line-height: 100px;
+  height: 100px;
+}
+.header .nav .menu li:hover {
+  background-color: rgba(255, 255, 255, 0.113725);
+}
+.header .nav .menu li a {
+  display: block;
+  color: #aeaeae;
+  padding: 0px 18px;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  transition-delay: 0s;
+  transition-duration: .15s;
+}
+.header .nav .menu li a:hover {
+  border-top: 3px solid #fff;
+}
+.mainlogo .biglogo {
+  position: absolute;
+  top: 40%;
+  right: 41%;
+  width: 240px;
+  height: 100px;
+  background-image: url("../image/mainlogo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-indent: -9999px;
+  transition: 1s;
+}
+.mainlogo .biglogo:hover {
+  transform: scale(2);
+  opacity: 0;
+}
+.mainlogo footer {
+  height: 57px;
+  width: 100%;
+  background-image: url(http://sunmi.jype.com/images/footerbg.png);
+  display: table;
+  position: fixed;
+  bottom: 0;
+  text-align: right;
+  transition: 1s;
+}
+.mainlogo footer .jypicon {
+  display: table-cell;
+  padding-left: 50px;
+  vertical-align: middle;
+  transition: 3s;
+}
+.mainlogo footer .jypicon a {
+  height: 45px;
+  width: 115px;
+  background-image: url("../image/jyplogo-w.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-indent: -9999px;
+  font-size: 0;
+  display: block;
+}
+.mainlogo footer .icon {
+  transition: 1s;
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 50px;
+}
+.mainlogo footer .icon a {
+  text-decoration: none;
+}
+.mainlogo footer .icon a[class^=flaticon]::before {
+  transition: 1s;
+  font-size: 30px;
+}
+@media screen and (max-width: 845px) {
+  body {
+    background-image: url("../image/bg-720.jpg");
+    background-position: center center;
+  }
+  .header {
+    height: 55px;
+    transition: 2s;
+  }
+  .header h1 a {
+    display: block;
+    background-image: url("../image/smalllogo-sw.png");
+    width: 65px;
+    height: 30px;
+    text-indent: -9999px;
+    font-size: 0;
+    transition: 1s;
+    margin: 10px 0 10px 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .header .nav .smallmenu {
+    display: block;
+  }
+  .header .nav .menu {
+    position: absolute;
+    right: 0;
+    top: 55px;
+    display: none;
+    width: 200px;
+    height: auto;
+    opacity: 1;
+  }
+  .header .nav .menu li {
+    float: none;
+    display: block;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    line-height: 50px;
+    padding: 0;
+    margin: 0;
+  }
+  .header .nav .menu li:hover {
+    background-color: #ffe;
+  }
+  .header .nav .menu li a {
+    transition: .1s;
+    border-left: 0px #fff solid;
+    width: auto;
+  }
+  .header .nav .menu li a:hover {
+    border-top: 0;
+    border-left: 5px #fff solid;
+  }
+  .mainlogo .biglogo {
+    top: 40%;
+    left: 50%;
+    margin-left: -120px;
+    transform: scale(0.5);
+  }
+  .mainlogo .biglogo:hover {
+    transform: scale(1);
+    opacity: 0;
+  }
+  .mainlogo footer {
+    transition: 1s;
+    height: 37px;
+  }
+  .mainlogo footer .jypicon {
+    transition: 1s;
+    padding-left: 30px;
+  }
+  .mainlogo footer .jypicon a {
+    height: 27px;
+    width: 69px;
+    background-position: center center;
+  }
+  .mainlogo footer .icon {
+    transition: 1s;
+    padding-right: 30px;
+  }
+  .mainlogo footer .icon a[class^=flaticon]::before {
+    transition: 1s;
+    font-size: 20px;
+  }
+}
