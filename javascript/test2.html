@@ -1,0 +1,48 @@
+<script type="text/javascript">
+    var max_user = prompt("학생수입력")
+    var studentArr = [];
+    var scoreArr = [];
+    var check = confirm('맞나요?')
+    if (check) {
+        for (var i = 0; i < max_user; i++) {
+            var name = prompt('이름을 입력');
+            var score = prompt('점수를 입력');
+            scoreArr.unshift(name);
+            studentArr.unshift(score);
+
+        }
+        console.log(studentArr);
+        console.log(scoreArr);
+        var next = confirm('입력한거 맞나?');
+
+        if (next) {
+
+            var totalscore = 0;
+            for (var i = 0; i < scoreArr.length; i++) {
+                totalscore += Number(scoreArr[i]);
+
+            };
+
+            console.log(totalscore);
+
+            var avg = totalscore / scoreArr.length;
+
+            document.write("너의 평균 점수는: " + avg + " 입니다.")
+
+
+
+
+
+
+        } else if (!next) {
+            alert('프로그램을 종료합니다')
+        }
+
+
+
+    } else if (!check) {
+        console.log('다시체크하고와라.')
+    }
+</script>
+
+</script>

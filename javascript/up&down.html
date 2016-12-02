@@ -1,0 +1,49 @@
+<script type="text/javascript">
+    // 업엔다운게임
+
+    var numberscope = 100;
+    var randomnum = Math.random() * numberscope;
+    var random = Math.floor(randomnum);
+
+    // var count = prompt('input in conutnumber')
+    // console.log(random);
+
+
+
+    var name = prompt('니이름?')
+    for (j = 0; j < 10; j++) {
+        var countnum = prompt('맞출 횟수 정해라.')
+        if (countnum > 10) {
+            alert('너무많아');
+        } else if (countnum < 10) {
+            alert('너무적어');
+        } else if (countnum == 10) {
+            break;
+
+        }
+    }
+    // console.log(countnum);
+    var count = countnum
+    console.log(random);
+
+
+    for (i = 0; i < count; i++) {
+        var entry = prompt('자, 숫자 맞춰봐');
+
+        if (random > entry) {
+            alert('up!');
+        } else if (random < entry) {
+            alert('down');
+        } else if (random == entry) {
+            alert('bingo!');
+            alert('잘햇어!');
+            break;
+
+        } else {
+            alert('잘못입력했어엿만아..잘지내');
+            break;
+
+        }
+
+    }
+</script>

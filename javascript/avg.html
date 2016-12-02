@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+
+    <script type="text/javascript">
+        //1
+        // var max_user = prompt('	학생의 수를 입력해주세요');
+        // console.log(max_user)
+        // var check = confirm(max_user + "인원이 맞습니까?")
+        // 창이 뜨고 그 값은 true false로 확인할수 있다.
+        // console.log(check)
+        // if (check) {
+        //     console.log('you are rigtht')
+        // } else if (!check) {
+        //     console.log('you are wrong')
+        // }
+        // 느낌표를 붙여준 이유는 값이 false면 콘솔이 나오지 않기때문에 부정을 하기 위해서이다.
+
+
+        // 2
+        // var nameArr = [];
+        // var scoreArr = [];
+        //
+        // var max_user = prompt('	학생의 수를 입력해주세요');
+        // var check = confirm(max_user + "인원이 맞습니까?")
+        //
+        // if (check) {
+        //     var name = prompt('이름을입력하세요');
+        //     nameArr.unshift(name);
+        // 변수.unshift(값)은 .unshift값이  역순으로 변수 저장공간에 넣어진다.
+        // 변수.push(값)은 .push값이  순서대로 변수 저장공간에 넣어진다.
+        //     console.log(nameArr)
+        //
+        // } else if (!check) {
+        //     console.log('re');
+        // }
+
+
+        //3
+        var nameArr = [];
+        var scoreArr = [];
+
+        var max_user = prompt('	학생의 수를 입력해주세요');
+        var check = confirm(max_user + "인원이 맞습니까?")
+
+        if (check) {
+
+            for (var i = 0; i < max_user; i++) {
+                var name = prompt('이름을입력하세요');
+                var score = prompt('점수를입력하세요');
+                nameArr.unshift(name);
+                scoreArr.unshift(score);
+            }
+            // console.log(nameArr, scoreArr) 콘솔로그로 두개의 변수를 확인할 경우 쉼표를 이용한다.
+            // document.write(nameArr + "<br />" + scoreArr)
+            var next = confirm('입력정보가 맞습니까?');
+
+            if (next) {
+                console.log('반 전체 평균을 산출합니다.')
+                var Toscore = 0;
+                // Toscore = ""
+                // 숫자로 정의를 안하고 ""으로 정의를 하게 되면 문자로 인식하게되어 덧셈이 안된다.
+
+
+                for (var i = 0; i < scoreArr.length; i++) {
+
+
+                    Toscore += Number(scoreArr[i]);
+
+                }
+                console.log(Toscore);
+
+                var avg = Toscore / scoreArr.length;
+                if (avg >= 0 && avg < 19) {
+                    document.write('반전체 평균은 ' + avg + "점수이며" + ' 등급은 가 입니다')
+                } else if (avg >= 19 && avg < 49) {
+                    document.write('반전체 평균은 ' + avg + "점수이며" + ' 등급은 양 입니다')
+                } else if (avg >= 49 && avg < 69) {
+                    document.write('반전체 평균은 ' + avg + "점수이며" + ' 등급은 미 입니다')
+                } else if (avg >= 69 && avg < 89) {
+                    document.write('반전체 평균은 ' + avg + "점수이며" + ' 등급은 우 입니다')
+                } else if (avg >= 89 && avg <= 100) {
+                    document.write('반전체 평균은 ' + avg + "점수이며" + ' 등급은 수 입니다')
+                }
+
+                // document.write('반전체 평균은 ' + avg + '점입니다')
+
+
+
+
+            } else if (!next) {
+                alert('프로그램을 종료합니다')
+            }
+
+            console.log(nameArr, scoreArr)
+
+
+        } else if (!check) {
+            console.log('re');
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+l>
