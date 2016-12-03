@@ -22,10 +22,12 @@ header {
   -webkit-box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2);
   height: 100px;
   padding: 0 20px;
+  transition: 1s;
 }
 header h1 {
   float: left;
   padding: 25px;
+  transition: 1s;
 }
 header h1 a {
   display: block;
@@ -55,19 +57,20 @@ header .menu {
   font-size: 14px;
   color: #FFFFFF;
   text-decoration: none;
+  transition: 1s;
 }
-header ul {
+header .navi {
   list-style: none;
   text-transform: uppercase;
   font-size: 16px;
   float: right;
 }
-header ul li {
+header .navi li {
   height: 100px;
   overflow: hidden;
   float: left;
 }
-header ul li a {
+header .navi li a {
   color: #aeaeae;
   display: block;
   padding: 42px 18px;
@@ -79,7 +82,7 @@ header ul li a {
   transition-delay: 0s;
   transition-duration: .15s;
 }
-header ul li a:hover {
+header .navi li a:hover {
   border-top: 3px solid #fff;
   background-color: rgba(255, 255, 255, 0.3);
 }
@@ -87,6 +90,7 @@ header ul li a:hover {
   position: absolute;
   top: 45%;
   right: 41%;
+  transition: 1s;
 }
 .main .mainlogo a {
   width: 240px;
@@ -112,10 +116,12 @@ header ul li a:hover {
   width: 100%;
   position: fixed;
   bottom: 0;
+  transition: 1s;
 }
 .footer .jypicon {
   padding: 6px 30px;
   float: left;
+  transition: 1s;
 }
 .footer .jypicon a {
   display: block;
@@ -124,6 +130,7 @@ header ul li a:hover {
   background-image: url("../image/jyplogo-w.png");
   background-position: center 0;
   background-repeat: no-repeat;
+  transition: 1s;
 }
 .footer .icon {
   padding: 10px 30px;
@@ -131,6 +138,7 @@ header ul li a:hover {
 }
 .footer .icon a {
   text-decoration: none;
+  transition: 1s;
 }
 @media screen and (max-width: 905px) {
   header {
@@ -140,24 +148,98 @@ header ul li a:hover {
     display: block;
     float: right;
   }
-  header ul {
+  header .navi {
     display: none;
     position: absolute;
     right: 0px;
     top: 61px;
     background-color: rgba(255, 255, 255, 0.2);
   }
-  header ul li {
+  header .navi li {
     width: 200px;
     height: 46px;
     float: none;
   }
-  header ul li a {
+  header .navi li a {
     padding: 15px;
   }
-  header ul li a:hover {
+  header .navi li a:hover {
     border-top: none;
     border-left: 3px solid #252525;
     background: #F2F2F2;
+  }
+  .main .mainlogo {
+    right: 35%;
+    transition: 1s;
+    transform: scale(0.7);
+  }
+}
+@media screen and (max-width: 475px) {
+  header {
+    height: 40px;
+    padding: 0;
+    transition: 1s;
+  }
+  header h1 {
+    padding: 2px 5px;
+    transition: 1s;
+  }
+  header h1 a {
+    width: 65px;
+    height: 30px;
+    transition: 1s;
+  }
+  header .menu {
+    display: block;
+    float: right;
+    width: 130px;
+    height: 21px;
+    padding: 10px;
+    transition: 1s;
+  }
+  header .navi {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 61px;
+    background-color: rgba(255, 255, 255, 0.2);
+    top: 41px;
+  }
+  header .navi li {
+    width: 150px;
+    height: 36px;
+    float: none;
+  }
+  header .navi li a {
+    padding: 10px 8px;
+  }
+  header .navi li a:hover {
+    border-top: none;
+    border-left: 3px solid #252525;
+    background: #F2F2F2;
+  }
+  .main .mainlogo {
+    right: 23%;
+    transition: 1s;
+    transform: scale(0.5);
+  }
+  .footer {
+    height: 37px;
+    transition: 1s;
+  }
+  .footer .jypicon {
+    padding: 6px 10px;
+    transition: 1s;
+  }
+  .footer .jypicon a {
+    background-size: 60%;
+    transition: 1s;
+  }
+  .footer .icon {
+    padding: 10px 30px;
+  }
+  .footer .icon a[class^=flaticon]::before {
+    transition: 1s;
+    font-size: 20px;
   }
 }

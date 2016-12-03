@@ -9,7 +9,10 @@
 
 
         }
-        ul{
+        h1{
+
+        }
+        .navi{
             display: none;
             position: absolute;
             right: 0px;
@@ -22,6 +25,7 @@
                 height: 46px;
                 float: none;
                 a{
+
                     padding: 15px;
                     &:hover{
                         border-top: none;
@@ -37,7 +41,28 @@
 
 
     }
+    .main{
+        .mainlogo{
 
+            right: 35%;
+            transition: 1s;
+            transform: scale(0.7);
+
+
+
+            a{
+
+                // transform과 background-size 차이?백그라운드는 찌그러질수 있어서 트랜스폰 스케일은 그런 찌그러짐이 없다.
+
+
+                &:hover{
+                }
+
+
+            }
+        }
+
+    }
 
 
 
@@ -49,27 +74,45 @@
     body{
     }
     header{
+        height: 40px;
         padding: 0;
+        transition: 1s;
+        h1{
+            padding: 2px 5px;
+            transition: 1s;
+            a{
+                width: 65px;
+                height: 30px;
+                transition: 1s;
+            }
+        }
         .menu{
             display: block;
             float: right;
+            width: 130px;
+            height: 21px;
+            padding: 10px;
+            transition: 1s;
 
 
         }
-        ul{
+        .navi{
             display: none;
             position: absolute;
             right: 0px;
             top: 61px;
             background-color: rgba(255,255,255,0.2);
+            top: 41px;
 
 
             li{
-                width: 200px;
-                height: 46px;
+                width: 150px;
+                height: 36px;
+
                 float: none;
+
                 a{
-                    padding: 15px;
+                    padding: 10px 8px;
                     &:hover{
                         border-top: none;
                         border-left: 3px solid #252525;
@@ -84,6 +127,57 @@
 
 
     }
+    .main{
+        .mainlogo{
+
+            right: 23%;
+            transition: 1s;
+            transform: scale(0.5);
+
+
+            a{
+
+
+                &:hover{
+                }
+
+
+            }
+        }
+
+    }
+    .footer{
+
+
+        height: 37px;
+        transition: 1s;
+
+
+        .jypicon{
+            padding: 6px 10px;
+            transition: 1s;
+
+
+            a{
+
+
+                background-size: 60%;
+                transition: 1s;
+
+            }
+        }
+        .icon{
+            padding: 10px 30px;
+
+            a[class^=flaticon]::before{
+                transition: 1s;
+                font-size: 20px;
+
+            }
+        }
+
+    }
+
 
 
 
