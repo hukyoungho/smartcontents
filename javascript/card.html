@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        var user;
+        var cardeck = [];
+        var cardModel = ['♠', '♣', '♥', '◆'];
+        var users = [];
+
+        function cardSelector() {
+
+            var rcard = Math.floor(Math.random() * cardeck.length);
+            users.unshift(cardeck[rcard]);
+            cardeck.splice(rcard, 1);
+            // splice 메서드는 내장메서드이고 (rcard,1)은 본인 위치를 삭제하는 행위다.
+
+        }
+
+
+        function addUser() {
+            user = prompt('사용자수를 입력하세요');
+        }
+
+
+        function cardMake() {
+            cardeck = [];
+            // 배열이기에 반복문에 의해 쌓여 배열을 비워야 한다.
+            for (i = 0; i < 4; i++) {
+                for (j = 1; j <= 13; j++) {
+                    //switch문
+                    switch (j) {
+                        case 1:
+                            cardeck.push(cardModel[i] + "A");
+                            break;
+                        case 11:
+                            cardeck.push(cardModel[i] + "J");
+                            break;
+                        case 12:
+                            cardeck.push(cardModel[i] + "Q");
+                            break;
+                        case 13:
+                            cardeck.push(cardModel[i] + "K");
+                            break;
+                        default:
+                            cardeck.push(cardModel[i] + j);
+                            break;
+                    }
+
+
+
+                    //if문
+                    // if (j == 1) {
+                    //     cardeck.push(cardModel[i] + "A")
+                    // } else if (j == 11) {
+                    //     cardeck.push(cardModel[i] + "J")
+                    // } else if (j == 12) {
+                    //     cardeck.push(cardModel[i] + "Q")
+                    // } else if (j == 13) {
+                    //     cardeck.push(cardModel[i] + "K")
+                    // } else {
+                    //     cardeck.push(cardModel[i] + i)
+                    // }
+
+
+                    //if문 한줄일때
+                    // if (j == 1) cardeck.push(cardModel[i] + "A");
+                    // else if (j == 11) cardeck.push(cardModel[i] + "J");
+                    // else if (j == 12) cardeck.push(cardModel[i] + "Q");
+                    // else if (j == 13) cardeck.push(cardModel[i] + "K");
+                    // else cardeck.push(cardModel[i] + j);
+                }
+            }
+        }
+
+
+        function checkvalue() {
+            console.log("현재등록된 사용자수:" + user)
+            console.log(cardeck);
+            console.log(users);
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <button type="button" onclick="addUser()">게임참여자 입력</button>
+    <button type="button" onclick="cardMake()">카드생산</button>
+    <button type="button" onclick="checkvalue()">데이터확인</button>
+    <button type="button" onclick="cardSelector()">카드나눠주기</button>
+</body>
+
+</html>

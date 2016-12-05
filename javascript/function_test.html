@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        // 1
+        // function shoot(x, y, z) {
+        //     console.log(x)
+        //     // x,y,z 값을 넣고 콘솔로 x값만 확인 가능하다.
+        // }
+        //
+        // function pass(x, y, z) {
+        //     console.log(x, y, z)
+        // }
+        // var technic = 10;
+        // var portune = 20;
+        // var napping = 30;
+        //
+        // function keeping(x, y, z, c) {
+        //     console.log(x, y, z, c)
+        // }
+
+        // 2
+        // var UserList = [
+        //     [],
+        //     []
+        // ];
+        //
+        // function addUser() {
+        //     var user = prompt('사용자를 입력');
+        //     var score = prompt('점수를 입력');
+        //
+        //     UserList[0].unshift(user);
+        //     UserList[1].unshift(score);
+        //
+        //     console.log(UserList)
+        //
+        //
+        // }
+
+
+
+        var userList = [
+            [],
+            []
+        ];
+
+        function addUser() {
+            var user = prompt('이름을 입력하세요');
+            var score = prompt('점수를');
+
+            userList[0].unshift(user);
+            userList[1].unshift(score);
+
+            console.log(userList);
+        }
+
+        function avg() {
+            var score = 0;
+            if (userList[1].length == 0) {
+                alert('점수를 입력해야 내가 평균을 냄')
+            } else {
+
+
+                for (i = 0; i < userList[1].length; i++) {
+                    score += Number(userList[1][i]);
+                }
+                var avg = score / userList[1].length
+                console.log(avg)
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 1 -->
+    <!-- <button type="button" onclick="shoot('left','right','up')">shoot</button> -->
+    <!--밖에서 큰따옴표로 감싸면 안에는 작은 따옴표로 감싸야 중간에 문자로 인식하는 오류가 발생하지 않는다.  -->
+    <!-- <button type="button" onclick="pass('right' ,'left' ,'down')">pass</button>
+    <button type="button" onclick="keeping('left','right','middle')">keeping</button>
+    <button type="button" onclick="shoot(technic,portune,napping)">shoot</button> -->
+
+
+
+    <!-- 2 -->
+    <!-- <button type="button" onclick="addUser()">학생 및 점수 추가</button> -->
+
+
+
+    <!-- 3 -->
+    <button type="button" onclick="addUser()">학생추가</button>
+    <button type="button" onclick="avg()">평균내기</button>
+
+
+
+
+
+</body>
+
+</html>

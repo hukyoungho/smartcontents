@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        var user;
+        var cardeck = [];
+        var cardModel = ['♠', '♣', '♥', '◆'];
+
+
+        function addUser() {
+            user = prompt('사용자수를 입력하세요');
+        }
+
+
+        function cardMake() {
+            cardeck = [];
+            // 배열이기에 반복문에 의해 쌓여 배열을 비워야 한다.
+            for (i = 0; i < 4; i++) {
+                for (j = 1; j <= 13; j++) {
+                    cardeck.push(cardModel[i] + j)
+                }
+            }
+        }
+
+
+        function checkvalue() {
+            console.log("현재등록된 사용자수:" + user)
+            console.log(cardeck);
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <button type="button" onclick="addUser()">게임참여자 입력</button>
+    <button type="button" onclick="cardMake()">카드생산</button>
+    <button type="button" onclick="checkvalue()">데이터확인</button>
+</body>
+
+</html>

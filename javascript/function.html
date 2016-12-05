@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        // 1
+        // function 은 임이로 내가 정할 수 있다.
+        // 반환값없음 보이드함수
+
+        // function sum(x, y) {
+        //     console.log(x, y)
+        // }
+        // var 스킬레벨 = 18;
+        //
+        // function 다데기(x) {
+        //     console.log('다데기!!' + x + "파워!!!")
+        // }
+
+
+        // 2
+        // var userList = [
+        //     [],
+        //     []
+        // ];
+        //
+        // function addUser() {
+        //     var user = prompt('사용자를 입력해주세요!');
+        //     var score = prompt('점수입력');
+        //
+        //     userList[0].unshift(user);
+        //     userList[1].unshift(score);
+        //
+        //     console.log(userList)
+        // 함수는 호출하지 않으면 실행시키지 않기 때문에 함수 안에 콘솔은 입력되지 않는다. 고로 함수가 실행 될때마다
+        // 콘솔은 실행되어 계속 쌓이는거다
+
+        // }
+
+
+
+        // 3
+        var userList = [
+            [],
+            []
+        ];
+
+        // var user
+        // 지역변수 는 함수또는 여러 문에 감싸여진 변수
+        // 전역변수 는 감싸여지지 않은 변수
+
+
+        function addUser() {
+            var user = prompt('사용자를 입력해주세요!');
+            var score = prompt('점수입력');
+
+            userList[0].unshift(user);
+            userList[1].unshift(score);
+
+            console.log(userList)
+        }
+        // console이 안에 있어야 함수가 실행 됐을때마다 기록을 하게 된다.
+        // 밖에 함수가 있다면 실행되기전에 기록된다.
+
+        function avg() {
+            var score = 0;
+
+            if (userList[1].length == 0) {
+                alert('점수를 입력해야 내가 평균을 냄')
+            } else {
+
+                for (i = 0; i < userList[1].length; i++) {
+                    score += Number(userList[1][i]);
+                }
+
+                var avg = score / userList[1].length
+                console.log(avg)
+                    // avg() 함수와 avg 변수는 다르다.
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 1 -->
+    <!-- <button type="button" onclick="sum(220,100)"></button> -->
+    <!-- x,y값을 sum안에 입력하여 콘솔에서 확인 가능하다. -->
+
+    <!-- <button type="button" onclick="다데기(스킬레벨)">다데기</button> -->
+    <!-- 스킬레벨 값을 18로 선언한후 다데기 함수에 대입하였으므로 콘솔에서 x값을 확인 할수 있다. -->
+
+    <!-- <button type="button" onclick="다데기('궁!!')">다데기2</button> -->
+    <!-- <button type="button" onclick="addUser()">학생추가</button> -->
+
+
+
+    <!-- 2 -->
+    <button type="button" onclick="addUser()">학생추가</button>
+    <!--3  -->
+    <button type="button" onclick="avg()">평균내기</button>
+
+</body>
+
+</html>
