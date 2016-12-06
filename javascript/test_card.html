@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
     <script type="text/javascript">
         var user;
         var cardeck = [];
@@ -12,18 +13,38 @@
         var users = [];
 
         function cardSelector() {
-
             var rcard = Math.floor(Math.random() * cardeck.length);
+            var rcard1 = Math.floor(Math.random() * cardeck.length);
+            var rcard2 = Math.floor(Math.random() * cardeck.length);
+
+            users.unshift(cardeck[rcard], cardeck[rcard1], cardeck[rcard2]);
+            cardeck.splice(rcard, 1);
+            cardeck.splice(rcard1, 1);
+            cardeck.splice(rcard2, 1);
+            console.log(users);
+
+        }
+
+        function cardSelector2() {
+            var rcard = Math.floor(Math.random() * cardeck.length);
+
+
             users.unshift(cardeck[rcard]);
             cardeck.splice(rcard, 1);
+
+            console.log(users);
+
         }
 
-        function addUser() {
+        function reset() {
+            users = [];
+            cardmake();
+            console.log(users);
+            console.log(cardeck);
 
-            user = prompt('사용자수를 입력하세요');
         }
 
-        function cardMake() {
+        function cardmake() {
             cardeck = [];
             for (i = 0; i < 4; i++) {
                 for (j = 1; j <= 13; j++) {
@@ -40,30 +61,26 @@
                         case 13:
                             cardeck.push(cardModel[i] + "K");
                             break;
+
                         default:
                             cardeck.push(cardModel[i] + j);
                             break;
 
                     }
+
                 }
             }
-        }
-
-        function checkvalue() {
-            console.log('현재등록된 사용자수:' + user)
             console.log(cardeck);
-            console.log(users);
         }
     </script>
-
-
 </head>
 
 <body>
-    <button type="button" onclick="addUser()">게임참여자 입력</button>
-    <button type="button" onclick="cardMake()">카드생산</button>
-    <button type="button" onclick="checkvalue()">데이터확인</button>
-    <button type="button" onclick="cardSelector()">카드나눠주기</button>
+    <button type="button" onclick="cardmake()">카드정리</button>
+    <button type="button" onclick="cardSelector()">게임시작</button>
+    <button type="button" onclick="cardSelector2()">콜</button>
+    <button type="button" onclick="reset()">다이</button>
+
 </body>
 
 </html>

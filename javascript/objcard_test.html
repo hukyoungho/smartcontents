@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var card = {
+            card_number: 13,
+            card_deck: [],
+            users: [],
+            shape: ['♠', '♣', '♥', '◆'],
+            card_Selector: function() {
+                var rcard = Math.floor(Math.random() * card_deck.length);
+                users.unshift(card_deck[racard]);
+                card.card_deck.splice(rcard, 1);
+            },
+            cardMake: function() {
+
+                for (var i = 0; i < this.shape.length; i++) {
+                    card_deck = [];
+                    for (var j = 1; j <= this.card_number; j++) {
+                        if (j == 1) {
+                            card.card_deck.push(this.shape[i] + "A");
+                        } else if (j == 11) {
+                            card.card_deck.push(this.shape[i] + "J");
+                        } else if (j == 12) {
+                            card.deck_deck.push(this.shape[i] + "Q");
+                        } else if (j == 13) {
+                            card.card_deck.push(this.shape[i] + "K");
+                        } else {
+                            card.card_deck.push(this.shape[i] + j);
+                        }
+
+
+                    }
+                }
+            }
+        }
+
+        function checkvalue() {
+            console.log(card.card_deck)
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="card.cardMake()">생성</button>
+    <button type="button" onclick="checkvalue()">데이터확인</button>
+    <button type="button" onclick="card_Selector()">카드나눠주기</button>
+
+
+
+
+</body>
+
+</html>
