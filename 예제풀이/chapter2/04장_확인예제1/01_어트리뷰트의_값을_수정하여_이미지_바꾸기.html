@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>01_어트리뷰트의_값을_수정하여_이미지_바꾸기</title>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<style>
+		html * {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			padding: 10px;
+			margin-top: 100px;
+		}
+
+		body span {
+			color: red;
+			font-size: 30px;
+		}
+
+		p {
+			margin-bottom: 20px;
+		}
+
+		#wrapper {
+			width: 522px;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		li {
+			float: left;
+			list-style: none;
+			margin-left: 10px;
+			overflow: hidden;
+			width: 123px;
+			height: 40px;
+		}
+
+		li.first {
+			margin-left: 0px;
+		}
+
+		li a {
+			display: block;
+			width: 123px;
+		}
+
+		li a img {
+			display: block;
+		}
+
+		#nav {
+			width: 522px;
+			height: 40px;
+			margin: 0px auto 10px auto;
+		}
+
+		#image {
+			width: 522px;
+			height: 400px;
+			margin: 10px auto 0px auto;
+		}
+
+		#image img {
+			width: 522px;
+			height: 400px;
+		}
+	</style>
+	<script>
+		$(document).ready(function() {
+			// 기존
+			// $('#nav > ul > #springBtn').bind('click', function(){
+			// 	$('#image > img').attr({src:'images/spring.jpg', alt:'봄'});
+			// });
+			//
+			// $('#nav > ul > #summerBtn').bind('click', function(){
+			// 	$('#image > img').attr({src:'images/summer.jpg', alt:'여름'});
+			// });
+			//
+			// $('#nav > ul > #fallBtn').bind('click', function(){
+			// 	$('#image > img').attr({src:'images/fall.jpg', alt:'가을'});
+			// });
+			//
+			// $('#nav > ul > #winterBtn').bind('click', function(){
+			// 	$('#image > img').attr({src:'images/winter.jpg', alt:'겨울'});
+			// });
+
+
+			// teacher
+			// $('#nav > ul > #springBtn').click(function() {
+			// 	console.log('aaa')
+			//
+			// 	$('#image > img').attr('src', 'images/spring.jpg')
+			//
+			//
+			// })
+			// $('#nav > ul > #summerBtn').click(function() {
+			// 	// $('#image>img').attr('src')
+			// 	// src만 쓰고 속성값을 안쓰면 고유 속성값을 가지고 온다.
+			//
+			// 	$('#image > img').attr('src', 'images/summer.jpg')
+			//
+			//
+			// })
+			// $('#nav > ul > #fallBtn').click(function() {
+			//
+			// 	$('#image > img').attr('src', 'images/fall.jpg')
+			//
+			//
+			// })
+			// $('#nav > ul > #winterBtn').click(function() {
+			//
+			// 	$('#image > img').attr('src', 'images/winter.jpg')
+			// 		// $('#image > img').attr({
+			// 		// 	'src': "images/summer.jpg",
+			// 		// 	'alt': "여름"
+			// 		// });
+			// 		// 두개이상의 속성값을 바꿔주려면 {}객체형식으로 만들어줘야 한다.
+			//
+			//
+			// })
+
+
+			//효율적으로
+			var imgur1 = ['spring.jpg', 'summer.jpg', 'fall.jpg', 'winter.jpg']
+			var path = 'images/';
+			$('#nav > ul > li').click(function() {
+				var idx = $(this).index();
+				$('#image img').attr('src', path + imgur1[idx]);
+			})
+		});
+	</script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="nav">
+			<ul>
+				<li id="springBtn" class="first on">
+					<a href="#">
+						<img src="images/btn1_2.jpg" />
+					</a>
+				</li>
+				<li id="summerBtn">
+					<a href="#">
+						<img src="images/btn2_2.jpg" />
+					</a>
+				</li>
+				<li id="fallBtn">
+					<a href="#">
+						<img src="images/btn3_2.jpg" />
+					</a>
+				</li>
+				<li id="winterBtn">
+					<a href="#">
+						<img src="images/btn4_2.jpg" />
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div id="image">
+			<img src="images/spring.jpg" alt="봄" />
+		</div>
+	</div>
+</body>
+
+</html>

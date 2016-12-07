@@ -7,6 +7,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script type="text/javascript">
+    var cardtype=['하트','다이아','스페이스','클로버'];
+    var carbox=[];
+    function reset(){
+        carbox=[];
+
+        for(var i=0 in cardtype){
+            for(j=0; j<13; j++){
+                if(j==0){
+                    carbox.push(cardtype[i]+'A');
+                }else if(j==11){
+                    carbox.push(cardtype[i]+'J');
+                }else if(j==12){
+                    carbox.push(cardtype[i]+'K');
+                }else if(j==13){
+                    carbox.push(cardtype[i]+'Q');
+                }else{
+                    carbox.push(cardtype[i]+(j+1))
+                }
+            }
+        }
+        console.log(carbox)
+
+
+    }
+    function die() {
+        reset()
+        user=[]
+    }
+    function start(){
+        var i=0;
+        while (i<3) {
+            addcard()
+            i++
+
+        }
+    }
+    var user = [];
+
+    function addcard(){
+        var rans = math.floor(Math.random()*carbox.length);
+        user.push(carbox[rans])
+        carbox.splice(rans,1)
+
+        console.log(user)
+    }
     </script>
 </head>
 
