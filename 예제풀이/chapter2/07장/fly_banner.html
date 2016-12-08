@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var $wrap = $('.wrapper');
+            // 변수앞 $는 선택자변수라는것을 표시하기 위한 단순 표시. 의미 없음.
+            $(window).resize(function() {
+                $('.fly').css('left', $wrap.offset().left + $wrap.width() + 10)
+            })
+            $(window).scroll(function() {
+                // window scroll을 하게되면 실행되는 이벤트.
+                $('.fly').stop().animate({
+                        // fly 멈추면 애니메이션을 실행해라.
+                        top: $(this).scrollTop()
+                    }, 1000)
+                    // animate에서 한개 변화를 주더라도 duration이라는
+                    // 지시자가 값이 있기대문에 객체로 담아줘야 한다.
+
+            });
+            $(window).trigger('resize');
+            // trigger window에 있는 ressize 함수를 실행시켜라 라는 명령어여서 문자로 표현된다/.
+            // resize 실행되기전에 먼저 실행할수 있게 한다.
+            // resize 반환함수가 아니고 보이드 함수 이기에
+        })
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            width: 800px;
+            height: 2000px;
+            border: 1px #f00 solid;
+            margin: 0 auto;
+        }
+
+        .fly {
+            width: 100px;
+            height: 200px;
+            border: 1px #0f0 solid;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+    </div>
+    <div class="fly"></div>
+
+</body>
+
+</html>

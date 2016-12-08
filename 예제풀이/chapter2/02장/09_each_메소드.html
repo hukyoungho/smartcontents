@@ -40,24 +40,24 @@
 		// });
 		$(document).ready(function() {
 
-			// $('#wrapper li').each(function() {
-			// 	$(this).css('color', 'red');
-			// 	console.log($(this).text())
+			$('#wrapper li').each(function() {
+				$(this).css('color', 'red');
+				console.log($(this).text())
+
+			})
+
+
+
+
+
+			// for (i = 0; i < $('#wrapper li').size(); i++) {
+			// 	$('#wrapper li:eq(' + i + ')').text()
 			//
-			// })
+			// 	// $('#wrapper li').eq(i).text();
+			// 	// 문자를 변수로 고쳐주기 위해 썼다. 따옴표 안ㅇ
 			//
-			// console.log("아" + 2)
-
-
-
-			for (i = 0; i < $('#wrapper li').size(); i++) {
-				$('#wrapper li:eq(' + i + ')').text()
-
-				// $('#wrapper li').eq(i).text();
-				// 문자를 변수로 고쳐주기 위해 썼다. 따옴표 안ㅇ
-
-			}
-			$(this).css('color', 'red');
+			// }
+			// $(this).css('color', 'red');
 		})
 	</script>
 </head>

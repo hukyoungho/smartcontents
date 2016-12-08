@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+        /*  layout */
+
+        .slide {
+            width: 500px;
+            height: 300px;
+            border: 1px #00F solid;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .slide .btngroup {
+            top: 50%;
+        }
+
+        .slide .btngroup button.next {
+            position: absolute;
+            right: -50px;
+            top: 150%
+        }
+
+        .slide .btngroup button.prev {
+            position: absolute;
+            left: -50px;
+            top: 50%
+        }
+
+        .slide .view {
+            text-align: center;
+            border: 1px #0F0 solid;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slide .view li {
+            display: inline-block;
+        }
+
+        .slide .view li div {
+            border: 1px #F00 solid;
+            left: 0;
+            width: 100%;
+            top: 0;
+            height: 300px;
+            position: absolute;
+            display: none;
+        }
+
+        .slide .view li.on div {
+            display: block;
+        }
+
+        .slide .view li a {
+            position: relative;
+            top: 350px;
+        }
+
+        .slide .view li:nth-child(1) div {
+            background: #F00;
+        }
+
+        .slide .view li:nth-child(2) div {
+            background: #0F0;
+        }
+
+        .slide .view li:nth-child(3) div {
+            background: #00F;
+        }
+    </style>
+
+    <script>
+        $(function() {
+
+            var move = $('.slide').width() // 이동값
+            var idx = 0; // 초기값
+
+            $('.next').click(function() {
+
+                $('.slide .view ul li') // 슬라이드 안에 뷰 안에 유엘 안에 엘아이 선택해
+                    .eq(idx) //엘아이 중에 idx 번째 해당하는 놈
+                    .find('div') //의 자식 div
+                    .animate({ //움직임줘
+                        left: -move //왼쪽으로 슬라이드 위드값 만큼 이동해
+                    })
+                    .parent() //부모로 올라와
+                    .next() //그다음놈
+                    .find('div') //의 자식
+                    .css({ //한테  스타일줘
+                        'display': 'block', //눈에보이게하고
+                        'left': move // 오른쪽 끝으로 이동해
+                    })
+                    .stop()
+                    .animate({ // 움직임줘
+                        'left': 0 // 눈에보이는 0위치로 이동해
+                    })
+
+                idx++ // 그리고 idx 증가해 (다음 )
+                //
+                // if (idx == $('.slide .view ul li').length) {
+                //     idx = 0;
+                //     $('.slide .view ul li').eq(idx).find('div').css({
+                //         'left': move
+                //     }).stop().animate({
+                //         'left': 0
+                //     })
+                // }
+
+
+
+
+                //console.log($('.slide .view ul li').find('div').parent().next().html())
+            })
+
+            $('.prev').click(function() {
+                //숙제
+
+
+            })
+
+
+
+
+        })
+    </script>
+
+</head>
+
+<body>
+
+    <div class="slide">
+        <div class="btngroup">
+            <button class="next">다음</button>
+            <button class="prev">이전</button>
+        </div>
+        <div class="view">
+            <ul>
+                <li class="on">
+                    <a href="">1</a>
+                    <div></div>
+                </li>
+                <li>
+                    <a href="">2</a>
+                    <div></div>
+                </li>
+                <li>
+                    <a href="">3</a>
+                    <div></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

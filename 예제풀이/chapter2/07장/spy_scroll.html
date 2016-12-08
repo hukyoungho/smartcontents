@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <title>Document</title>
     <style>
         .wrap div {
             height: 700px;
@@ -25,43 +27,50 @@
             font-size: 20px;
         }
     </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
     <script>
-        $(function() {
+        $(document).ready(function() {
 
-        var move =
+            //1안
+            // $('.menu a').click(function(){
+            //   var idx = $(this).index();
+            //   var move = $('.wrap div:eq('+idx+')').offset().top;
+            //   $('body,html').animate({
+            //      scrollTop:move
+            //   })
+            // })
 
-            $('.next').click(function() {
-                $('.slide .view ul li').eq(0).find('div').animate({
-                    left: "-100px"
-                })
+
+
+            //2안
+            var a = [];
+            $('.wrap div').each(function() {
+                a.push($(this).offset().top)
             })
+            console.log(a)
 
-        })
+            $('.menu a').click(function() {
+                var idx = $(this).index();
+                $('body,html').animate({
+                    scrollTop: a[idx]
+                })
 
-
-
-
-
-
-
-
+            })
         })
     </script>
 
-    <title>Document</title>
 </head>
 
 <body>
+
     <div class="menu">
         <a href="javascript:void(0)">menu1</a>
+        <!--a 태그 실행 막기,onclick 으로 javascript 함수를 호출하고 싶을때 href="" 기능을 막아버린다.
+[출처] a 태그 실행 막기 // a href="javascript:void(0);"|작성자 월야  -->
         <a href="javascript:void(0)">menu2</a>
         <a href="javascript:void(0)">menu3</a>
         <a href="javascript:void(0)">menu4</a>
         <a href="javascript:void(0)">menu5</a>
-
-
-
     </div>
     <div class="wrap">
         <div></div>
@@ -69,10 +78,17 @@
         <div></div>
         <div></div>
         <div></div>
-        <div></div>
     </div>
-</body>
 
-</html>
+
+
+
+
+
+
+
+
+
+</body>
 
 </html>

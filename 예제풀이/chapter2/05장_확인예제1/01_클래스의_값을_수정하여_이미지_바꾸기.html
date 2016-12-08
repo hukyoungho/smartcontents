@@ -2,68 +2,158 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<title>01_어트리뷰트의_값을_수정하여_이미지_바꾸기</title>
-		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-		<style>
-			html * { margin:0; padding:0; }
-			body { padding:10px;  margin-top:100px;}
-			body span { color:red; font-size: 30px; }
-			p { margin-bottom: 20px;}
-			#wrapper { width:522px; margin:0 auto; text-align:center;}
-			li { float: left; list-style: none; margin-left: 10px;overflow:hidden; width:123px; height:40px;}
-			li.first { margin-left:0px; }
-			li a {display:block;  width:123px;}
-			li a img {display:block;}
-			#nav {width:522px; height:40px; margin: 0px auto 10px auto; }
-			#image { width:522px; height:400px; margin: 10px auto 0px auto; }
-			#image.spring { background:url(images/spring.jpg) }
-			#image.summer { background:url(images/summer.jpg) }
-			#image.fall { background:url(images/fall.jpg) }
-			#image.winter { background:url(images/winter.jpg) }
-		</style>
-		<script>
-			$(document).ready(function(){
-				$('#nav > ul > #springBtn').bind('click', function(){
-					$('#image').removeClass().addClass('spring');
-				});
-				
-				$('#nav > ul > #summerBtn').bind('click', function(){
-					$('#image').removeClass().addClass('summer');
-				});
-				
-				$('#nav > ul > #fallBtn').bind('click', function(){
-					$('#image').removeClass().addClass('fall');
-				});
-				
-				$('#nav > ul > #winterBtn').bind('click', function(){
-					$('#image').removeClass().addClass('winter');
-				});
-			});
-		</script>
-	</head>
-	
-	<body>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>01_어트리뷰트의_값을_수정하여_이미지_바꾸기</title>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<style>
+		html * {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			padding: 10px;
+			margin-top: 100px;
+		}
+
+		body span {
+			color: red;
+			font-size: 30px;
+		}
+
+		p {
+			margin-bottom: 20px;
+		}
+
+		#wrapper {
+			width: 522px;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		li {
+			float: left;
+			list-style: none;
+			margin-left: 10px;
+			overflow: hidden;
+			width: 123px;
+			height: 40px;
+		}
+
+		li.first {
+			margin-left: 0px;
+		}
+
+		li a {
+			display: block;
+			width: 123px;
+		}
+
+		li a img {
+			display: block;
+		}
+
+		#nav {
+			width: 522px;
+			height: 40px;
+			margin: 0px auto 10px auto;
+		}
+
+		#image {
+			width: 522px;
+			height: 400px;
+			margin: 10px auto 0px auto;
+		}
+
+		#image.spring {
+			background: url(images/spring.jpg)
+		}
+
+		#image.summer {
+			background: url(images/summer.jpg)
+		}
+
+		#image.fall {
+			background: url(images/fall.jpg)
+		}
+
+		#image.winter {
+			background: url(images/winter.jpg)
+		}
+	</style>
+	<script>
+		$(document).ready(function() {
+			// $('#nav > ul > #springBtn').bind('click', function() {
+			// 	$('#image').removeClass().addClass('spring');
+			// 	// removeClass(djk)를 하면  특정 클래스만 제거. 없으면 모든 클래스 제거
+			// 	// romoveclass먼저 선언되고 addClass나중에 선언되어야 지우고 들어간다.
+			// });
+			// $('#nav > ul > #springBtn').click(function() {
+			// 	$('#image').removeClass().addClass('spring');
+			// 	// 윗 부분과 같음
+			// });
+			//
+			// $('#nav > ul > #summerBtn').bind('click', function() {
+			// 	$('#image').removeClass().addClass('summer');
+			// });
+			//
+			// $('#nav > ul > #fallBtn').bind('click', function() {
+			// 	$('#image').removeClass().addClass('fall');
+			// });
+			//
+			// $('#nav > ul > #winterBtn').bind('click', function() {
+			// 	$('#image').removeClass().addClass('winter');
+			// });
+
+
+			// test
+			// var images = ['spring', 'summer', 'fall', 'winter'];
+			//
+			// $('#nav > ul > li').click(function() {
+			// 	var idx = $(this).index();
+			// 	$('#image').removeClass().addClass(images[idx]);
+			// })
+
+
+			// teacher
+			$('#nav>ul>li').click(function() {
+				var classe = $(this).attr('data-view-class');
+				// var class 사용 안됨.
+				$('#image').removeClass().addClass(classe);
+			})
+
+
+			$('#nav>ul>li').click(function() {
+				var classe = $(this).attr('data-view-class');
+				$('')
+			})
+
+		});
+	</script>
+</head>
+
+<body>
 	<div id="wrapper">
 		<div id="nav">
 			<ul>
-				<li id="springBtn" class="first on">
+				<li id="springBtn" data-view-class="spring" class="first on">
 					<a href="#">
 						<img src="images/btn1_2.jpg" />
 					</a>
 				</li>
-				<li id="summerBtn">
+				<li id="summerBtn" data-view-class="summer">
 					<a href="#">
 						<img src="images/btn2_2.jpg" />
 					</a>
 				</li>
-				<li id="fallBtn">
+				<li id="fallBtn" data-view-class="fall">
 					<a href="#">
 						<img src="images/btn3_2.jpg" />
 					</a>
 				</li>
-				<li id="winterBtn">
+				<li id="winterBtn" data-view-class="winter">
 					<a href="#">
 						<img src="images/btn4_2.jpg" />
 					</a>
@@ -72,5 +162,6 @@
 		</div>
 		<div id="image" class="spring"></div>
 	</div>
-	</body>
+</body>
+
 </html>
