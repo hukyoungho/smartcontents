@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            var move = $('.slide').width()
+            var idx = 0;
+
+            $('.next').click(function() {
+
+                $('.slide .view ul li')
+                    .eq(idx)
+                    .find('div')
+                    .stop()
+                    .animate({
+                        left: -move
+                    })
+                    .parent()
+                    .next()
+                    .find('div')
+                    .css({
+                        'display': 'block',
+                        'left': move
+                    })
+                    .stop()
+                    .animate({
+                        'left': 0
+                    })
+                idx++
+
+                if (idx == $('.slide .view ul li').length) {
+                    idx = 0;
+                    $('.slide .view ul li')
+                        .eq(idx)
+                        .find('div')
+                        .css({
+                            'left': move
+                        }).stop()
+                        .animate({
+                            'left': 0
+                        })
+                }
+
+
+            })
+
+            $('.prev').click(function() {
+                // //idx를++를 해줬을 경우
+                // $('.slide .view ul li')
+                //     .eq(idx)
+                //     .find('div')
+                //     .animate({
+                //         left: move
+                //     })
+                //     .parent()
+                //     .next()
+                //     .find('div')
+                //     .css({
+                //         'display': 'block',
+                //         'left': -move
+                //     })
+                //     .stop()
+                //     .animate({
+                //         'left': 0
+                //     })
+                //
+                // idx++
+                // if (idx == $('.slide .view ul li').length) {
+                //
+                //     idx = 0;
+                //     $('.slide .view ul li').eq(idx).find('div').css({
+                //         'left': -move
+                //     }).stop().animate({
+                //         'left': 0
+                //     })
+                // }
+
+
+
+
+
+                // //idx를--를 해줬을 경우
+                // $('.slide .view ul li')
+                //     .eq(-idx)
+                //     .find('div')
+                //     .animate({
+                //         left: move
+                //     })
+                //     .parent()
+                //     .next()
+                //     .find('div')
+                //     .css({
+                //         'display': 'block',
+                //         'left': -move
+                //     })
+                //     .stop()
+                //     .animate({
+                //         'left': 0
+                //     })
+                // idx--
+                // if (idx == -$('.slide .view ul li').length) {
+                //     idx = 0;
+                //     $('.slide .view ul li').eq(idx).find('div').css({
+                //         'left': -move
+                //     }).stop().animate({
+                //         'left': 0
+                //     })
+                // }
+
+                // //idx를--를 해줬을 경우2
+                $('.slide .view ul li')
+                    .eq(idx)
+                    .find('div')
+                    .stop()
+                    .animate({
+                        left: move
+                    })
+                    .parent()
+                    .prev()
+                    .find('div')
+                    .css({
+                        'display': 'block',
+                        'left': -move
+                    })
+                    .stop()
+                    .animate({
+
+                        'left': 0
+                    })
+                idx--
+
+                if (idx < 0) {
+                    idx = $('.slide .view ul li').length - 1
+                    $('.slide .view ul li').eq(idx).find('div').css({
+                        'display': 'block',
+                        'left': -move
+                    }).stop().animate({
+                        'left': 0
+                    })
+                }
+
+
+
+            })
+        })
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .slide {
+            width: 500px;
+            height: 300px;
+            border: 1px #00f solid;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .slide .btngroup button.next {
+            position: absolute;
+            right: -50px;
+            top: 50%;
+        }
+
+        .slide .btngroup button.prev {
+            position: absolute;
+            left: -50px;
+            top: 50%;
+        }
+
+        .slide .view {
+            text-align: center;
+            border: 1px #00f solid;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slide .view li {
+            display: inline-block;
+        }
+
+        .slide .view li div {
+            border: 1px #f00 solid;
+            position: absolute;
+            left: 0px;
+            width: 100%;
+            top: 0;
+            height: 300px;
+            display: none;
+        }
+
+        .slide .view li.on div {
+            display: block;
+        }
+
+        .slide .view li a {
+            position: relative;
+            top: 350px;
+        }
+
+        .slide .view li:nth-child(1) div {
+            background: #F00;
+        }
+
+        .slide .view li:nth-child(2) div {
+            background: #0F0;
+        }
+
+        .slide .view li:nth-child(3) div {
+            background: #00F;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="slide">
+        <div class="btngroup">
+            <button type="button" class="next">다음</button>
+            <button type="button" class="prev">이전</button>
+
+        </div>
+        <div class="view">
+            <ul>
+                <li class="on">
+                    <a href="">1</a>
+                    <div></div>
+                </li>
+                <li>
+                    <a href="">2</a>
+                    <div></div>
+                </li>
+                <li>
+                    <a href="">3</a>
+                    <div></div>
+                </li>
+            </ul>
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+</html>

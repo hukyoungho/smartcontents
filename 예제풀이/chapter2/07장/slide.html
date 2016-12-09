@@ -23,15 +23,15 @@
             margin: 0 auto;
             position: relative;
         }
-
-        .slide .btngroup {
+        /*.slide .btngroup {
             top: 50%;
-        }
+        /*}*/
+        /*선생님이 주신 부분 어떤 이유로 적용한지 모르겠다.*/
 
         .slide .btngroup button.next {
             position: absolute;
             right: -50px;
-            top: 150%
+            top: 50%
         }
 
         .slide .btngroup button.prev {
@@ -111,15 +111,15 @@
                     })
 
                 idx++ // 그리고 idx 증가해 (다음 )
-                //
-                // if (idx == $('.slide .view ul li').length) {
-                //     idx = 0;
-                //     $('.slide .view ul li').eq(idx).find('div').css({
-                //         'left': move
-                //     }).stop().animate({
-                //         'left': 0
-                //     })
-                // }
+
+                if (idx == $('.slide .view ul li').length) {
+                    idx = 0;
+                    $('.slide .view ul li').eq(idx).find('div').css({
+                        'left': move
+                    }).stop().animate({
+                        'left': 0
+                    })
+                }
 
 
 

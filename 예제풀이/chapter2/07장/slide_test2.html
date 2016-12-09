@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .slide {
+            border: 1px #F00 solid;
+            width: 600px;
+            height: 300px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .slide button {
+            position: absolute;
+            top: 50%;
+            width: 30px;
+            height: 40px;
+        }
+
+        .slide button.next {
+            left: -50px;
+        }
+
+        .slide button.prev {
+            right: -50px;
+        }
+
+        .slide .view {
+            text-align: center;
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .slide li {
+            display: inline-block;
+        }
+
+        .slide li.on a {
+            background-color: #F00;
+        }
+
+        .slide li a {
+            position: relative;
+            top: 250px;
+            z-index: 1;
+            display: block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            border: 1px #FFF solid;
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        .slide li:first-child div {
+            display: block;
+        }
+
+        .slide li div {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+
+        .slide li div img {
+            width: 100%;
+        }
+    </style>
+
+    <script>
+        $(function() {
+
+            var idx = 0;
+
+            var inters = setInterval(function() {
+                $('.next').click();
+            }, 1000);
+            // setInterval 함수는 내장 함수이고 그 의미는 자동으로
+            // 시작되는 기능과 간격을 조절할수 있다.
+            // 자동으로 실행
+
+            $('.view').mouseenter(function() {
+
+                    clearInterval(inters)
+
+                }).mouseleave(function() {
+
+                    inters = setInterval(function() {
+                        $('.next').click();
+                    }, 3000);
+
+                })
+                // mouseenter 함수는 내장 함수이고 마우스를 가져갔을때 실행시키는 함수.
+                // mouseleave 함수는 내장 함수이고 가져간 마우스가 떠났을땓 실행시키는 함수.
+                // 마우스가 올라오면 나가면 실행해라.
+
+            function movement(start, end, i) {
+                // var movement = function(){}와 같지만 익명 함수이기때문에 위에서 호출해줘야 한다.
+                // 안그러면 그 함수가 정의 되기전에 가져가 쓰지 못한다.
+                // function movement 는 이름 있는 함수가 되기때문에 어디 위치하든 호출 가능하다.
+                $('.view li').eq(i).addClass('on').find('div').css({
+                    left: start,
+                    'display': 'block'
+                }).stop().animate({
+                    left: end
+                }).parent().siblings().removeClass();
+                // 적용시키고 부모 형제들의 모든 클래스 제거.
+
+                if (idx == $('.view li').length) {
+                    idx = 0
+                    movement('100%', 0, idx)
+                } else if (idx < 0) {
+                    idx = $('.view li').length - 1;
+                    movement('-100%', 0, idx)
+                }
+            }
+
+            $('.next').click(function() {
+                console.log(idx)
+                movement(0, '-100%', idx);
+                idx++
+                movement('100%', 0, idx);
+
+            })
+
+            $('.prev').click(function() {
+                movement(0, '100%', idx);
+                idx--
+                movement('-100%', 0, idx);
+            })
+
+            $('.view li a').click(function() {
+                var hinum = $('.view li.on').index();
+                // hinum on클래스가 있는놈
+                idx = $(this).parent().index()
+                    // a를 클릭하고 실행한 놈은 idx 이고 그놈의 부모의 위치값.
+
+                if (hinum < idx) {
+                    // on클래스가 있는 li의 index < a태그의 부모의 index값
+                    movement(0, '-100%', hinum);
+                    // 기존 이미지가 원래 있던 곳에서 왼쪽으로
+                    movement('100%', 0, idx);
+                    // 선택한 부분의 이미지가 오른쪽에서 왼쪽으로
+                } else if (hinum > idx) {
+                    movement(0, '100%', hinum);
+                    // 기존이미지가 원래 있던곳에서 오른쪽으로
+                    movement('-100%', 0, idx);
+                    //  선택한 부분의 이미지가 왼쪽에서 오른쪽으로
+                }
+
+                return false;
+                // 여기서 끝내
+            })
+
+        })
+    </script>
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <div class="slide">
+        <div class="btngroup">
+            <button class="next">다음</button>
+            <button class="prev">이전</button>
+        </div>
+
+        <div class="view">
+            <ul>
+                <li class="on">
+                    <a href="">1</a>
+                    <div><img src="../../../smartcontents/images/1.jpg"></div>
+                </li>
+                <li>
+                    <a href="">2</a>
+                    <div><img src="../../../smartcontents/images/2.jpg"></div>
+                </li>
+                <li>
+                    <a href="">3</a>
+                    <div><img src="../../../smartcontents/images/3.jpg"></div>
+                </li>
+                <li>
+                    <a href="">4</a>
+                    <div><img src="../../../smartcontents/images/4.jpg"></div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
