@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+        var slide = {
+            idx: 0,
+            inters: setInterval(function() {
+                $('.next').click();
+
+            }, 1000),
+            mouse: function() {
+                $('#result').on('mouseenter', '.view', function() {
+                    clearInterval(slide.inters)
+                });
+                $('#result').on('mouseleave', '.view', function() {
+                    $('.next').click();
+                })
+            },
+
+
+
+
+
+
+
+
+            movement: function(start, end, idx) {
+                $('.slide').find('li').eq(idx).addClass('on').find('div').css({
+                    'left': start,
+                    'display': 'block'
+                }).stop().animate({
+                    'left': end
+                }).parent().siblings().removeClass();
+
+                if (slide.idx == $('.view li').length) {
+                    slide.idx = 0
+                    slide.movement('100%', 0, slide.idx)
+                } else if (slide.idx < 0) {
+                    slide.idx = $('.view li').length - 1;
+                    slide.movement('-100%', 0, slide.idx)
+                }
+            },
+            event: function() {
+                $('#result').on('click', '.next', function() {
+                    slide.movement('0', '-100%', slide.idx);
+                    slide.idx++
+                        slide.movement('100%', '0', slide.idx);
+                })
+            },
+            event2: function() {
+                $('#result').on('click', '.prev', function() {
+                    slide.movement('0', '100%', slide.idx);
+                    slide.idx--
+                        slide.movement('-100%', '0', slide.idx);
+                })
+            },
+            event3: function() {
+                $('#result').on('click', '.view li a', function() {
+                    var hinum = $('.view li.on').index();
+                    idx = $(this).parent().index()
+                    if (hinum < idx) {
+                        slide.movement(0, '-100%', hinum);
+                        slide.movement('100%', 0, idx);
+                    } else if (hinum > idx) {
+                        slide.movement(0, '100%', hinum);
+                        slide.movement('-100%', 0, idx);
+                    }
+                    return false;
+                })
+            }
+
+
+
+        }
+
+
+
+        $(document).ready(function() {
+            $("#result").load("loadslide.html #slide");
+            slide.event();
+            slide.event2();
+            slide.event3();
+            slide.inters;
+            slide.mouse();
+
+
+
+
+
+        })
+
+
+        $(window).load(function() {
+
+        })
+    </script>
+
+
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .slide {
+            border: 1px #F00 solid;
+            width: 600px;
+            height: 300px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .slide button {
+            position: absolute;
+            top: 50%;
+            width: 30px;
+            height: 40px;
+        }
+
+        .slide button.next {
+            left: -50px;
+        }
+
+        .slide button.prev {
+            right: -50px;
+        }
+
+        .slide .view {
+            text-align: center;
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .slide li {
+            display: inline-block;
+        }
+
+        .slide li.on a {
+            background-color: #F00;
+        }
+
+        .slide li a {
+            position: relative;
+            top: 250px;
+            z-index: 1;
+            display: block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            border: 1px #FFF solid;
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        .slide li:first-child div {
+            display: block;
+        }
+
+        .slide li div {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+
+        .slide li div img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="result">
+        <input type="text" name="" id="q" />
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

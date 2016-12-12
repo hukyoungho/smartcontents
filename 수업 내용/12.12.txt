@@ -1,0 +1,15 @@
+var grades = {'egoing': 10, 'k8805': 6, 'sorialgi': 80};
+for(key in grades) {
+    document.write("key : "+key+" value : "+grades[key]+"<br />");
+}
+여기서 [key]는 지시자를 가리키는 것으로
+
+배열 선택과 다르다
+
+다르게 표현하자면
+
+grades.지시자
+
+key :   egoing value : 10
+key :   k8805 value : 6
+key :   sorialgi value : 80
