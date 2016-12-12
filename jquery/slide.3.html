@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+
+            //문서가 준비되면 실행해!
+
+            // var tt = function(i,e){
+            //     console.log("ready: "+$(e).height())
+            // }
+
+            // $('body img').each(tt)
+        })
+
+        $(window).load(function() {
+            $('.loadding').hide(20000)
+                //문서가 완료 되면 실행해!
+
+            // var tt = function(i,e){
+            //     console.log("load: "+$(e).height())
+            // }
+
+            // $('body img').each(tt)
+        })
+    </script>
+
+
+
+    <style type="text/css">
+        img {
+            width: 100%;
+        }
+
+        .loadding {
+            width: 100%;
+            height: 100%;
+            background-image: url(http://weknowmemes.com/wp-content/uploads/2013/10/youtube-loading-gif1.gif);
+            background-size: cover;
+            background-position: center;
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loadding"> </div>
+    <img src="../smartcontents/images/1.jpg">
+    <img src="../smartcontents/images/2.jpg">
+    <img src="../smartcontents/images/3.jpg">
+    <img src="../smartcontents/images/4.jpg">
+
+
+
+
+    <!--<div class="slide">
+        <div class="btngroup">
+                <button class="next">다음</button>
+                <button class="prev">이전</button>
+        </div>
+
+        <div class="view">
+            <ul>
+                <li class="on">
+                    <a href="">1</a>
+                    <div><img src="../img/a.jpg"></div>
+                </li>
+                <li>
+                    <a href="">2</a>
+                    <div><img src="../img/b.jpg"></div>
+                </li>
+                <li>
+                    <a href="">3</a>
+                    <div><img src="../img/c.jpg"></div>
+                </li>
+                <li>
+                    <a href="">4</a>
+                    <div><img src="../img/d.jpg"></div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    -->
+
+
+</body>
+
+</html>

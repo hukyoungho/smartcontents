@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#result").load("loadslide.html #slide");
+            // 웹서버 안에서만 로드가 가능하다.
+        })
+    </script>
+
+
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .slide {
+            border: 1px #F00 solid;
+            width: 600px;
+            height: 300px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .slide button {
+            position: absolute;
+            top: 50%;
+            width: 30px;
+            height: 40px;
+        }
+
+        .slide button.next {
+            left: -50px;
+        }
+
+        .slide button.prev {
+            right: -50px;
+        }
+
+        .slide .view {
+            text-align: center;
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .slide li {
+            display: inline-block;
+        }
+
+        .slide li.on a {
+            background-color: #F00;
+        }
+
+        .slide li a {
+            position: relative;
+            top: 250px;
+            z-index: 1;
+            display: block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            border: 1px #FFF solid;
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        .slide li:first-child div {
+            display: block;
+        }
+
+        .slide li div {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+
+        .slide li div img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="result">
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
