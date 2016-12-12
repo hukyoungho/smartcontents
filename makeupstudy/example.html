@@ -29,21 +29,25 @@
     </style>
     <script type="text/javascript">
         
-     $(function(){
+        $(function(){
             
             $(window).scroll(function(){
                 
                 var sct = $(this).scrollTop()
                 
                 if(sct > $('.gnb').height() && !$('.gnb').is('.mini')){
+                    // mini가 없다면 이 없으면 계속 실행 된다.
                     $('.gnb').animate({
                         top:-100
+                        // 기본단위가 px이기 때문에 px을 넣으려고 하는경우 따옴표로 감싸주면 된다.
                     },1000,function(){
-
+                        // 에니메이션 종료후
+                        // 함수안에 함수가 여러개가 존재하는 경우 연결 되어 있지 않으면 
+                        // 한번에 읽힌다.
                         $(this).css({
                             'bottom':'-100px',
                             'top':'initial'
-                         
+                            // top에서 -100을 상속받지 않는것이다.
                         }).animate({
                             'bottom':0
                         },1000,function(){
@@ -79,13 +83,11 @@
                 }
                 
                 
-                
             })
             
             
             
         })
-        
         
         
     </script>

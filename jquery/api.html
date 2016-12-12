@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        li.on{background-color: #F00; color:#FFF;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script>
+        
+            
+            
+        $(function(){
+         
+         
+        //  간단하게 표현 가능
+         $('.menu li').click(function(){
+             $('.menu li').removeClass();
+             $(this).addClass('on')
+         })
+         
+         
+         /*
+         $('.menu li').click(function(){
+             $(this).addClass('on').siblings().removeClass()
+         })
+         */
+         
+         /* siblings each 알때
+         $('.menu li').click(function(){
+             
+            var idx=$(this).index() 
+             
+             $('.menu li').each(function(i,e){
+            //  $(selector).each(function(index,element)) 이다.
+            //  i는 변수 , e는 엘리먼트.
+            
+                $(e).removeClass('on');
+                // e는 모든 li 를 지칭한다.
+                // $(e) = $(this) 이다.
+                
+                
+                
+                
+                if(idx == i){
+                    $(e).addClass('on');
+                }
+                 
+             })
+         */ 
+             
+             
+            /*
+            sibligns each   모를때
+            var len = $('.menu li').length
+             var idx = $(this).index();
+             
+             for(i=0; i < len; i++){
+                 
+                 if(idx == i){
+                     
+                     $('.menu li').eq(i).addClass('on');
+                     
+                 }else{
+                     $('.menu li').eq(i).removeClass('on');
+                 }
+                 
+             }
+          })
+         */
+             
+            
+            
+        })
+            
+            
+        
+        
+        
+    </script>
+    
+</head>
+<body>
+    
+    <ul class="menu">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+    
+    
+</body>
+</html>
