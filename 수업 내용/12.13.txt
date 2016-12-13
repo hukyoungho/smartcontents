@@ -1,0 +1,12 @@
+    $(document).ready(function(){})
+    은 1.4 이전 버전에서 사용
+    $(function(){})
+    1.4 버전 이후 사용
+
+    return false를 왠만하면 쓰지 말자
+    이유: 하위 링크가 안먹음
+    그래서 javascript:voide(0)을 걸자
+
+    다음주 금요일 시험
+
+    200점 만점, 하루종일시험

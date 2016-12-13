@@ -7,86 +7,88 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
     <script>
-        var slide = {
-            idx: 0,
-            inters: setInterval(function() {
-                $('.next').click();
-
-            }, 1000),
-            mouse: function() {
-                $('#result').on('mouseenter', '.view', function() {
-                    clearInterval(slide.inters)
-                });
-                $('#result').on('mouseleave', '.view', function() {
-                    $('.next').click();
-                })
-            },
-
-
-
-
-
-
-
-
-            movement: function(start, end, idx) {
-                $('.slide').find('li').eq(idx).addClass('on').find('div').css({
-                    'left': start,
-                    'display': 'block'
-                }).stop().animate({
-                    'left': end
-                }).parent().siblings().removeClass();
-
-                if (slide.idx == $('.view li').length) {
-                    slide.idx = 0
-                    slide.movement('100%', 0, slide.idx)
-                } else if (slide.idx < 0) {
-                    slide.idx = $('.view li').length - 1;
-                    slide.movement('-100%', 0, slide.idx)
-                }
-            },
-            event: function() {
-                $('#result').on('click', '.next', function() {
-                    slide.movement('0', '-100%', slide.idx);
-                    slide.idx++
-                        slide.movement('100%', '0', slide.idx);
-                })
-            },
-            event2: function() {
-                $('#result').on('click', '.prev', function() {
-                    slide.movement('0', '100%', slide.idx);
-                    slide.idx--
-                        slide.movement('-100%', '0', slide.idx);
-                })
-            },
-            event3: function() {
-                $('#result').on('click', '.view li a', function() {
-                    var hinum = $('.view li.on').index();
-                    idx = $(this).parent().index()
-                    if (hinum < idx) {
-                        slide.movement(0, '-100%', hinum);
-                        slide.movement('100%', 0, idx);
-                    } else if (hinum > idx) {
-                        slide.movement(0, '100%', hinum);
-                        slide.movement('-100%', 0, idx);
-                    }
-                    return false;
-                })
-            }
-
-
-
-        }
-
-
-
         $(document).ready(function() {
-            $("#result").load("loadslide.html #slide");
-            slide.event();
-            slide.event2();
-            slide.event3();
-            slide.inters;
-            slide.mouse();
+            $("#result").load("loadslide.html #slide", function() {
+                var slide = {
+                    idx: 0,
+                    inters: setInterval(function() {
+                        console.log(slide.idx)
+                        $('.next').click();
+
+                    }, 1000),
+                    // 변수에 담은과 동시에 실행되는 거라서 따로 호출 안해도 실행이 된다.
+                    mouse: function() {
+                        $('#result').find('.view').on('mouseenter', function() {
+                            clearInterval(slide.inters)
+                        })
+                        $('#result').on('mouseleave', '.view', function() {
+                            $('.next').click();
+                        })
+                    },
+
+                    // #result를 load를 통해 불려지면 위와 같이 #result를 객체를 잡고
+                    // 이벤트를 적용시켜야 된다. 만약 #result 다음 객체를 앞에둔다면 실행이 안되어
+                    // on 함수 안에서 선택 요소를 선택해야 한다. 왜냐하면 현 창에서는 없기 때문이다.
+                    // on({객체},'선택요소')로 정의 될수 있다.
+
+                    movement: function(start, end, idx) {
+                        $('.slide').find('li').eq(idx).addClass('on').find('div').css({
+                            'left': start,
+                            'display': 'block'
+                        }).stop().animate({
+                            'left': end
+                        }).parent().siblings().removeClass();
+
+                        if (slide.idx == $('.view li').length) {
+                            slide.idx = 0
+                            slide.movement('100%', 0, slide.idx)
+                        } else if (slide.idx < 0) {
+                            slide.idx = $('.view li').length - 1;
+                            slide.movement('-100%', 0, slide.idx)
+                        }
+                    },
+                    event: function() {
+                        $('#result').on('click', '.next', function() {
+                            slide.movement('0', '-100%', slide.idx);
+                            slide.idx++
+                                slide.movement('100%', '0', slide.idx);
+                        })
+                    },
+                    event2: function() {
+                        $('#result').on('click', '.prev', function() {
+                            slide.movement('0', '100%', slide.idx);
+                            slide.idx--
+                                slide.movement('-100%', '0', slide.idx);
+                        })
+                    },
+                    event3: function() {
+                        $('#result').on('click', '.view li a', function() {
+                            var hinum = $('.view li.on').index();
+                            idx = $(this).parent().index()
+                            if (hinum < idx) {
+                                slide.movement(0, '-100%', hinum);
+                                slide.movement('100%', 0, idx);
+                            } else if (hinum > idx) {
+                                slide.movement(0, '100%', hinum);
+                                slide.movement('-100%', 0, idx);
+                            }
+                            return false;
+                        })
+                    }
+
+
+
+                }
+                slide.event();
+                slide.event2();
+                slide.event3();
+                slide.mouse();
+
+
+
+            });
+
+
 
 
 
