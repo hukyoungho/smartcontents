@@ -13,16 +13,18 @@
                 var tg = '.' + $(this).attr('id'); //.open을 눌렀을때 아이디 값을 이용하여 팝업이랑  연결시켜주기 위함이다.
                 var w = $(tg).width(); //가운데 정렬 하기 위해 뽑는것이다.
                 var h = $(tg).height(); //가운데 정렬 하기 위해 뽑는것이다.
+                var w1 = $(window).height();
+                console.log(h / 2);
                 $(tg).show().css({
                     left: '50%',
                     top: function() {
-                        return $(window).scrollTop() + 50 + '%' //윈도우가 가리키는 스크롤 위치 값을 반환
+                        return $(window).scrollTop() + 'px' //윈도우가 가리키는 스크롤 위치 값을 반환
                     },
                     marginLeft: function() {
                         return '-' + (w / 2) + "px" //레프트로 50%옮겨진 후 가로 값의 반절 을 이동하게 되면 가운데 정렬이 됨.
                     },
                     marginTop: function() {
-                        return '-' + (h / 2) + "px"
+                        return (w1 / 2) - (h / 2) + "px"
                     }
 
                 });
@@ -133,4 +135,8 @@
 </body>
 
 </html>
-l>
+l> l> l>
+
+
+</html>
+l> l> l>

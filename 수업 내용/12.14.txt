@@ -1,0 +1,28 @@
+* 다른 사람들 개인 포트폴리오 작업물 확인 해보자
+
+* rfp 제안 요청서
+
+request for proposal
+
+* 구글 독스
+여러 사람들과 작업표를 함께 작업이 가능하다.
+
+https://docs.google.com/spreadsheets/d/1Hv3gxqs2P-VjY2yWWVpiqv9bnewS4c6FKXZPvpkopu8/edit#gid=620676782
+선생님 하이미디어 설계작업표
+ia
+정보 설계
+
+wbs
+작업일정표
+
+
+
+
+메인
+
+홈       프로필                      포트폴리오              sns         contactus          자소서
+        인적사항                    (리스트형식)                         blog              (키워드 있으면 좋음)
+        대표작품                    *컨셉을 정하자
+        (난 아직없음)
+        스킬
+        (뭘 배웠는지 힘줘야함.)
