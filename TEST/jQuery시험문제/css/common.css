@@ -19,6 +19,7 @@ div.content>section>div>ol{list-style-position:inside; font-size:14px; line-heig
 .slidebanner ul{ width:500px; height:260px;overflow:hidden;  position:relative; text-align:center; font-size:0}
 .slidebanner li{display: inline-block;}
 .slidebanner li img{position:absolute; left:0; width:100%; top:0; display: none;}
+.slidebanner li:first-child img{display: block;}
 .slidebanner li a{position:relative ; z-index: 1; display:block; width:20px; height:20px; background:#FFF; text-decoration: none; margin:0 1px; top:230px}
 .slidebanner li.on a{background:#E8B482}
 .slidebanner button{position:absolute; top:0; cursor: pointer}
@@ -29,11 +30,12 @@ div.content>section>div>ol{list-style-position:inside; font-size:14px; line-heig
 .fadebanner ul{ width:500px; height:260px;overflow:hidden;  position:relative; text-align:center; font-size:0}
 .fadebanner li{display: inline-block;}
 .fadebanner li img{position:absolute; left:0; width:100%; top:0; display: none;}
+.fadebanner li:first-child img{display: block;}
 .fadebanner li a{position:relative ; z-index: 1; display:block; width:20px; height:20px; background:#FFF; text-decoration: none; margin:0 1px; top:230px}
 .fadebanner li.on a{background:#E8B482}
 .fadebanner li:first-child img{display: block}
 
-.movie-view .view{width:800px; height:442px; margin: 30px  auto 30px;} 
+.movie-view .view{width:800px; height:442px; margin: 30px  auto 30px;}
 .movie-view ul {list-style: none; text-align: center}
 .movie-view ul li{display: inline-block;}
 
