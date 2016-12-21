@@ -2,44 +2,75 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<title>06_animate_메소드</title>
-		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-		<style>
-			html * { margin:0; padding:0; }
-			#wrapper { margin-top:140px; margin-left: 330px;}
-			#controller { padding: 10px;}
-			#box { width:150px; height:150px; background-color:red; border:2px solid blue; position:absolute; left:200px; }
-		</style>
-		<script>
-			$(document).ready(function(){
-				var box = $('#box');
-				var bigBtn = $('#controller > .big');
-				var smallBtn = $('#controller > .small');
-				var leftBtn = $('#controller > .left');
-				var rightBtn = $('#controller > .right');
-				
-				bigBtn.click(function(){
-					box.animate({width:400, height:400, opacity:1}, 600);
-				});
-				
-				smallBtn.click(function(){
-					box.animate({width:50, height:50, opacity:0.2}, 600);
-				});
-				
-				leftBtn.click(function(){
-					box.animate({left:0}, 1000);
-				});
-				
-				rightBtn.click(function(){
-					box.animate({left:'100%'}, 1000);
-				});
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>06_animate_메소드</title>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<style>
+		html * {
+			margin: 0;
+			padding: 0;
+		}
+
+		#wrapper {
+			margin-top: 140px;
+			margin-left: 330px;
+		}
+
+		#controller {
+			padding: 10px;
+		}
+
+		#box {
+			width: 150px;
+			height: 150px;
+			background-color: red;
+			border: 2px solid blue;
+			position: absolute;
+			left: 200px;
+		}
+	</style>
+	<script>
+		$(document).ready(function() {
+			var box = $('#box');
+			var bigBtn = $('#controller > .big');
+			var smallBtn = $('#controller > .small');
+			var leftBtn = $('#controller > .left');
+			var rightBtn = $('#controller > .right');
+
+			bigBtn.click(function() {
+				box.animate({
+					width: 400,
+					height: 400,
+					opacity: 1
+				}, 600);
 			});
-		</script>
-	</head>
-	
-	<body>
+
+			smallBtn.click(function() {
+				box.animate({
+					width: 50,
+					height: 50,
+					opacity: 0.2
+				}, 600);
+			});
+
+			leftBtn.click(function() {
+				box.animate({
+					left: 0
+				}, 1000);
+			});
+
+			rightBtn.click(function() {
+				box.animate({
+					left: '100%'
+				}, 1000);
+			});
+		});
+	</script>
+</head>
+
+<body>
 	<div id="wrapper">
 		<div id="controller">
 			<input class="big" type="button" value="크고 불투명하게 하기" />
@@ -50,5 +81,6 @@
 		<div id="box">
 		</div>
 	</div>
-	</body>
+</body>
+
 </html>
