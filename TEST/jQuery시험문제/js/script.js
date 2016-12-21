@@ -352,60 +352,41 @@ $(function(){
             })
         }
     })
+    // 선생님이 짜주신거
+    // var fidx=1;
+    // var finter = setInterval(function(){
+    //     $('.fadebanner li a').eq(fidx).click()
+    //     fidx++
+    //     if(fidx==$('.fadebanner li').length){
+    //         fidx=0
+    //         $('.fadebanner li').eq(fidx).click()
+    //
+    //     }
+    // },1000)
 
-
-
-    var idx1 = 0
-    var inters1 = setInterval(function(){
-        $('.fadebanner').on();
-    },1000);
-    $('.fadebanner').mouseenter(function(){
-        clearInterval(inters1)
-    }).mouseleave(function(){
-        inters1 = setInterval(function(){
-            $('.fadebanner').on();
-        },1000);
-    })
-    $('.fadebanner').on(function(){
-
-        $('.fadebanner li')
-        .eq(idx1)
-        .addClass('on')
-        .find('img')
-        .fadeOut(1000)
-        .parent()
-        .removeClass()
-        .next()
-        .addClass('on')
-        .find('img')
-        .fadeIn(1000)
-
-        idx1++
-        if(idx1==$('.slidebanner li').length){
-            idx1=0
-            $('.slidebanner li')
-            .eq(idx1)
-            .addClass('on')
-            .find('img')
-            .fadeIn(1000)
-
-        }
-    })
-    var fidx=1;
+    //내가 한거
+    var fidx=0;
     var finter = setInterval(function(){
-        $('.fadebanner li a').eq(fidx).click()
-        fidx++
+
+        // console.log(fidx)
         if(fidx==$('.fadebanner li').length){
             fidx=0
-            $('.fadebanner li').eq(fidx).parent().click()
-
+            $('.fadebanner li').eq(fidx).children('a').click()
+        }else{
+            $('.fadebanner li').eq(fidx).children('a').click()
         }
+        fidx++
     },1000)
+
     $('.fadebanner li a').click(function(){
 
          fidx = $(this).parent().index();
-         $('.fadebanner li.on').removeClass().find('img').fadeOut();
-         $('.fadebanner li').eq(fidx).addClass('on').find('img').fadeIn();
+        ////선생님
+        //  $('.fadebanner li.on').removeClass().find('img').fadeOut();
+        //  $('.fadebanner li').eq(fidx).addClass('on').find('img').fadeIn();
+
+        //내가 한거
+         $('.fadebanner li').eq(fidx).addClass('on').find('img').fadeIn().parent().siblings().removeClass().find('img').fadeOut();
 
         return false
 
@@ -419,5 +400,117 @@ $(function(){
         return false;
     })
 
+    $(window).scroll(function() {
+        $('.wing').stop().animate({
+                top: $(this).scrollTop()
+            }, 1000)
+
+    });
+
+
+    $('.btnevent1').click(function() {
+        bl();
+        var tg = '.' + $(this).attr('id');
+        var w = $(tg).width();
+        var h = $(tg).height();
+        var w1 = $(window).height();
+        console.log(h / 2);
+        $(tg).show().css({
+            left: '50%',
+            top: 0,
+            marginLeft: function() {
+                return '-' + (w / 2) + "px"
+            },
+            marginTop: function() {
+                return (w1 / 2) - (h / 2) + "px"
+            }
+
+        }).animate({
+            top:$(window).scrollTop() + 'px'
+        },1000)
+    })
+    $('.btnevent2').click(function() {
+        bl();
+        var tg = '.' + $(this).attr('id');
+        var w = $(tg).width();
+        var h = $(tg).height();
+        var w1 = $(window).height();
+        console.log(h / 2);
+        $(tg).show().css({
+            left: '50%',
+            top: 0,
+            marginLeft: function() {
+                return '-' + (w / 2) + "px"
+            },
+            marginTop: function() {
+                return (w1 / 2) - (h / 2) + "px"
+            }
+
+        }).animate({
+            top:$(window).scrollTop() + 'px'
+        },1000)
+    })
+    $('.btnevent3').click(function() {
+        bl();
+        var tg = '.' + $(this).attr('id');
+        var w = $(tg).width();
+        var h = $(tg).height();
+        var w1 = $(window).height();
+        console.log(h / 2);
+        $(tg).show().css({
+            left: '50%',
+            top: 0,
+            marginLeft: function() {
+                return '-' + (w / 2) + "px"
+            },
+            marginTop: function() {
+                return (w1 / 2) - (h / 2) + "px"
+            }
+
+        }).animate({
+            top:$(window).scrollTop() + 'px'
+        },1000)
+    })
+    $('.btnevent4').click(function() {
+        bl();
+        $('.blaind').fadeTo(1000, 0.4);
+        var tg = '.' + $(this).attr('id');
+        var w = $(tg).width();
+        var h = $(tg).height();
+        var w1 = $(window).height();
+        console.log(h / 2);
+        $(tg).show().css({
+            left: '50%',
+            top: 0,
+            marginLeft: function() {
+                return '-' + (w / 2) + "px"
+            },
+            marginTop: function() {
+                return (w1 / 2) - (h / 2) + "px"
+            }
+
+        }).animate({
+            top:$(window).scrollTop() + 'px'
+        },1000)
+    })
+
+
+    var close = function() {
+
+        $('.pop').hide();
+        $('.blaind').fadeOut(function() {
+            $(this).remove();
+        })
+
+    }
+
+    $('body').on('click', '.blaind', close);
+    $('.close').click(close);
+
+
+    function bl() {
+        $('.btngroup').prepend('<div class="blaind"></div>')
+
+    }
 
 })
