@@ -410,6 +410,7 @@ $(function(){
 
     $('.btnevent1').click(function() {
         bl();
+        $('.blaind').fadeTo(1000, 0.4);
         var tg = '.' + $(this).attr('id');
         var w = $(tg).width();
         var h = $(tg).height();
@@ -429,8 +430,10 @@ $(function(){
             top:$(window).scrollTop() + 'px'
         },1000)
     })
+
     $('.btnevent2').click(function() {
         bl();
+        $('.blaind').fadeTo(1000, 0.4);
         var tg = '.' + $(this).attr('id');
         var w = $(tg).width();
         var h = $(tg).height();
@@ -450,8 +453,10 @@ $(function(){
             top:$(window).scrollTop() + 'px'
         },1000)
     })
+
     $('.btnevent3').click(function() {
         bl();
+        $('.blaind').fadeTo(1000, 0.4);
         var tg = '.' + $(this).attr('id');
         var w = $(tg).width();
         var h = $(tg).height();
@@ -471,6 +476,7 @@ $(function(){
             top:$(window).scrollTop() + 'px'
         },1000)
     })
+
     $('.btnevent4').click(function() {
         bl();
         $('.blaind').fadeTo(1000, 0.4);
