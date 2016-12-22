@@ -12,7 +12,7 @@ $(function(){
 			secH = []
 			windowheight=$('body').height()
 			$.each($('.content>section'),function(i,e){
-				secH.push($(e).offset().top)	
+				secH.push($(e).offset().top)
 			})
 		},
 		scroll:function(){
@@ -35,7 +35,7 @@ $(function(){
 		},
 		click:function(){
 			var scIdx = $(this).index()
-			
+
 			$('body,html').animate({
 				scrollTop:secH[scIdx]
 			})
@@ -51,7 +51,7 @@ $(function(){
 	var stimg = null;
 
 	st.eq(stIdx).addClass('on').find('img').css('display','block')
-	
+
 	var sliderhend = setInterval(function(){
 		$('.slidebanner .next').trigger('click')
 	},4800)
@@ -62,7 +62,7 @@ $(function(){
 
 			hisnum=stIdx;
 			stIdx = $(this).index()
-			
+
 			if(hisnum < stIdx){
 				stimg = st.eq(hisnum).find('img')
 				slideMotion(stimg,0,"-100%",800)
@@ -117,7 +117,7 @@ $(function(){
 		select.css({
 			left:start,
 			display:'block'
-			
+
 		}).stop().animate({
 			left:end
 		},speed)
@@ -137,7 +137,7 @@ $(function(){
 
 	//fadebanner
 	var fadeIdx = 0
-	
+
 	var hisfadeIdx = null
 	var fadeheand = setInterval(fademotion,4800)
 
@@ -171,14 +171,14 @@ $(function(){
 			$('.fadebanner li').eq(fadeIdx).addClass('on').find('img').fadeIn().parent().siblings().removeClass('on')
 		}
 	}
-	
+
 
 	//youtube
 	$('.movie-view ul li').on({
 		click:function(){
 
 			var url = $(this).find('a').attr('href');
-			
+
 			$('iframe').attr('src',"https://www.youtube.com/embed/"+url+"?rel=0&amp;controls=0&amp;showinfo=0")
 
 			return false;
@@ -190,7 +190,7 @@ $(function(){
 			$(this).fadeTo(300,1)
 		}
 	})
-	
+
 
 	//popup
 	var event1 = $('.event1').html()
@@ -219,7 +219,7 @@ $(function(){
 		blaind()
 		openbox(300,500,event4)
 	})
-	
+
 	function blaind(){
 		$('body').append('<div class="blaind"></div>').find(".blaind").fadeTo(500,0.8)
 	}
@@ -264,7 +264,7 @@ $(function(){
 			})
 
 		}
-		
+
 		function blaind(){
 			$('body').append("<div class='blaind'></div>");
 			$('.blaind').fadeTo(1000,0.5)

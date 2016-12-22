@@ -107,10 +107,10 @@ var scrollEvent=function(){
 };
 function movement(start, end, i) {
     $('.slidebanner li').eq(i).addClass('on').find('img').css({
-        left: start,
+        'left': start,
         'display': 'block'
     }).stop().animate({
-        left: end
+        'left': end
     }).parent().siblings().removeClass();
 
     if (idx == $('.slidebanner li').length) {
@@ -188,6 +188,31 @@ function movement(start, end, i) {
 //
 // }
 $(function(){
+    var idx = 0;
+    var scrollEvent=function(){
+        var idx = $(this).index();
+        var sot = $('.content section').eq(idx).offset().top;
+        $('html,body').stop().animate({
+            scrollTop:sot
+        },1000)
+        return false;
+    };
+    function movement(start, end, i) {
+        $('.slidebanner li').eq(i).addClass('on').find('img').css({
+            left: start,
+            'display': 'block'
+        }).stop().animate({
+            left: end
+        }).parent().siblings().removeClass();
+
+        if (idx == $('.slidebanner li').length) {
+            idx = 0
+            movement('100%', 0, idx)
+        } else if (idx < 0) {
+            idx = $('.slidebanner li').length - 1;
+            movement('-100%', 0, idx)
+        }
+    }
     $('nav ul li').mouseover(function(){
         $(this).css('background','red').children('a').css('color','blue');
     }).mouseout(function(){
@@ -222,7 +247,7 @@ $(function(){
 
         }).mouseleave(function() {
 
-            inters = setInterval(function() {
+        inters = setInterval(function() {
                 $('.next').click();
             }, 4500);
 
@@ -378,6 +403,32 @@ $(function(){
         fidx++
     },1000)
 
+
+
+    $('.fadebanner').mouseenter(function(){
+        clearInterval(finter)
+    }).mouseleave(function() {
+
+        finter = setInterval(function(){
+
+            // console.log(fidx)
+            if(fidx==$('.fadebanner li').length){
+                fidx=0
+                $('.fadebanner li').eq(fidx).children('a').click()
+            }else{
+                $('.fadebanner li').eq(fidx).children('a').click()
+            }
+            fidx++
+        },1000)
+
+    })
+
+
+
+
+
+
+
     $('.fadebanner li a').click(function(){
 
          fidx = $(this).parent().index();
@@ -397,8 +448,11 @@ $(function(){
     $('.movie-view > ul > li').click(function() {
         midx = $(this).index();
         $('.movie-view .view iframe').attr('src', src1 + imgur1[midx]);
+        $(this).fadeTo(300, 0.5).siblings().fadeTo(300,1)
         return false;
+
     })
+
 
     $(window).scroll(function() {
         $('.wing').stop().animate({
@@ -406,6 +460,7 @@ $(function(){
             }, 1000)
 
     });
+
 
 
     $('.btnevent1').click(function() {
@@ -515,7 +570,7 @@ $(function(){
 
 
     function bl() {
-        $('.btngroup').prepend('<div class="blaind"></div>')
+        $('body').prepend('<div class="blaind"></div>')
 
     }
 
