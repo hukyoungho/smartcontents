@@ -19,7 +19,7 @@ div.content>section>div>ol{list-style-position:inside; font-size:14px; line-heig
 .slidebanner ul{ width:500px; height:260px;overflow:hidden;  position:relative; text-align:center; font-size:0}
 .slidebanner li{display: inline-block;}
 .slidebanner li img{position:absolute; left:0; width:100%; top:0; display: none;}
-.slidebanner li:first-child img{display: block;}
+/*.slidebanner li:first-child img{display: block;}*/
 .slidebanner li a{position:relative ; z-index: 1; display:block; width:20px; height:20px; background:#FFF; text-decoration: none; margin:0 1px; top:230px}
 .slidebanner li.on a{background:#E8B482}
 .slidebanner button{position:absolute; top:0; cursor: pointer}
@@ -43,34 +43,30 @@ div.content>section>div>ol{list-style-position:inside; font-size:14px; line-heig
 .btngroup{text-align: center}
 
 .pop{
-    border: 1px #f00 solid;
     position: absolute;
-    background: #fff;
+    border: 1px solid #f00;
     display: none;
-    margin: 0 auto;
+    background: #fff;
+    z-index: 3;
 }
-.event1 {
-    width: 200px;
-    height: 300px;
+.event1{
+    width:200px;
+    height: 200px;
 }
-.event2 {
-    width: 200px;
-    height: 300px;
+.event2{
+    width:200px;
+    height: 200px;
+}
+.event3{
+    width:200px;
+    height: 200px;
+}
+.event4{
+    width:200px;
+    height: 200px;
 }
 
-.event3 {
-    width: 200px;
-    height: 300px;
-}
-
-.event4 {
-    width: 200px;
-    height: 300px;
-}
-
-
-
-.blaind{position:fixed; width:100%; height:100%; top:0; left:0; background:#000; display: none;}
+.blaind{z-index: 2;position:fixed; width:100%; height:100%; top:0; left:0; background:#000; display: none;}
 .popde{border:1px #F00 solid; padding:20px;}
 .popde h2 {border-bottom:1px #F00 solid; padding-bottom:10px;}
 .popde p{margin:10px 0; font-size:12px;}
