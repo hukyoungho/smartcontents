@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        function goAdd() {
+            var xx = document.myform.x.value;
+            var yy = document.myform.y.value;
+            var result =eval(xx) + eval(yy);
+        // document.myform.x는 경로를 타고 가기 위함이다 value 값을 알아내기 위함
+        // 문서의.네임.네임.벨류는?
+        //eval - 아스키코드를 숫자로 바꿔주는 함수.
+
+        alert(result);
+
+        // xx =10;
+        // xx ='10';
+        // 두 값은 같다
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- input 태그, form 태그 name,id속성을 갖는다
+div나 테이블 ,span 태그는 id속성을 갖는다
+name속성을 값을 서버로 전달해준다
+id 속성은 클라이언트에서 접근만 허용한다.
+nam 속성의 경우에는 중복이 가능하다
+id는 반든시 하나만 중복 불가
+ -->
+    <form name="myform" action="get">
+        사칙연산 <br /><br />
+         x : <input type="text" name="x"><br />
+         y : <input type="text" name="y"><br />
+
+        <input type="button" value="+" onclick="goAdd()">
+
+    </form>
+
+</body>
+
+</html>
+
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        function goAdd() {
+            var xx = document.getElementById('xvalue').value;
+            var yy = document.getElementById('yvalue').value;
+            var result = eval(xx) + eval(yy);
+            // div 태그에 결과를 출력하기
+            document.getElementById('result').innerHTML = result;
+            //div 태그는 innerHTML 속성을 이용해 값을 내보낸다.
+            //=result는 변수값을 받아서 보내주기 위함이다.
+
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <form name="myform" action="get">
+        사칙연산 <br /><br />
+         x : <input type="text" id="xvalue"><br />
+          y : <input type="text" id="yvalue"><br />
+
+        <input type="button" value="+" onclick="goAdd()">
+
+        <div id="result" style="width:300px;height:200px;background:#ccc"></div>
+
+    </form>
+
+</body>
+
+</html>
+
+
+</html>

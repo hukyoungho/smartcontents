@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script type="text/javascript">
+function goCalc(){
+// var a1 = document.getElementById('a1').value;
+// var a2 = document.getElementById('a2').value;
+// var a3 = document.getElementById('a3').value;
+// var a4 = document.getElementById('a4').value;
+// var a5 = document.getElementById('a5').value;
+// var a6 = document.getElementById('a6').value;
+// var a7 = document.getElementById('a7').value;
+// var a8 = document.getElementById('a8').value;
+// var a9 = document.getElementById('a9').value;
+// var a10 = document.getElementById('a10').value;
+//
+//
+// var result = eval(a1) + eval(a2)+ eval(a3)+ eval(a4)+ eval(a5)+ eval(a6)+ eval(a7)+ eval(a8)+ eval(a9)+ eval(a10);
+//
+// document.getElementById('result').innerHTML = result;
+
+
+
+var total=0;
+for (var i = 1; i < 11; i++) {
+    total += eval(document.getElementById('a'+i).value);
+}
+document.getElementById('result').innerHTML=total;
+}
+</script>
+<body>
+
+
+    <input type="text" id="a1"><br />
+    <input type="text" id="a2"><br />
+    <input type="text" id="a3"><br />
+    <input type="text" id="a4"><br />
+    <input type="text" id="a5"><br />
+    <input type="text" id="a6"><br />
+    <input type="text" id="a7"><br />
+    <input type="text" id="a8"><br />
+    <input type="text" id="a9"><br />
+    <input type="text" id="a10"><br />
+
+
+    <input type="button" onclick="goCalc()" value="계산하기"><br />
+
+<div id="result" style="width:300px;height:200px;background:#ccc"></div>
+
+</body>
+</html>
