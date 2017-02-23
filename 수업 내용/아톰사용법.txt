@@ -1,0 +1,19 @@
+아톰 사용법
+
+ 아톰 에디터
+
+* webbox-color
+컬러 확인 가능
+
+*atom-beautify
+css ,html setting에서 save 모드 바꿔주면
+
+저장후 들여쓰기 해줌.
+
+
+*atom(editor)
+
+장점
+1. 드래그, ctrl + d 한꺼번에 수정 가능
+2. 사용자들간의 확장프로그램 공유 가능
+*

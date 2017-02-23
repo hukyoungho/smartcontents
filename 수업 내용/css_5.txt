@@ -1,0 +1,32 @@
+﻿
+최대 최소값------------------
+
+*max-width 최대값 안되는
+*min-width 최소값 보다 위
+
+
+
+
+background-size--------------
+
+* cover: 이미지를 부모사이즈 가로
+* contain : " " 부모사이즈 세로
+
+벤더프리픽스---------
+-webkit- background-size:cover; 크롬
+-moz-   background-size:cover; 파이어폭스
+-o-    background-size:cover; 오페라
+-ms-   background-size:cover; IE
+표준   background-size:cover;
+
+
+-html 버그가 발생하는 빈도수가 적다.
+
+태그 안닫는경우 , 오타 ,
+
+-css 버그가 발생한느 경우
+
+오타, 세미콜론 안닫는 경우 , 선택자가 잘못선택되는 경우 ,캐스케이딩
+
+*display:none눈에도 안보이고 소스상에도 없어 리딩기도 안읽는다.
+*visibility:hidden : 눈에만 안보이고 소스상에는 있어 리딩기 읽는다.

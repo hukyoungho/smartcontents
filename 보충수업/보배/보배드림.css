@@ -1,0 +1,177 @@
+html,body{
+    width: 100%;
+    height: 100%;
+
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+}
+ul,ol {
+    list-style: none;
+
+}
+a{
+    text-decoration: none;
+    color: #676767;
+    font-size: 11px;
+}
+
+
+
+/*상단 네비*/
+.top_nav{
+    border: 1px solid red;
+    width: 100%;
+    height: 30px;
+    background-color: #f8f8f8;
+
+}
+.top_nav .wnav{
+    width: 993px;
+    height: 30px;
+    margin: 0 auto;
+    line-height: 30px;
+}
+.top_nav .wnav .left{
+    float: left;
+
+}
+.top_nav .wnav ul {
+    width: auto;
+    margin: 0;
+    padding: 0;
+
+}
+
+.top_nav .wnav li{
+    display: inline-block;
+}
+
+.top_nav .wnav .right{
+    float: right;
+}
+
+
+/*전체 몸*/
+.wrap{
+    border: 1px solid red;
+    width: 994px;
+    height: 2016px;
+    margin: 0 auto;
+}
+
+
+
+
+/*헤더*/
+.header{
+    border: 1px solid red;
+    width: 993px;
+    height: 105px;
+    margin: 0 auto;
+}
+.wrap .header .left {
+    float: left;
+
+}
+.wrap .header .left div{
+    margin-top: 30px;
+
+}
+.wrap .header .left ul {
+    margin-top: 10px;
+}
+.wrap .header .left ul li{
+    display: inline-block;
+}
+.wrap .header .middle {
+    margin-left: 50px;
+    height: 105px;
+
+    float: left;
+    border: 1px solid red;
+}
+.wrap .header .middle div{
+    margin-top: 10px;
+}
+.wrap .header .middle span{
+    display: block;
+    margin-left: 30px;
+}
+.wrap .header .middle span .bar{
+
+    height: 14px;
+    padding: 5px 5px 3px;
+    border: 2px solid #3a66af;
+    border-right: none;
+    font-size: 16px;
+    line-height: 19px;
+    float: left;
+    margin-top: 5px;
+}
+.wrap .header .middle span .search{
+    float: left;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+.wrap .header .right {
+    padding-top: 10px;
+    float: right;
+}
+.wrap .header .right div{
+    float: left;
+}
+
+
+
+
+nav .bar{
+    width: 993px;
+    height: 39px;
+    background-color: #3b5999;
+}
+nav .bar ul {
+    float: left;
+}
+nav .bar div {
+    float: right;
+    line-height: 39px;
+    color: white;
+}
+nav .bar ul li{
+    display: inline-block;
+    line-height: 39px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.body{
+    border: 1px solid red;
+    width: 993px;
+    height: 1350px;
+    margin: 0 auto;
+}
+.footer{
+    border: 1px solid red;
+    width: 994px;
+    height: 453px;
+    margin: 0 auto;
+}

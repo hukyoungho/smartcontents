@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(http://static.naver.net/newsstand/img/20121231/bg_bd.png);
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #333;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.wrap {
+    position: relative;
+    width: 900px;
+    height: 540px;
+    margin: 50px auto;
+    background: url(http://static.naver.net/newsstand/img/20121231/bg_panel.png) 50% 0 no-repeat;
+}
+
+.heading {
+    width: 840px;
+    height: 87px;
+    margin: 0 auto;
+    border-top: 1px #f5f5f5 solid;
+}
+
+.heading .logo {
+    width: 260px;
+    height: 55;
+    float: left;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.heading .logo img {
+    width: 100%;
+}
+
+.heading .banner {
+    width: 468px;
+    height: 60px;
+    margin-left: 374px;
+    margin-top: 40px;
+}
+
+.heading_bottom {
+    width: 840px;
+    height: 24px;
+    border-bottom: 3px black solid;
+    margin: 0px auto 12px;
+}
+
+.read {
+    width: 66px;
+    height: 21px;
+    background-image: url(../smartcontents/images/dd.png);
+    background-position: -256px -199px;
+    float: left;
+}
+
+.user {
+    width: 106px;
+    height: 21px;
+    background-image: url(../smartcontents/images/dd.png);
+    background-position: -293px -174px;
+    float: left;
+    margin-left: 3px
+}
+
+.give {
+    width: 28px;
+    height: 21px;
+    background-position: -500px -270px;
+    background-image: url(../smartcontents/images/dd.png);
+    float: left;
+    margin-left: 3px;
+}
+
+.heading_bottom span {
+    font-size: 11px;
+    line-height: 13px;
+    font-family: '돋움', Dotum;
+    color: #4e4e4e;
+    padding: 6px 0 0 9px;
+}
+
+.body {
+    width: 840px;
+    height: 380px;
+    margin: 0 auto;
+    font-family: '돋움', dotum, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 140%;
+    color: #444;
+}
+
+.body .left {
+    float: left;
+    width: 507px;
+    height: 380px;
+}
+
+.body .left .Top {
+    width: 507px;
+    height: 151px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #959595;
+}
+
+.body .left .Top .headPhoto {
+    position: relative;
+    float: left;
+    width: 180px;
+    height: 116px;
+    margin-right: 12px;
+}
+
+.body .left .Top .headArticle {
+    float: left;
+    width: 315px;
+}
+
+.body .left .Top .headArticle p {
+    display: block;
+    line-height: 16px;
+    font-size: 11px;
+    color: #7f7e7e;
+    letter-spacing: -1px;
+}
+
+.body .left .Top .headArticle ul {
+    width: 100%;
+    margin-top: 7px;
+}
+
+.body .left .Top .headArticle ul li {
+    float: left;
+    width: 300px;
+    height: 19px;
+    line-height: 19px;
+    overflow: hidden;
+    padding-left: 11px;
+    background: url(http://static.naver.net/newsstand/2017/0124/donga/113205/012.gif) no-repeat 0 5px;
+}
+
+.body .left .bottom ul {
+    float: left;
+    padding-top: 13px;
+}
+
+.body .left .bottom ul li {
+    width: 363px;
+    height: 22px;
+    padding-left: 9px;
+    margin-bottom: 7px;
+    line-height: 22px;
+    background: url(http://static.naver.net/newsstand/2017/0124/donga/113205/013.gif) no-repeat 1px 7px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.body .left .bottom ul li a {
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.body .left .bottom .rightPic {
+    float: right;
+    width: 95px;
+    height: 196px;
+    margin: 0;
+    padding: 12px;
+    background: #f4f4f4;
+}
+
+.body .left .bottom .rightPic p {
+    width: 95px;
+    line-height: 13px;
+    font-size: 11px;
+    letter-spacing: -1px;
+    color: #505050;
+    text-align: center;
+    padding-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.body .left .bottom .rightPic p:first-child {
+    padding-bottom: 8px;
+}
+
+.body .left .bottom .rightPic p a {
+    color: #505050;
+}
+
+.body .left .bottom .rightPic p img {
+    display: block;
+    margin-bottom: 4px;
+    border: 1px solid #b4b4b4;
+}
+/*오른쪽*/
+
+.body .right {
+    float: left;
+    height: 380px;
+    margin-left: 10px;
+}
+
+.newsTop {
+    width: 309px;
+    height: 150px;
+    padding: 6px 0 0 10px;
+    background: #f9f9f9;
+}
+
+.newsTop h2 {
+    height: 16px;
+    margin-top: 4px;
+}
+
+.newsTop ul {
+    width: 100%;
+    margin-top: 1px;
+    font-size: 14px;
+    letter-spacing: -1px;
+    color: #242424;
+}
+
+.newsTop ul li {
+    width: 311px;
+    height: 25px;
+    line-height: 25px;
+    font-weight: bold;
+    padding-left: 8px;
+    background: url(http://static.naver.net/newsstand/2017/0124/donga/113205/013.gif) no-repeat 0 11px;
+    overflow: hidden;
+
+}
+
+.newsBottom {
+    width: 319px;
+    overflow: hidden;
+}
+
+.newsBottom .article p {
+    position: relative;
+    float: left;
+    width: 159px;
+    font-size: 11px;
+    color: #505050;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.newsBottom .article .first {
+    margin-right: 1px;
+}
+
+.newsBottom .article .third {
+    margin-top: 1px;
+}
+
+.newsBottom .article .last {
+    margin: 1px 0 0 1px;
+}
+
+.newsBottom .article p span {
+    display: block;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    width: 100%;
+    height: 22px;
+    line-height: 22px;
+    background: url(http://static.naver.net/newsstand/2017/0124/donga/153157/014.png);
+    color: #fff;
+    font-size: 11px;
+}
+/*하단부*/
+
+a.dongwhaBtn {
+    position: absolute;
+    bottom: 15px;
+    right: 31px;
+    font-size: 11px;
+    color: #494949;
+    text-decoration: none;
+
+}
+
+.dongwhaBtn strong {
+    margin-right: 1px;
+    color: #4a7ce4;
+    font-weight: bold;
+}

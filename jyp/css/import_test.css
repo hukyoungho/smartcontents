@@ -5,7 +5,7 @@ html {
   height: 100%;
 }
 body {
-  background-image: url("../image/sunmi.jpg");
+  background-image: url("../image2/sunmi.jpg");
   background-position: center 0;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -33,7 +33,7 @@ header h1 a {
   display: block;
   width: 104px;
   height: 52px;
-  background-image: url("../image/logo.png");
+  background-image: url("../image2/logo.png");
   background-repeat: no-repeat;
   background-position: center;
   text-indent: -999px;
@@ -96,7 +96,7 @@ header .navi li a:hover {
   width: 240px;
   height: 100px;
   display: block;
-  background-image: url("../image/mainlogo.png");
+  background-image: url("../image2/mainlogo.png");
   background-repeat: no-repeat;
   background-position: center;
   text-indent: -999px;
@@ -127,7 +127,7 @@ header .navi li a:hover {
   display: block;
   width: 115px;
   height: 45px;
-  background-image: url("../image/jyplogo-w.png");
+  background-image: url("../image2/jyplogo-w.png");
   background-position: center 0;
   background-repeat: no-repeat;
   transition: 1s;

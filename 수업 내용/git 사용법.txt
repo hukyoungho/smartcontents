@@ -1,0 +1,61 @@
+내용
+
+ 환경설정 맞추기
+
+ 1.emmet 2.4.3 파일 설치
+ 2.file-icons
+ 3.open in browsers 0.0.19
+ 4.minimap
+
+
+ 단축키
+
+ 1. ctrl + alt + o 는 브라우저 열기
+
+*git(editor)
+
+장점
+1. 여러 사람들과 작업 가능 (손실 x)
+
+내용
+
+ status :현재 상황
+ commit :올리기
+ git init :저장소 생성
+ git status :상태확인 ->html:commit 한번도 안된 경우 빨강
+                          html:commit 되었지만 수정해야하는 경우 갈색
+ git add :파일등록 (add *):전체
+ git commit:파일 올리기
+ git commmit -m"내용"
+ 10:cd ..:경로에서 나와라
+ 11.ls :수정된것만 commit
+ 12.git push: github 올리기
+
+ 순서 git status -> git add {컴퓨터 안}
+      git push {서버 올리기}
+
+* git remote (서버 등록 확인)
+
+저장소가 없다고 나올것이다. 있으면 있다고 할것이고..
+
+clear
+
+*git clone 주소
+
+깃으로 부터 자료 다운로드 됨..
+
+*서버 등록
+
+git add remote add origin 복사한 주소
+
+
+*깃 저장소 들어가기
+
+cd 위치
+(위치 다 안써도 탭 누르면 자동으로 찾아줌. 그리고 엔터)
+
+*사용자 등록
+
+git push -u origin master
+
+계정확인 아이디/비밀번호 (등록 되어 있으면 안물)

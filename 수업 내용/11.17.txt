@@ -1,9 +1,0 @@
-positon
-clear
-float 활용
-
-*clear 속성 기능
-
-선언된 태그는 마진이 안먹는다.
-
-float으로 먼저 선언된 요소

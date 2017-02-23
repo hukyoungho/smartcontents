@@ -6,7 +6,7 @@ body {
 }
 body {
   margin: 0;
-  background-image: url("../image/sunmi.jpg");
+  background-image: url("../image2/sunmi.jpg");
   background-repeat: no-repeat;
   background-position: center 0;
   -webkit-background-size: cover;
@@ -30,7 +30,7 @@ body {
 }
 .header h1 a {
   display: block;
-  background-image: url("../image/logo.png");
+  background-image: url("../image2/logo.png");
   width: 104px;
   height: 52px;
   text-indent: -9999px;
@@ -93,7 +93,7 @@ body {
   right: 41%;
   width: 240px;
   height: 100px;
-  background-image: url("../image/mainlogo.png");
+  background-image: url("../image2/mainlogo.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -123,7 +123,7 @@ body {
 .mainlogo footer .jypicon a {
   height: 45px;
   width: 115px;
-  background-image: url("../image/jyplogo-w.png");
+  background-image: url("../image2/jyplogo-w.png");
   background-repeat: no-repeat;
   background-size: contain;
   text-indent: -9999px;
@@ -145,7 +145,7 @@ body {
 }
 @media screen and (max-width: 845px) {
   body {
-    background-image: url("../image/bg-720.jpg");
+    background-image: url("../image2/bg-720.jpg");
     background-position: center center;
   }
   .header {
@@ -154,7 +154,7 @@ body {
   }
   .header h1 a {
     display: block;
-    background-image: url("../image/smalllogo-sw.png");
+    background-image: url("../image2/smalllogo-sw.png");
     width: 65px;
     height: 30px;
     text-indent: -9999px;

@@ -101,7 +101,7 @@ $(function(){
 
     $('.fadebanner li a').click(function(){
         fidx=$(this).parent().index()
-        $('.fadebanner li').eq(fidx).addClass('on').find('img').fadeIn().parent().siblings().removeClass().find('img').fadeOut();
+        $('.fadebanner li').eq(fidx).addClass('on').find('img').fadeIn(4000).parent().siblings().removeClass().find('img').fadeOut(1000);
         return false;
     })
 
